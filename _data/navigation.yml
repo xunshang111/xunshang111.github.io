@@ -8,26 +8,26 @@
 #      Markdown formatted page while the second is generated using JSON.
 
 main:
-  - title: "Publications"
-    url: /publications/
+  - title: "About Me"
+    url: /
 
-  - title: "Talks"
-    url: /talks/    
+  - title: "Education"
+    url: /#education
 
-  - title: "Teaching"
-    url: /teaching/    
-    
-  - title: "Portfolio"
-    url: /portfolio/
-        
-  - title: "Blog Posts"
-    url: /year-archive/
-    
+  - title: "Projects"
+    url: /#project-experience
+
+  - title: "Awards"
+    url: /#scholarship--awards
+
+  - title: "Activities"
+    url: /#extracurricular-activities
+
+  - title: "Internship"
+    url: /#internship
+
   - title: "CV"
     url: /cv/
-    
-  # - title: "CV"
-  #   url: /cv-json/
-    
-  - title: "Guide"
-    url: /markdown/
+
+  - title: "中文"
+    url: /cn/

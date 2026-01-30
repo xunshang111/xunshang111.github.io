@@ -1,0 +1,24 @@
+main:
+  - title: "关于我"
+    url: /cn/
+
+  - title: "教育经历"
+    url: /cn/#教育经历
+
+  - title: "项目经历"
+    url: /cn/#项目经历
+
+  - title: "奖项"
+    url: /cn/#奖学金与奖项
+
+  - title: "课外活动"
+    url: /cn/#课外活动
+
+  - title: "实习"
+    url: /cn/#实习与实训
+
+  - title: "CV"
+    url: /cv/
+
+  - title: "English"
+    url: /
