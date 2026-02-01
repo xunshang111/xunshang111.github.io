@@ -7,6 +7,27 @@ redirect_from:
   - /about.html
 ---
 
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  body {
+    font-family: 'Roboto', sans-serif !important;
+    animation: fadeIn 1s ease-in-out;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  a, .btn {
+    transition: all 0.3s ease;
+  }
+  a:hover, .btn:hover {
+    transform: translateY(-2px);
+  }
+</style>
+
 Hello! I am **Yiyang Ma**, a Bachelor of Engineering candidate at **Guangzhou University (GZHU)**, majoring in **Intelligent Manufacturing Engineering**. I am expected to graduate in 2027.
 
 My research interests and skills lie in Python Programming, C Programming, and Mathematics.
@@ -29,26 +50,21 @@ My research interests and skills lie in Python Programming, C Programming, and M
 
 💼 Project Experience
 ======
-**HoLoRA-HSI: Hyperspectral Image Classification via Holographic Low-Rank Adapter**
-*Project Leader (Supervisor: Xiaofei Yang)* | *06/2025-Present*
-* Developed a parameter-efficient dynamic architecture to address high dimensionality and small sample sizes in HSI classification.
-* Introduced **Holographic Patch Embedding (HPE)** to capture non-local redundancies.
-* Innovated **Low-Rank Holographic Adapter (LRHA)** for instance-level adaptation.
-* Integrated physics-guided **Spectral Polynomial Prior (SPP)** loss for robustness.
-* **Performance:** 94.96% OA on Indian Pines dataset, outperforming SOTA models (SSFTT, MambaHSI).
 
-**A Robot for Underwater Energy Pipeline Crack Detection**
-*Core Member (Supervisor: Zhifu Li & Daqi Chen)* | *09/2024 - Present*
-* Developed a high-performance underwater robot with **Neural Network-enhanced Fuzzy PID controller** (reduced offset by 34%).
-* Implemented **Actor-Critic Reinforcement Learning** for thruster fault tolerance (0.7s response).
-* Improved **YOLOv11-based visual detection**, boosting crack detection accuracy by 14%.
-* **Achievements:** National 2nd Prize (China Robotics & AI Competition), National 3rd Prize (Energy Saving Competition).
+<div style="border: 1px solid #e0e0e0; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.2s;">
+  <h3>A Robot for Underwater Energy Pipeline Crack Detection</h3>
+  <p><em>Core Member (Supervisor: Zhifu Li & Daqi Chen)</em> | <em>09/2024 - Present</em><br>
+  Developed a high-performance underwater robot with <strong>Neural Network-enhanced Fuzzy PID controller</strong> (reduced offset by 34%). Implemented <strong>Actor-Critic Reinforcement Learning</strong> for thruster fault tolerance (0.7s response). Improved <strong>YOLOv11-based visual detection</strong>, boosting crack detection accuracy by 14%.<br>
+  <strong>Achievements:</strong> National 2nd Prize (China Robotics & AI Competition), National 3rd Prize (Energy Saving Competition).</p>
+  <a href="#" class="btn btn--primary" style="text-decoration: none; padding: 8px 16px; background-color: #24292e; color: white; border-radius: 4px; display: inline-block; margin-top: 10px;">📄 Project Page</a>
+</div>
 
-**Intelligent Trash Can System Based on Three-stage Differential Separation Device**
-*Core Member (Supervisor: Wenting Deng)* | *01/2025-04/2025*
-* Built an automated waste sorting system with Arduino Mega 2560 and CanMV K230.
-* Deployed **YOLOv5 model** achieving 99.74% classification accuracy.
-* Coordinated mechanical-electrical integration and filed an invention patent (2nd Student Inventor).
+<div style="border: 1px solid #e0e0e0; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.2s;">
+  <h3>Intelligent Trash Can System Based on Three-stage Differential Separation Device</h3>
+  <p><em>Core Member (Supervisor: Wenting Deng)</em> | <em>01/2025-04/2025</em><br>
+  Built an automated waste sorting system with Arduino Mega 2560 and CanMV K230. Deployed <strong>YOLOv5 model</strong> achieving 99.74% classification accuracy. Coordinated mechanical-electrical integration and filed an invention patent (2nd Student Inventor).</p>
+  <a href="#" class="btn btn--primary" style="text-decoration: none; padding: 8px 16px; background-color: #24292e; color: white; border-radius: 4px; display: inline-block; margin-top: 10px;">📄 Project Page</a>
+</div>
 
 🥇 Scholarship & Awards
 ======
