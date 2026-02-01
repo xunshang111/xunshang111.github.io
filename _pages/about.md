@@ -19,6 +19,14 @@ My research interests and skills lie in Python Programming, C Programming, and M
   * **Weighted Avg:** 87.15/100
   * **Core Honors:** University First-Class Scholarship (Top 2%), Ranked 1st in Major in Comprehensive Evaluation (Sophomore).
 
+## 📜 Publication
+
+**2026**
+* Haotian Shi, Zihang Luo, **Yiyang Ma**, Guanquan Zhu, Xin Dai. **SSGTN: Spectral-Spatial Graph Transformer Network for Hyperspectral Image Classification**. *(Remote Sensing)*, [Paper](https://doi.org/10.3390/rs18020199).
+
+**2025**
+* Guiyun Liu, Haozhe Xu, Yu Zhu, **Yiyang Ma**, Zhipeng Chen. **Optimal Media Control Strategy for Rumor Propagation in a Multilingual Dual Layer Reaction Diffusion Network Model**. *(Mathematics)*, [Paper](https://doi.org/10.3390/math13142253).
+
 💼 Project Experience
 ======
 **HoLoRA-HSI: Hyperspectral Image Classification via Holographic Low-Rank Adapter**
