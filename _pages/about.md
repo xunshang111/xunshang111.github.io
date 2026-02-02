@@ -71,6 +71,7 @@ redirect_from:
   /* Link Colors & Icons */
   .education-card a, .project-card a, .paper-card a { color: #0366d6 !important; text-decoration: none; }
   .education-card a:hover, .project-card a:hover, .paper-card a:hover { text-decoration: underline; }
+  .project-card a.btn { color: #fff !important; text-decoration: none !important; }
 
   .card-icon {
     flex-shrink: 0;
@@ -114,7 +115,7 @@ redirect_from:
   }
 
   /* Sidebar & Mobile */
-  .author__avatar img { border-radius: 50% !important; border: 4px solid rgba(255,255,255,0.8); }
+  .author__avatar img { border-radius: 12px !important; border: 4px solid rgba(255,255,255,0.8); }
 
   @media (min-width: 769px) {
     .sidebar {
@@ -173,7 +174,7 @@ My research interests and skills lie in Python Programming, C Programming, and M
     <h3 style="margin: 0 0 5px 0;">Guangzhou University (GZHU)</h3>
     <p style="margin: 0 0 10px 0; color: #666; font-size: 0.9em;"><em>09/2023 - Present | Intelligent Manufacturing Engineering</em></p>
     <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 10px;">
-      <span style="background: rgba(255,255,255,0.6); padding: 4px 10px; border-radius: 12px; font-size: 0.8em; color: #555; border: 1px solid rgba(0,0,0,0.05);" class="geek-meta">GPA: 3.51/4.0</span>
+      <span style="background: rgba(255,255,255,0.6); padding: 4px 10px; border-radius: 12px; font-size: 0.8em; color: #555; border: 1px solid rgba(0,0,0,0.05);" class="geek-meta">GPA: 3.58/4.0</span>
       <span style="background: rgba(255,255,255,0.6); padding: 4px 10px; border-radius: 12px; font-size: 0.8em; color: #555; border: 1px solid rgba(0,0,0,0.05);" class="geek-meta">Rank: 8/57</span>
     </div>
     <p style="margin: 0; font-size: 0.9em;"><strong>Core Honors:</strong> University First-Class Scholarship (Top 2%), Ranked 1st in Major in Comprehensive Evaluation (Sophomore).</p>
@@ -204,6 +205,18 @@ My research interests and skills lie in Python Programming, C Programming, and M
 ## 💼 Project Experience
 
 <div id="projects">
+
+<div class="project-card">
+  <div class="card-icon">🛰️</div>
+  <div class="card-content">
+    <h3>HoLoRA-HSI: Hyperspectral Image Classification based on Holographic Low-Rank Adapter</h3>
+    <p><em>Project Leader (Supervisor: Xiaofei Yang) | 06/2025-Present</em><br>
+    Developed a parameter-efficient dynamic architecture to address the challenges of high dimensionality and small samples in hyperspectral image classification. Introduced <strong>Holographic Patch Embedding (HPE)</strong> mechanism to capture non-local redundancy. Innovated <strong>Low-Rank Holographic Adapter (LRHA)</strong> to achieve instance-level adaptation. Integrated physics-guided <strong>Spectral Polynomial Prior (SPP)</strong> loss function to enhance robustness.<br>
+    <strong>Performance:</strong> Achieved 94.96% Overall Accuracy (OA) on the Indian Pines dataset, outperforming state-of-the-art models such as SSFTT (94.02%) and MambaHSI.</p>
+    <a href="#" class="btn btn--primary">📄 Project Page</a>
+  </div>
+</div>
+
 <div class="project-card">
   <div class="card-icon">🤖</div>
   <div class="card-content">
@@ -230,63 +243,11 @@ My research interests and skills lie in Python Programming, C Programming, and M
 <div id="awards" class="project-card" style="display: block;">
   <h3 style="margin-top: 0; border-bottom: 2px solid #eee; padding-bottom: 10px;">National Competitions</h3>
   <ul style="margin-bottom: 20px;">
-    <li><strong>Gold Medal</strong>, China International College Students' Innovation Competition 2025 (National Level).</li>
-    <li><strong>National 2nd Prize</strong>, The 27th China Robotics & Artificial Intelligence Competition, 2025.</li>
-    <li><strong>National 2nd Prize</strong>, The 10th National Applied Talent Comprehensive Skills Competition, 2024. (Project Leader)</li>
-    <li><strong>National 3rd Prize</strong>, The 18th National University Student Social Practice and Science Contest on Energy Saving & Emission Reduction, 2025. (Project Leader)</li>
-    <li><strong>2nd Prize</strong>, The 14th Asia and Pacific Mathematical Contest in Modeling (APMCM), 2024.</li>
-  </ul>
-
-  <h3 style="margin-top: 0; border-bottom: 2px solid #eee; padding-bottom: 10px;">Scholarships</h3>
-  <ul>
-    <li>University First-Class Scholarship (Top 2%), 2025</li>
-    <li>University Second-Class Scholarship (Top 9%), 2024</li>
-  </ul>
-</div>
-
-## 🧙‍♂️ Extracurricular Activities
-<div id="extracurricular-activities">
-<div class="timeline">
-
-  <div class="timeline-item">
-    <div class="timeline-marker"></div>
-    <div class="timeline-date">Current</div>
-    <div class="timeline-content">
-      <h3 style="margin-top:0;">Maker Association of Guangzhou University</h3>
-      <p><em>President</em></p>
-      <ul>
-        <li>Led the university's largest student innovation community.</li>
-        <li>Organized the 12th "Winter Camp" and "Summer Camp" activities (500+ participants).</li>
-        <li>Organized the university-level selection for the National Energy Saving & Emission Reduction Contest.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="timeline-item">
-    <div class="timeline-marker"></div>
-    <div class="timeline-date">Current</div>
-    <div class="timeline-content">
-      <h3 style="margin-top:0;">Guangzhou-Hong Kong Science and Innovation Talent Class</h3>
-      <p><em>Teaching Assistant</em></p>
-      <ul>
-        <li>Provided voluntary guidance to outstanding freshmen on scientific research projects.</li>
-      </ul>
-    </div>
-  </div>
-
-</div>
-</div>
-</div>
-
-## 🥇 Scholarship & Awards
-<div id="awards" class="project-card" style="display: block;">
-  <h3 style="margin-top: 0; border-bottom: 2px solid #eee; padding-bottom: 10px;">National Competitions</h3>
-  <ul style="margin-bottom: 20px;">
-    <li><strong>Gold Medal</strong>, China International College Students' Innovation Competition 2025 (National Level).</li>
-    <li><strong>National 2nd Prize</strong>, The 27th China Robotics & Artificial Intelligence Competition, 2025.</li>
-    <li><strong>National 2nd Prize</strong>, The 10th National Applied Talent Comprehensive Skills Competition, 2024. (Project Leader)</li>
-    <li><strong>National 3rd Prize</strong>, The 18th National University Student Social Practice and Science Contest on Energy Saving & Emission Reduction, 2025. (Project Leader)</li>
-    <li><strong>2nd Prize</strong>, The 14th Asia and Pacific Mathematical Contest in Modeling (APMCM), 2024.</li>
+    <li>🥇 <strong>Gold Medal</strong>, China International College Students' Innovation Competition 2025 (National Level).</li>
+    <li>🥈 <strong>National 2nd Prize</strong>, The 27th China Robotics & Artificial Intelligence Competition, 2025.</li>
+    <li>🥈 <strong>National 2nd Prize</strong>, The 10th National Applied Talent Comprehensive Skills Competition, 2024. (Project Leader)</li>
+    <li>🥉 <strong>National 3rd Prize</strong>, The 18th National University Student Social Practice and Science Contest on Energy Saving & Emission Reduction, 2025. (Project Leader)</li>
+    <li>🥈 <strong>National 2nd Prize</strong>, The 14th Asia and Pacific Mathematical Contest in Modeling (APMCM), 2024.</li>
   </ul>
 
   <h3 style="margin-top: 0; border-bottom: 2px solid #eee; padding-bottom: 10px;">Scholarships</h3>

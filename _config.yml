@@ -23,7 +23,7 @@ repository               : "xunshang111/xunshang111.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : # "profile.png"
+  avatar           : "avatar.jpg"
   name             : "Yiyang Ma"
   pronouns         : # example: "she/her"  
   bio              : "Bachelor of Engineering (candidate) at Guangzhou University. Major: Intelligent Manufacturing Engineering."
