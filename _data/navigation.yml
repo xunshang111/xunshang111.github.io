@@ -15,10 +15,10 @@ main:
     url: /#education
 
   - title: "Projects"
-    url: /#project-experience
+    url: /#projects
 
   - title: "Awards"
-    url: /#scholarship--awards
+    url: /#awards
 
   - title: "Activities"
     url: /#extracurricular-activities
