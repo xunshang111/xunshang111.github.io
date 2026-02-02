@@ -7,32 +7,32 @@ lang: zh
 
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 <style>
-  /* 1. MORANDI MESH GRADIENT BACKGROUND */
+  /* 1. SOFT AURORA BACKGROUND */
   body {
-    font-family: 'Roboto', sans-serif !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
     line-height: 1.6 !important;
-    color: #333;
-    background: linear-gradient(-45deg, #e0c3fc, #8ec5fc, #ffdefa, #ffd194);
-    background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite;
+    color: #2c3e50;
+    background-color: #fbfbfb;
+    background-image:
+      radial-gradient(at 0% 0%, rgba(200, 220, 255, 0.3) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, rgba(230, 210, 255, 0.3) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, rgba(255, 230, 230, 0.2) 0px, transparent 50%);
+    background-attachment: fixed;
     min-height: 100vh;
   }
-  @keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
 
-  /* 2. CARD STYLING (Glass/Floating Effect) */
-  /* FORCE White Background & Dark Text for Dark Mode Compatibility */
+  /* 2. GLASSMORPHISM CARDS */
+  /* Translucent white with blur */
   .sidebar, .education-card, .project-card, .paper-card {
-    background: #fff !important;
+    background: rgba(255, 255, 255, 0.75) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     color: #333 !important;
-    border: 1px solid rgba(255,255,255,0.6);
-    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 16px;
     padding: 24px;
     margin-bottom: 24px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
     overflow: hidden;
@@ -46,30 +46,36 @@ lang: zh
   }
 
   .education-card:hover, .project-card:hover, .paper-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
   }
 
   /* Link Colors & Icons */
-  .education-card a, .project-card a, .paper-card a { color: #0366d6 !important; }
+  .education-card a, .project-card a, .paper-card a { color: #0366d6 !important; text-decoration: none; }
+  .education-card a:hover, .project-card a:hover, .paper-card a:hover { text-decoration: underline; }
+
   .card-icon {
     flex-shrink: 0;
     width: 50px; height: 50px;
-    background: #f6f8fa; border-radius: 8px;
+    background: rgba(246, 248, 250, 0.8);
+    border-radius: 12px;
     display: flex; align-items: center; justify-content: center; font-size: 24px;
   }
 
   /* Sidebar */
-  .sidebar { position: sticky !important; top: 20px; }
-  .author__avatar img { border-radius: 50% !important; border: 4px solid #fff; }
+  .sidebar {
+    position: sticky !important;
+    top: 60px;
+    z-index: 10;
+  }
+  .author__avatar img { border-radius: 50% !important; border: 4px solid rgba(255,255,255,0.8); }
 </style>
 
 你好！我是**马翌阳**，**广州大学 (GZHU)** **智能制造工程**专业的本科在读学生。我预计于 2027 年毕业。
 
 我的研究兴趣和技能主要集中在 Python 编程、C 语言编程和数学方面。
 
-🎓 教育经历
-======
+## 🎓 教育经历
 <div id="education">
 <div class="education-card">
   <div class="card-icon">🎓</div>
@@ -77,16 +83,15 @@ lang: zh
     <h3 style="margin: 0 0 5px 0;">广州大学 (GZHU)</h3>
     <p style="margin: 0 0 10px 0; color: #666; font-size: 0.9em;">09/2023 - 至今 | 智能制造工程工学学士</p>
     <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 10px;">
-      <span style="background: #eee; padding: 2px 8px; border-radius: 12px; font-size: 0.8em; color: #555;">GPA: 3.51/4.0</span>
-      <span style="background: #eee; padding: 2px 8px; border-radius: 12px; font-size: 0.8em; color: #555;">排名: 8/57</span>
+      <span style="background: rgba(238,238,238,0.6); padding: 2px 8px; border-radius: 12px; font-size: 0.8em; color: #555;">GPA: 3.51/4.0</span>
+      <span style="background: rgba(238,238,238,0.6); padding: 2px 8px; border-radius: 12px; font-size: 0.8em; color: #555;">排名: 8/57</span>
     </div>
     <p style="margin: 0; font-size: 0.9em;"><strong>核心荣誉:</strong> 校一等奖学金 (前 2%)，大二综测专业第一。</p>
   </div>
 </div>
 </div>
 
-💼 项目经历
-======
+## 💼 项目经历
 <div id="projects">
 
 <div class="project-card">
@@ -121,33 +126,44 @@ lang: zh
 
 </div>
 
-🥇 奖学金与奖项
-======
-<div id="awards">
-**国家级竞赛**
-* **金奖**, 2025年中国国际大学生创新大赛 (国家级)。
-* **国家二等奖**, 第二十七届中国机器人及人工智能大赛, 2025。
-* **国家二等奖**, 第十届全国应用型人才综合技能大赛, 2024 (项目负责人)。
-* **国家三等奖**, 第十八届全国大学生节能减排社会实践与科技竞赛, 2025 (项目负责人)。
-* **二等奖**, 第十四届亚太地区大学生数学建模竞赛 (APMCM), 2024。
+## 🥇 奖学金与奖项
+<div id="awards" class="project-card" style="display: block;">
+  <h3 style="margin-top: 0; border-bottom: 2px solid #eee; padding-bottom: 10px;">国家级竞赛</h3>
+  <ul style="margin-bottom: 20px;">
+    <li><strong>金奖</strong>, 2025年中国国际大学生创新大赛 (国家级)。</li>
+    <li><strong>国家二等奖</strong>, 第二十七届中国机器人及人工智能大赛, 2025。</li>
+    <li><strong>国家二等奖</strong>, 第十届全国应用型人才综合技能大赛, 2024 (项目负责人)。</li>
+    <li><strong>国家三等奖</strong>, 第十八届全国大学生节能减排社会实践与科技竞赛, 2025 (项目负责人)。</li>
+    <li><strong>二等奖</strong>, 第十四届亚太地区大学生数学建模竞赛 (APMCM), 2024。</li>
+  </ul>
 
-**奖学金**
-* 校一等奖学金 (前 2%), 2025学年
-* 校二等奖学金 (前 9%), 2024学年
+  <h3 style="margin-top: 0; border-bottom: 2px solid #eee; padding-bottom: 10px;">奖学金</h3>
+  <ul>
+    <li>校一等奖学金 (前 2%), 2025学年</li>
+    <li>校二等奖学金 (前 9%), 2024学年</li>
+  </ul>
 </div>
 
-🧙‍♂️ 课外活动
-======
-**广州大学创客协会** | *会长*
-* 领导全校最大的学生创新社团。
-* 组织第十二届“冬令营”和“夏令营”学术科技活动，吸引了超过 500 名参与者。
-* 成功组织并执行了第十八届全国大学生节能减排社会实践与科技竞赛的校级选拔赛。
+## 🧙‍♂️ 课外活动
+<div class="project-card" style="display: block;">
+<h3>广州大学创客协会 | <em>会长</em></h3>
+<ul>
+  <li>领导全校最大的学生创新社团。</li>
+  <li>组织第十二届“冬令营”和“夏令营”学术科技活动，吸引了超过 500 名参与者。</li>
+  <li>成功组织并执行了第十八届全国大学生节能减排社会实践与科技竞赛的校级选拔赛。</li>
+</ul>
 
-**穗港科技创新人才班** | *助教*
-* 担任精英人才班的助教。
-* 在暑假期间为来自不同专业的优秀新生提供科研项目的志愿指导。
+<h3>穗港科技创新人才班 | <em>助教</em></h3>
+<ul>
+  <li>担任精英人才班的助教。</li>
+  <li>在暑假期间为来自不同专业的优秀新生提供科研项目的志愿指导。</li>
+</ul>
+</div>
 
-🛠️ 实习与实训
-======
-**广东工贸职业技术学院** | *工程实训学员* (04/2025)
-* 在机电技术学院完成了全面的工程实训，获得了制造工艺和电气技术的实践经验。
+## 🛠️ 实习与实训
+<div class="project-card" style="display: block;">
+<h3>广东工贸职业技术学院 | <em>工程实训学员</em> (04/2025)</h3>
+<ul>
+  <li>在机电技术学院完成了全面的工程实训，获得了制造工艺和电气技术的实践经验。</li>
+</ul>
+</div>

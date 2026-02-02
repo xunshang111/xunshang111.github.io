@@ -9,32 +9,32 @@ redirect_from:
 
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 <style>
-  /* 1. MORANDI MESH GRADIENT BACKGROUND */
+  /* 1. SOFT AURORA BACKGROUND */
   body {
-    font-family: 'Roboto', sans-serif !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
     line-height: 1.6 !important;
-    color: #333;
-    background: linear-gradient(-45deg, #e0c3fc, #8ec5fc, #ffdefa, #ffd194);
-    background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite;
+    color: #2c3e50;
+    background-color: #fbfbfb;
+    background-image:
+      radial-gradient(at 0% 0%, rgba(200, 220, 255, 0.3) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, rgba(230, 210, 255, 0.3) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, rgba(255, 230, 230, 0.2) 0px, transparent 50%);
+    background-attachment: fixed;
     min-height: 100vh;
   }
-  @keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
 
-  /* 2. CARD STYLING (Glass/Floating Effect) */
-  /* FORCE White Background & Dark Text for Dark Mode Compatibility */
+  /* 2. GLASSMORPHISM CARDS */
+  /* Translucent white with blur */
   .sidebar, .education-card, .project-card, .paper-card {
-    background: #fff !important;
+    background: rgba(255, 255, 255, 0.75) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     color: #333 !important;
-    border: 1px solid rgba(255,255,255,0.6);
-    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 16px; /* Softer corners */
     padding: 24px;
     margin-bottom: 24px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04); /* Softer, more diffused shadow */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
     overflow: hidden;
@@ -48,30 +48,36 @@ redirect_from:
   }
 
   .education-card:hover, .project-card:hover, .paper-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
   }
 
   /* Link Colors & Icons */
-  .education-card a, .project-card a, .paper-card a { color: #0366d6 !important; }
+  .education-card a, .project-card a, .paper-card a { color: #0366d6 !important; text-decoration: none; }
+  .education-card a:hover, .project-card a:hover, .paper-card a:hover { text-decoration: underline; }
+
   .card-icon {
     flex-shrink: 0;
     width: 50px; height: 50px;
-    background: #f6f8fa; border-radius: 8px;
+    background: rgba(246, 248, 250, 0.8);
+    border-radius: 12px;
     display: flex; align-items: center; justify-content: center; font-size: 24px;
   }
 
   /* Sidebar */
-  .sidebar { position: sticky !important; top: 20px; }
-  .author__avatar img { border-radius: 50% !important; border: 4px solid #fff; }
+  .sidebar {
+    position: sticky !important;
+    top: 60px; /* Adjusted to prevent clipping */
+    z-index: 10;
+  }
+  .author__avatar img { border-radius: 50% !important; border: 4px solid rgba(255,255,255,0.8); }
 </style>
 
 Hello! I am **Yiyang Ma**, a Bachelor of Engineering candidate at **Guangzhou University (GZHU)**, majoring in **Intelligent Manufacturing Engineering**. I am expected to graduate in 2027.
 
 My research interests and skills lie in Python Programming, C Programming, and Mathematics.
 
-🎓 Education
-======
+## 🎓 Education
 <div id="education">
 <div class="education-card">
   <div class="card-icon">🎓</div>
@@ -79,8 +85,8 @@ My research interests and skills lie in Python Programming, C Programming, and M
     <h3 style="margin: 0 0 5px 0;">Guangzhou University (GZHU)</h3>
     <p style="margin: 0 0 10px 0; color: #666; font-size: 0.9em;">09/2023 - Present | Intelligent Manufacturing Engineering</p>
     <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 10px;">
-      <span style="background: #eee; padding: 2px 8px; border-radius: 12px; font-size: 0.8em; color: #555;">GPA: 3.51/4.0</span>
-      <span style="background: #eee; padding: 2px 8px; border-radius: 12px; font-size: 0.8em; color: #555;">Rank: 8/57</span>
+      <span style="background: rgba(238,238,238,0.6); padding: 2px 8px; border-radius: 12px; font-size: 0.8em; color: #555;">GPA: 3.51/4.0</span>
+      <span style="background: rgba(238,238,238,0.6); padding: 2px 8px; border-radius: 12px; font-size: 0.8em; color: #555;">Rank: 8/57</span>
     </div>
     <p style="margin: 0; font-size: 0.9em;"><strong>Core Honors:</strong> University First-Class Scholarship (Top 2%), Ranked 1st in Major in Comprehensive Evaluation (Sophomore).</p>
   </div>
@@ -107,8 +113,7 @@ My research interests and skills lie in Python Programming, C Programming, and M
 </div>
 </div>
 
-💼 Project Experience
-======
+## 💼 Project Experience
 
 <div id="projects">
 <div class="project-card">
@@ -133,32 +138,43 @@ My research interests and skills lie in Python Programming, C Programming, and M
 </div>
 </div>
 
-🥇 Scholarship & Awards
-======
-<div id="awards">
-**National Competitions**
-* **Gold Medal**, China International College Students' Innovation Competition 2025 (National Level).
-* **National 2nd Prize**, The 27th China Robotics & Artificial Intelligence Competition, 2025.
-* **National 2nd Prize**, The 10th National Applied Talent Comprehensive Skills Competition, 2024. (Project Leader)
-* **National 3rd Prize**, The 18th National University Student Social Practice and Science Contest on Energy Saving & Emission Reduction, 2025. (Project Leader)
-* **2nd Prize**, The 14th Asia and Pacific Mathematical Contest in Modeling (APMCM), 2024.
+## 🥇 Scholarship & Awards
+<div id="awards" class="project-card" style="display: block;">
+  <h3 style="margin-top: 0; border-bottom: 2px solid #eee; padding-bottom: 10px;">National Competitions</h3>
+  <ul style="margin-bottom: 20px;">
+    <li><strong>Gold Medal</strong>, China International College Students' Innovation Competition 2025 (National Level).</li>
+    <li><strong>National 2nd Prize</strong>, The 27th China Robotics & Artificial Intelligence Competition, 2025.</li>
+    <li><strong>National 2nd Prize</strong>, The 10th National Applied Talent Comprehensive Skills Competition, 2024. (Project Leader)</li>
+    <li><strong>National 3rd Prize</strong>, The 18th National University Student Social Practice and Science Contest on Energy Saving & Emission Reduction, 2025. (Project Leader)</li>
+    <li><strong>2nd Prize</strong>, The 14th Asia and Pacific Mathematical Contest in Modeling (APMCM), 2024.</li>
+  </ul>
 
-**Scholarships**
-* University First-Class Scholarship (Top 2%), 2025
-* University Second-Class Scholarship (Top 9%), 2024
+  <h3 style="margin-top: 0; border-bottom: 2px solid #eee; padding-bottom: 10px;">Scholarships</h3>
+  <ul>
+    <li>University First-Class Scholarship (Top 2%), 2025</li>
+    <li>University Second-Class Scholarship (Top 9%), 2024</li>
+  </ul>
 </div>
 
-🧙‍♂️ Extracurricular Activities
-======
-**Maker Association of Guangzhou University** | *President*
-* Led the university's largest student innovation community.
-* Organized the 12th "Winter Camp" and "Summer Camp" activities (500+ participants).
-* Organized the university-level selection for the National Energy Saving & Emission Reduction Contest.
+## 🧙‍♂️ Extracurricular Activities
+<div class="project-card" style="display: block;">
+<h3>Maker Association of Guangzhou University | <em>President</em></h3>
+<ul>
+  <li>Led the university's largest student innovation community.</li>
+  <li>Organized the 12th "Winter Camp" and "Summer Camp" activities (500+ participants).</li>
+  <li>Organized the university-level selection for the National Energy Saving & Emission Reduction Contest.</li>
+</ul>
 
-**Guangzhou-Hong Kong Science and Innovation Talent Class** | *Teaching Assistant*
-* Provided voluntary guidance to outstanding freshmen on scientific research projects.
+<h3>Guangzhou-Hong Kong Science and Innovation Talent Class | <em>Teaching Assistant</em></h3>
+<ul>
+  <li>Provided voluntary guidance to outstanding freshmen on scientific research projects.</li>
+</ul>
+</div>
 
-🛠️ Internship
-======
-**Guangdong Industry Polytechnic** | *Engineering Training Trainee* (04/2025)
-* Completed comprehensive engineering training in manufacturing processes and electrical technology.
+## 🛠️ Internship
+<div class="project-card" style="display: block;">
+<h3>Guangdong Industry Polytechnic | <em>Engineering Training Trainee</em> (04/2025)</h3>
+<ul>
+  <li>Completed comprehensive engineering training in manufacturing processes and electrical technology.</li>
+</ul>
+</div>
