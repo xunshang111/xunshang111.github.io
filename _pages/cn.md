@@ -1,7 +1,7 @@
 ---
 layout: single
 permalink: /cn/
-title: "欢迎来到马翌阳的主页"
+title: "欢迎来到马艺洋的主页"
 author_profile: true
 lang: zh
 ---
@@ -111,7 +111,7 @@ lang: zh
   }
 
   /* Sidebar & Mobile */
-  .author__avatar img { border-radius: 50% !important; border: 4px solid rgba(255,255,255,0.8); }
+  .author__avatar img { border-radius: 12px !important; border: 4px solid rgba(255,255,255,0.8); }
 
   @media (min-width: 769px) {
     .sidebar {
@@ -134,7 +134,7 @@ lang: zh
   }
 </style>
 
-你好！我是**马翌阳**，**广州大学 (GZHU)** **智能制造工程**专业的本科在读学生。我预计于 2027 年毕业。
+你好！我是**马艺洋**，**广州大学 (GZHU)** **智能制造工程**专业的本科在读学生。我预计于 2027 年毕业。
 
 我的研究兴趣和技能主要集中在 Python 编程、C 语言编程和数学方面。
 
@@ -150,6 +150,26 @@ lang: zh
       <span style="background: rgba(255,255,255,0.6); padding: 4px 10px; border-radius: 12px; font-size: 0.8em; color: #555; border: 1px solid rgba(0,0,0,0.05);" class="geek-meta">排名: 8/57</span>
     </div>
     <p style="margin: 0; font-size: 0.9em;"><strong>核心荣誉:</strong> 校一等奖学金 (前 2%)，大二综测专业第一。</p>
+  </div>
+</div>
+</div>
+
+## 📜 发表论文
+
+<div id="publications">
+<div class="paper-card">
+  <div class="card-icon">📜</div>
+  <div class="card-content">
+    <strong class="geek-meta">2026</strong><br>
+    Haotian Shi, Zihang Luo, <strong>Yiyang Ma</strong>, Guanquan Zhu, Xin Dai. <strong>SSGTN: Spectral-Spatial Graph Transformer Network for Hyperspectral Image Classification</strong>. <em>(Remote Sensing)</em>, <a href="https://doi.org/10.3390/rs18020199">[Paper]</a>.
+  </div>
+</div>
+
+<div class="paper-card">
+  <div class="card-icon">📜</div>
+  <div class="card-content">
+    <strong class="geek-meta">2025</strong><br>
+    Guiyun Liu, Haozhe Xu, Yu Zhu, <strong>Yiyang Ma</strong>, Zhipeng Chen. <strong>Optimal Media Control Strategy for Rumor Propagation in a Multilingual Dual Layer Reaction Diffusion Network Model</strong>. <em>(Mathematics)</em>, <a href="https://doi.org/10.3390/math13142253">[Paper]</a>.
   </div>
 </div>
 </div>
@@ -251,7 +271,7 @@ lang: zh
     <div class="timeline-marker"></div>
     <div class="timeline-date">04/2025</div>
     <div class="timeline-content">
-      <h3 style="margin-top:0;">广东工贸职业技术学院</h3>
+      <h3 style="margin-top:0;">广东轻工职业技术大学</h3>
       <p><em>工程实训学员</em></p>
       <ul>
         <li>在机电技术学院完成了全面的工程实训，获得了制造工艺和电气技术的实践经验。</li>

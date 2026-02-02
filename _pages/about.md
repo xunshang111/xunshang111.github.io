@@ -115,7 +115,7 @@ redirect_from:
   }
 
   /* Sidebar & Mobile */
-  .author__avatar img { border-radius: 50% !important; border: 4px solid rgba(255,255,255,0.8); }
+  .author__avatar img { border-radius: 12px !important; border: 4px solid rgba(255,255,255,0.8); }
 
   @media (min-width: 769px) {
     .sidebar {
