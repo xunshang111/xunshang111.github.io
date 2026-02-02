@@ -116,6 +116,18 @@ My research interests and skills lie in Python Programming, C Programming, and M
   </div>
 </div>
 
+## 📜 Publication
+
+<div class="paper-card">
+  <strong>2026</strong><br>
+  Haotian Shi, Zihang Luo, <strong>Yiyang Ma</strong>, Guanquan Zhu, Xin Dai. <strong>SSGTN: Spectral-Spatial Graph Transformer Network for Hyperspectral Image Classification</strong>. <em>(Remote Sensing)</em>, <a href="https://doi.org/10.3390/rs18020199">[Paper]</a>.
+</div>
+
+<div class="paper-card">
+  <strong>2025</strong><br>
+  Guiyun Liu, Haozhe Xu, Yu Zhu, <strong>Yiyang Ma</strong>, Zhipeng Chen. <strong>Optimal Media Control Strategy for Rumor Propagation in a Multilingual Dual Layer Reaction Diffusion Network Model</strong>. <em>(Mathematics)</em>, <a href="https://doi.org/10.3390/math13142253">[Paper]</a>.
+</div>
+
 💼 Project Experience
 ======
 
