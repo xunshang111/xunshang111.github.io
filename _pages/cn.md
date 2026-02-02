@@ -1,4 +1,5 @@
 ---
+layout: single
 permalink: /cn/
 title: "欢迎来到马翌阳的主页"
 author_profile: true

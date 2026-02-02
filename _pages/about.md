@@ -135,6 +135,29 @@ redirect_from:
     }
     .card-icon { margin-bottom: 10px; }
   }
+
+  /* Sidebar & Mobile */
+  .author__avatar img { border-radius: 50% !important; border: 4px solid rgba(255,255,255,0.8); }
+
+  @media (min-width: 769px) {
+    .sidebar {
+      position: sticky !important;
+      top: 80px;
+      z-index: 10;
+    }
+  }
+  @media (max-width: 768px) {
+    .sidebar {
+      position: relative !important;
+      top: 0 !important;
+      width: 100% !important;
+      margin-bottom: 20px;
+    }
+    .education-card, .project-card, .paper-card {
+      flex-direction: column;
+    }
+    .card-icon { margin-bottom: 10px; }
+  }
   .author__avatar img { border-radius: 50% !important; border: 4px solid rgba(255,255,255,0.8); }
 </style>
 
@@ -188,7 +211,7 @@ My research interests and skills lie in Python Programming, C Programming, and M
     <p><em>Core Member (Supervisor: Zhifu Li & Daqi Chen) | 09/2024 - Present</em><br>
     Developed a high-performance underwater robot with <strong>Neural Network-enhanced Fuzzy PID controller</strong> (reduced offset by 34%). Implemented <strong>Actor-Critic Reinforcement Learning</strong> for thruster fault tolerance (0.7s response). Improved <strong>YOLOv11-based visual detection</strong>, boosting crack detection accuracy by 14%.<br>
     <strong>Achievements:</strong> National 2nd Prize (China Robotics & AI Competition), National 3rd Prize (Energy Saving Competition).</p>
-    <a href="#" class="btn btn--primary" style="text-decoration: none; padding: 8px 16px; background-color: #24292e; color: white; border-radius: 4px; display: inline-block; margin-top: 10px;">📄 Project Page</a>
+    <a href="#" class="btn btn--primary">📄 Project Page</a>
   </div>
 </div>
 
@@ -198,8 +221,60 @@ My research interests and skills lie in Python Programming, C Programming, and M
     <h3>Intelligent Trash Can System Based on Three-stage Differential Separation Device</h3>
     <p><em>Core Member (Supervisor: Wenting Deng) | 01/2025-04/2025</em><br>
     Built an automated waste sorting system with Arduino Mega 2560 and CanMV K230. Deployed <strong>YOLOv5 model</strong> achieving 99.74% classification accuracy. Coordinated mechanical-electrical integration and filed an invention patent (2nd Student Inventor).</p>
-    <a href="#" class="btn btn--primary" style="text-decoration: none; padding: 8px 16px; background-color: #24292e; color: white; border-radius: 4px; display: inline-block; margin-top: 10px;">📄 Project Page</a>
+    <a href="#" class="btn btn--primary">📄 Project Page</a>
   </div>
+</div>
+</div>
+
+## 🥇 Scholarship & Awards
+<div id="awards" class="project-card" style="display: block;">
+  <h3 style="margin-top: 0; border-bottom: 2px solid #eee; padding-bottom: 10px;">National Competitions</h3>
+  <ul style="margin-bottom: 20px;">
+    <li><strong>Gold Medal</strong>, China International College Students' Innovation Competition 2025 (National Level).</li>
+    <li><strong>National 2nd Prize</strong>, The 27th China Robotics & Artificial Intelligence Competition, 2025.</li>
+    <li><strong>National 2nd Prize</strong>, The 10th National Applied Talent Comprehensive Skills Competition, 2024. (Project Leader)</li>
+    <li><strong>National 3rd Prize</strong>, The 18th National University Student Social Practice and Science Contest on Energy Saving & Emission Reduction, 2025. (Project Leader)</li>
+    <li><strong>2nd Prize</strong>, The 14th Asia and Pacific Mathematical Contest in Modeling (APMCM), 2024.</li>
+  </ul>
+
+  <h3 style="margin-top: 0; border-bottom: 2px solid #eee; padding-bottom: 10px;">Scholarships</h3>
+  <ul>
+    <li>University First-Class Scholarship (Top 2%), 2025</li>
+    <li>University Second-Class Scholarship (Top 9%), 2024</li>
+  </ul>
+</div>
+
+## 🧙‍♂️ Extracurricular Activities
+<div id="extracurricular-activities">
+<div class="timeline">
+
+  <div class="timeline-item">
+    <div class="timeline-marker"></div>
+    <div class="timeline-date">Current</div>
+    <div class="timeline-content">
+      <h3 style="margin-top:0;">Maker Association of Guangzhou University</h3>
+      <p><em>President</em></p>
+      <ul>
+        <li>Led the university's largest student innovation community.</li>
+        <li>Organized the 12th "Winter Camp" and "Summer Camp" activities (500+ participants).</li>
+        <li>Organized the university-level selection for the National Energy Saving & Emission Reduction Contest.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-marker"></div>
+    <div class="timeline-date">Current</div>
+    <div class="timeline-content">
+      <h3 style="margin-top:0;">Guangzhou-Hong Kong Science and Innovation Talent Class</h3>
+      <p><em>Teaching Assistant</em></p>
+      <ul>
+        <li>Provided voluntary guidance to outstanding freshmen on scientific research projects.</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
 </div>
 </div>
 
