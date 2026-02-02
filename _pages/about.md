@@ -135,6 +135,7 @@ redirect_from:
     }
     .card-icon { margin-bottom: 10px; }
   }
+  .author__avatar img { border-radius: 50% !important; border: 4px solid rgba(255,255,255,0.8); }
 </style>
 
 Hello! I am **Yiyang Ma**, a Bachelor of Engineering candidate at **Guangzhou University (GZHU)**, majoring in **Intelligent Manufacturing Engineering**. I am expected to graduate in 2027.
