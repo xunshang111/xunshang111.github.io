@@ -169,3 +169,17 @@
     font-size: $type-size-7;
   }
 }
+
+/* Force override as requested */
+.archive__item-teaser a.btn,
+.btn,
+.btn--primary {
+    background-color: #4a5568 !important; /* Slate Blue */
+    color: #ffffff !important;            /* FORCE WHITE TEXT */
+    border: none !important;
+    text-decoration: none !important;     /* Remove underline */
+}
+.archive__item-teaser a.btn:hover {
+    background-color: #2d3748 !important; /* Darker on hover */
+    color: #ffffff !important;
+}
