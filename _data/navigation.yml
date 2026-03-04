@@ -27,7 +27,9 @@ main:
     url: /#internship
 
   - title: "CV"
-    url: /cv/
+    url: /#cv-view
+    class: "cv-link"
 
-  - title: "中文"
-    url: /cn/
+  - title: "中文/English"
+    url: "javascript:toggleLanguage();"
+    class: "lang-toggle"
