@@ -31,5 +31,5 @@ main:
     class: "cv-link"
 
   - title: "中文/English"
-    url: "javascript:toggleLanguage();"
+    url: "#"
     class: "lang-toggle"

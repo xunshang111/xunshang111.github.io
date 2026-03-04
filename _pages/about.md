@@ -452,21 +452,24 @@ document.addEventListener('DOMContentLoaded', function() {
     var navLinks = document.querySelectorAll('.masthead__menu-item a');
     navLinks.forEach(function(link) {
         link.addEventListener('click', function(e) {
-            var href = this.getAttribute('href');
-
-            // If it's the language toggle, do nothing here (handled by inline javascript: href)
-            if (href && href.indexOf('javascript:') === 0) {
+            // Check if this is the language toggle
+            if (this.classList.contains('lang-toggle')) {
+                e.preventDefault();
+                toggleLanguage();
                 return;
             }
 
-            // If it's an anchor link
-            if (href && href.indexOf('/#') !== -1) {
+            var href = this.getAttribute('href');
+            if (!href) return;
+
+            // If it's an anchor link or contains a hash
+            if (href.indexOf('#') !== -1) {
                 var targetHash = href.substring(href.indexOf('#'));
 
                 if (targetHash === '#cv-view') {
                     homeView.style.display = 'none';
                     cvView.style.display = 'block';
-                    window.scrollTo(0, 0);
+                    // We let the browser's default hashchange handle the rest
                 } else {
                     homeView.style.display = 'block';
                     cvView.style.display = 'none';

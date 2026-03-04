@@ -10,7 +10,7 @@
           </li>
           {% assign nav_links = site.data.navigation.main %}
           {% for link in nav_links %}
-            {% if link.url contains 'http' or link.url contains 'javascript:' %}
+            {% if link.url contains 'http' or link.url == '#' %}
               {% assign domain = '' %}
             {% else %}
               {% assign domain = base_path %}
