@@ -468,7 +468,7 @@ body:not(.zh-active) div.lang-en {
 </style>
 
 <script>
-// SPA Navigation and Language Toggle Logic
+/* SPA Navigation and Language Toggle Logic */
 
 function toggleLanguage() {
     document.body.classList.toggle('zh-active');
@@ -478,7 +478,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var homeView = document.getElementById('home-view');
     var cvView = document.getElementById('cv-view');
 
-    // Function to handle hash changes
+    /* Function to handle hash changes */
     function handleHashChange() {
         var hash = window.location.hash;
 
@@ -489,13 +489,13 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             homeView.style.display = 'block';
             cvView.style.display = 'none';
-            // Allow default scrolling for other anchors like #education
+            /* Allow default scrolling for other anchors like #education */
         }
     }
 
-    // Use event delegation on the document body, BUT use capturing phase (true).
-    // The theme's greedy-nav or other scripts might call e.stopPropagation() on their listeners,
-    // which prevents the event from bubbling up to the body. Capturing catches it on the way down.
+    /* Use event delegation on the document body, BUT use capturing phase (true). */
+    /* The theme's greedy-nav or other scripts might call e.stopPropagation() on their listeners, */
+    /* which prevents the event from bubbling up to the body. Capturing catches it on the way down. */
     document.body.addEventListener('click', function(e) {
         var target = e.target.closest('a');
         if (!target) return;
@@ -503,45 +503,45 @@ document.addEventListener('DOMContentLoaded', function() {
         var href = target.getAttribute('href') || '';
         var text = target.innerText || '';
 
-        // 1. Check for Language Toggle
-        // The theme might strip the 'lang-toggle' class when it moves items into the dropdown.
-        // We reliably check by class OR by the text content "中文/English".
+        /* 1. Check for Language Toggle */
+        /* The theme might strip the 'lang-toggle' class when it moves items into the dropdown. */
+        /* We reliably check by class OR by the text content "中文/English". */
         if (target.classList.contains('lang-toggle') || text.includes('中文/English')) {
             e.preventDefault();
-            // Stop other click listeners (like the theme's default link handler) from interfering
+            /* Stop other click listeners (like the theme's default link handler) from interfering */
             e.stopPropagation();
             toggleLanguage();
             return;
         }
 
-        // 2. Handle SPA Navigation inside the site
+        /* 2. Handle SPA Navigation inside the site */
         if (href.indexOf('#') !== -1) {
             var targetHash = href.substring(href.indexOf('#'));
 
             if (targetHash === '#cv-view') {
                 homeView.style.display = 'none';
                 cvView.style.display = 'block';
-                // Force hash update so the back button works and 'hashchange' triggers
+                /* Force hash update so the back button works and 'hashchange' triggers */
                 if (window.location.hash !== '#cv-view') {
                     window.history.pushState(null, null, '#cv-view');
                 }
             } else if (targetHash !== '#' && targetHash !== '') {
-                // Clicking an anchor like #projects or #education
+                /* Clicking an anchor like #projects or #education */
                 homeView.style.display = 'block';
                 cvView.style.display = 'none';
             }
         } else if (href === '/' || (href.startsWith(window.location.origin) && href.endsWith('/'))) {
-            // Clicking "About Me" or Site Title
+            /* Clicking "About Me" or Site Title */
             homeView.style.display = 'block';
             cvView.style.display = 'none';
             window.scrollTo(0, 0);
         }
-    }, true); // <--- Capture phase is extremely important here
+    }, true); /* <--- Capture phase is extremely important here */
 
-    // Listen for browser back/forward buttons (hashchange event)
+    /* Listen for browser back/forward buttons (hashchange event) */
     window.addEventListener('hashchange', handleHashChange);
 
-    // Check initial hash on load
+    /* Check initial hash on load */
     handleHashChange();
 });
 </script>
