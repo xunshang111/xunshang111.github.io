@@ -493,36 +493,42 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Use event delegation on the document body to catch clicks dynamically
-    // This is crucial because the theme's greedy-nav might clone/move menu items
+    // Use event delegation on the document body, BUT use capturing phase (true).
+    // The theme's greedy-nav or other scripts might call e.stopPropagation() on their listeners,
+    // which prevents the event from bubbling up to the body. Capturing catches it on the way down.
     document.body.addEventListener('click', function(e) {
-        // Find if the clicked element or its parent is an anchor tag
         var target = e.target.closest('a');
         if (!target) return;
 
+        var href = target.getAttribute('href') || '';
+        var text = target.innerText || '';
+
         // 1. Check for Language Toggle
-        if (target.classList.contains('lang-toggle')) {
+        // The theme might strip the 'lang-toggle' class when it moves items into the dropdown.
+        // We reliably check by class OR by the text content "中文/English".
+        if (target.classList.contains('lang-toggle') || text.includes('中文/English')) {
             e.preventDefault();
+            // Stop other click listeners (like the theme's default link handler) from interfering
+            e.stopPropagation();
             toggleLanguage();
             return;
         }
 
         // 2. Handle SPA Navigation inside the site
-        var href = target.getAttribute('href');
-        if (!href) return;
-
-        // If it's an anchor link or contains a hash
         if (href.indexOf('#') !== -1) {
             var targetHash = href.substring(href.indexOf('#'));
 
             if (targetHash === '#cv-view') {
                 homeView.style.display = 'none';
                 cvView.style.display = 'block';
-                // Let the browser default handle the history state
-            } else {
+                // Force hash update so the back button works and 'hashchange' triggers
+                if (window.location.hash !== '#cv-view') {
+                    window.history.pushState(null, null, '#cv-view');
+                }
+            } else if (targetHash !== '#' && targetHash !== '') {
+                // Clicking an anchor like #projects or #education
                 homeView.style.display = 'block';
                 cvView.style.display = 'none';
-                // For links like /#projects, homeView must be block to show
             }
         } else if (href === '/' || (href.startsWith(window.location.origin) && href.endsWith('/'))) {
             // Clicking "About Me" or Site Title
@@ -530,7 +536,7 @@ document.addEventListener('DOMContentLoaded', function() {
             cvView.style.display = 'none';
             window.scrollTo(0, 0);
         }
-    });
+    }, true); // <--- Capture phase is extremely important here
 
     // Listen for browser back/forward buttons (hashchange event)
     window.addEventListener('hashchange', handleHashChange);
