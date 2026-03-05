@@ -362,6 +362,7 @@ My research interests and skills lie in Python Programming, C Programming, and M
 * **<span class="lang-en">Major:</span><span class="lang-zh" >专业：</span>** <span class="lang-en">Intelligent Manufacturing Engineering</span><span class="lang-zh" >智能制造工程</span> | **GPA:** 3.58/4.0 (<span class="lang-en">Rank: 8/57</span><span class="lang-zh" >排名: 8/57</span>) | **<span class="lang-en">Weighted Avg:</span><span class="lang-zh" >加权平均分：</span>** 88.20/100
 * **<span class="lang-en">Relevant Courses:</span><span class="lang-zh" >相关课程：</span>** <span class="lang-en">Linear Algebra (94), Python Programming (93), University Physics (90), C Programming Design (89).</span><span class="lang-zh" >线性代数 (94), Python 编程 (93), 大学物理 (90), C 语言程序设计 (89)。</span>
 * **<span class="lang-en">Core Honors:</span><span class="lang-zh" >核心荣誉：</span>** <span class="lang-en">University First-Class Scholarship (Top 2%), Ranked 1st in Major in Comprehensive Evaluation (Sophomore), University Second-Class Scholarship (Top 9%), CET-4.</span><span class="lang-zh" >校一等奖学金 (前 2%)，大二综测专业第一，校二等奖学金 (前 9%)，大学英语四级 (CET-4)。</span>
+</div>
 
 <br>
 
@@ -403,6 +404,7 @@ My research interests and skills lie in Python Programming, C Programming, and M
 *<span class="lang-en">Core Member (Supervisor: Wenting Deng)</span><span class="lang-zh" >核心成员 (指导老师: 邓文婷)</span> | 01/2025-04/2025*
 * <span class="lang-en">Built an automated waste sorting system utilizing a three-stage differential separation mechanism and dual-servo precision control. The system employs an Arduino Mega 2560 for motion control and a CanMV K230 module for edge AI computing. Specifically, I was responsible for deploying the YOLOv5 model and optimizing the recognition algorithm, achieving a high classification accuracy of 99.74% across four waste categories. Additionally, I coordinated the mechanical-electrical integration and successfully filed an invention patent as the second student inventor.</span><span class="lang-zh" >构建了一个利用三级差分分离机制和双伺服精密控制的自动化垃圾分类系统。使用 Arduino Mega 2560 进行运动控制，CanMV K230 模块进行边缘 AI 计算。我具体负责部署 YOLOv5 模型并优化识别算法，在四类垃圾中实现了 99.74% 的高分类准确率。此外，我协调机电一体化并作为第二学生发明人成功申请了发明专利。</span>
 * **<span class="lang-en">Outcome:</span><span class="lang-zh" >成果：</span>** <span class="lang-en">Filed an invention patent (2nd Student Inventor).</span><span class="lang-zh" >申请发明专利 (第二学生发明人)。</span>
+</div>
 
 <br>
 
@@ -433,6 +435,7 @@ My research interests and skills lie in Python Programming, C Programming, and M
 **<span class="lang-en">Guangzhou-Hong Kong Science and Innovation Talent Class</span><span class="lang-zh" >穗港科技创新人才班</span>**
 *<span class="lang-en">Teaching Assistant</span><span class="lang-zh" >助教</span> | <span class="lang-en">[Start Date]</span><span class="lang-zh" >[开始时间]</span> – <span class="lang-en">Present</span><span class="lang-zh" >至今</span>*
 * **<span class="lang-en">Mentorship:</span><span class="lang-zh" >指导：</span>** <span class="lang-en">Served as a Teaching Assistant for the elite talent class. Provided voluntary guidance to outstanding freshmen from various majors on scientific research projects during summer breaks.</span><span class="lang-zh" >担任精英人才班的助教。在暑假期间为来自不同专业的优秀新生提供科研项目的志愿指导。</span>
+</div>
 
 <br>
 
@@ -441,7 +444,6 @@ My research interests and skills lie in Python Programming, C Programming, and M
 **<span class="lang-en">Guangdong Industry Polytechnic</span><span class="lang-zh" >广东轻工职业技术大学</span>**
 *<span class="lang-en">Engineering Training Trainee</span><span class="lang-zh" >工程实训学员</span> | 04/2025*
 * **<span class="lang-en">Overview:</span><span class="lang-zh" >概述：</span>** <span class="lang-en">Completed comprehensive engineering training at the School of Mechanical and Electrical Technology, gaining hands-on experience in manufacturing processes and electrical technology.</span><span class="lang-zh" >在机电技术学院完成了全面的工程实训，获得了制造工艺和电气技术的实践经验。</span>
-
 </div>
 
 <style>
