@@ -354,7 +354,6 @@ My research interests and skills lie in Python Programming, C Programming, and M
 
 ## 📄 <span class="lang-en">Curriculum Vitae</span><span class="lang-zh" >个人简历</span>
 
-<div class="project-card" markdown="1">
 <h2 style="margin-top: 0; border-bottom: 2px solid #eee; padding-bottom: 10px;"><span class="lang-en">EDUCATION</span><span class="lang-zh" >教育背景</span></h2>
 
 **<span class="lang-en">Guangzhou University (GZHU)</span><span class="lang-zh" >广州大学 (GZHU)</span>**
@@ -365,7 +364,8 @@ My research interests and skills lie in Python Programming, C Programming, and M
 * **<span class="lang-en">Core Honors:</span><span class="lang-zh" >核心荣誉：</span>** <span class="lang-en">University First-Class Scholarship (Top 2%), Ranked 1st in Major in Comprehensive Evaluation (Sophomore), University Second-Class Scholarship (Top 9%), CET-4.</span><span class="lang-zh" >校一等奖学金 (前 2%)，大二综测专业第一，校二等奖学金 (前 9%)，大学英语四级 (CET-4)。</span>
 </div>
 
-<div class="project-card" markdown="1">
+<br>
+
 <h2 style="margin-top: 0; border-bottom: 2px solid #eee; padding-bottom: 10px;"><span class="lang-en">PROJECT EXPERIENCE</span><span class="lang-zh" >项目经历</span></h2>
 
 **<span class="lang-en">HoLoRA: Hyperspectral Image Classification via Holographic Low-Rank Adapter</span><span class="lang-zh" >HoLoRA: 基于全息低秩适配器的高光谱图像分类</span>**
@@ -379,6 +379,7 @@ My research interests and skills lie in Python Programming, C Programming, and M
 * **<span class="lang-en">Results:</span><span class="lang-zh" >实验结果:</span>** <span class="lang-en">95.07% OA on Indian Pines (+0.94% vs. SSFTT), 85% FLOPs of comparable methods. (Target: IEEE TIP)</span><span class="lang-zh" >在 Indian Pines 达到 95.07% OA (较 SSFTT 提升 0.94%)，且计算量仅为同类方法的 85%。(目标期刊: IEEE TIP)</span>
 
 <br>
+
 **<span class="lang-en">SSGTN: Spectral-Spatial Graph Transformer Network for HSI Classification</span><span class="lang-zh" >SSGTN: 基于空谱图变换网络的高光谱图像分类</span>**
 *<span class="lang-en">Haotian Shi, Zihang Luo, **Yiyang Ma**, Guanquan Zhu and Xin Dai (Supervisor: Xin Dai & Haotian Shi)</span><span class="lang-zh" >Haotian Shi, Zihang Luo, **Yiyang Ma**, Guanquan Zhu and Xin Dai (指导老师: 戴欣 & 史皓天)</span> | 05/2025 – 01/2026*
 *<span class="lang-en">Published in Remote Sensing (JCR Q1).</span><span class="lang-zh" >发表于 Remote Sensing (JCR一区)。</span>*
@@ -391,19 +392,22 @@ My research interests and skills lie in Python Programming, C Programming, and M
 * **<span class="lang-en">Results:</span><span class="lang-zh" >实验结果:</span>** <span class="lang-en">93.97% OA on Houston2018 (+2.95% vs. Graph-Mamba), utilizing only 3.8% FLOPs of standard Transformers (60G vs. 1578G).</span><span class="lang-zh" >在 Houston2018 达到 93.97% OA (较 Graph-Mamba 提升 2.95%)，计算量仅为标准 Transformer 的 3.8% (60G vs. 1578G)。</span>
 
 <br>
+
 **<span class="lang-en">A Robot for Underwater Energy Pipeline Crack Detection</span><span class="lang-zh" >水下能源管道裂缝检测机器人</span>**
 *<span class="lang-en">Core Member (Supervisor: Zhifu Li & Daqi Chen)</span><span class="lang-zh" >核心成员 (指导老师: 李志付 & 陈大奇)</span> | 09/2024 - <span class="lang-en">Present</span><span class="lang-zh" >至今</span>*
 * <span class="lang-en">Developed a high-performance underwater robot for pipeline inspection, focusing on stability and precision. The system features a Neural Network-enhanced Fuzzy PID controller that reduces navigation offset by 34% in complex currents, and an Actor-Critic Reinforcement Learning module for thruster fault tolerance with a 0.7s response time. Additionally, an improved YOLOv11-based visual detection system was implemented, boosting crack detection accuracy by 14%, effectively solving traditional inspection difficulties.</span><span class="lang-zh" >开发了一款高性能水下机器人用于管道检测，专注于稳定性和精度。系统采用神经网络增强的模糊 PID 控制器，将复杂水流中的导航偏差减少了 34%，并采用 Actor-Critic 强化学习模块实现推进器容错 (0.7秒响应时间)。此外，实施了改进的基于 YOLOv11 的视觉检测系统，将裂缝检测准确率提高了 14%，有效解决了传统检测难题。</span>
 * **<span class="lang-en">Achievements:</span><span class="lang-zh" >成就：</span>** <span class="lang-en">National 2nd Prize (China Robotics & AI Competition), National 3rd Prize (Energy Saving Competition).</span><span class="lang-zh" >国家二等奖 (中国机器人及人工智能大赛)，国家三等奖 (节能减排大赛)。</span>
 
 <br>
+
 **<span class="lang-en">Intelligent Trash Can System Based on Three-stage Differential Separation Device</span><span class="lang-zh" >基于三级差分分离装置的智能垃圾桶系统</span>**
 *<span class="lang-en">Core Member (Supervisor: Wenting Deng)</span><span class="lang-zh" >核心成员 (指导老师: 邓文婷)</span> | 01/2025-04/2025*
 * <span class="lang-en">Built an automated waste sorting system utilizing a three-stage differential separation mechanism and dual-servo precision control. The system employs an Arduino Mega 2560 for motion control and a CanMV K230 module for edge AI computing. Specifically, I was responsible for deploying the YOLOv5 model and optimizing the recognition algorithm, achieving a high classification accuracy of 99.74% across four waste categories. Additionally, I coordinated the mechanical-electrical integration and successfully filed an invention patent as the second student inventor.</span><span class="lang-zh" >构建了一个利用三级差分分离机制和双伺服精密控制的自动化垃圾分类系统。使用 Arduino Mega 2560 进行运动控制，CanMV K230 模块进行边缘 AI 计算。我具体负责部署 YOLOv5 模型并优化识别算法，在四类垃圾中实现了 99.74% 的高分类准确率。此外，我协调机电一体化并作为第二学生发明人成功申请了发明专利。</span>
 * **<span class="lang-en">Outcome:</span><span class="lang-zh" >成果：</span>** <span class="lang-en">Filed an invention patent (2nd Student Inventor).</span><span class="lang-zh" >申请发明专利 (第二学生发明人)。</span>
 </div>
 
-<div class="project-card" markdown="1">
+<br>
+
 <h2 style="margin-top: 0; border-bottom: 2px solid #eee; padding-bottom: 10px;"><span class="lang-en">SCHOLARSHIP & AWARDS</span><span class="lang-zh" >奖学金与奖项</span></h2>
 
 **<span class="lang-en">Scholarships & Academics:</span><span class="lang-zh" >奖学金与学业：</span>**
@@ -416,9 +420,9 @@ My research interests and skills lie in Python Programming, C Programming, and M
 * <span class="lang-en">**National 2nd Prize**, The 10th National Applied Talent Comprehensive Skills Competition, 2024. (Project Leader)</span><span class="lang-zh" >**国家二等奖**, 第十届全国应用型人才综合技能大赛, 2024 (项目负责人)。</span>
 * <span class="lang-en">**National 3rd Prize**, The 18th National University Student Social Practice and Science Contest on Energy Saving & Emission Reduction, 2025. (Project Leader)</span><span class="lang-zh" >**国家三等奖**, 第十八届全国大学生节能减排社会实践与科技竞赛, 2025 (项目负责人)。</span>
 * <span class="lang-en">**2nd Prize**, The 14th Asia and Pacific Mathematical Contest in Modeling (APMCM), 2024.</span><span class="lang-zh" >**二等奖**, 第十四届亚太地区大学生数学建模竞赛 (APMCM), 2024。</span>
-</div>
 
-<div class="project-card" markdown="1">
+<br>
+
 <h2 style="margin-top: 0; border-bottom: 2px solid #eee; padding-bottom: 10px;"><span class="lang-en">EXTRACURRICULAR ACTIVITIES</span><span class="lang-zh" >课外活动</span></h2>
 
 **<span class="lang-en">Maker Association of Guangzhou University</span><span class="lang-zh" >广州大学创客协会</span>**
@@ -427,12 +431,14 @@ My research interests and skills lie in Python Programming, C Programming, and M
 * **<span class="lang-en">Event Organization:</span><span class="lang-zh" >活动组织：</span>** <span class="lang-en">Successfully organized and executed the university-level selection for the 18th National University Student Social Practice and Science Contest on Energy Saving & Emission Reduction.</span><span class="lang-zh" >成功组织并执行了第十八届全国大学生节能减排社会实践与科技竞赛的校级选拔赛。</span>
 
 <br>
+
 **<span class="lang-en">Guangzhou-Hong Kong Science and Innovation Talent Class</span><span class="lang-zh" >穗港科技创新人才班</span>**
 *<span class="lang-en">Teaching Assistant</span><span class="lang-zh" >助教</span> | <span class="lang-en">[Start Date]</span><span class="lang-zh" >[开始时间]</span> – <span class="lang-en">Present</span><span class="lang-zh" >至今</span>*
 * **<span class="lang-en">Mentorship:</span><span class="lang-zh" >指导：</span>** <span class="lang-en">Served as a Teaching Assistant for the elite talent class. Provided voluntary guidance to outstanding freshmen from various majors on scientific research projects during summer breaks.</span><span class="lang-zh" >担任精英人才班的助教。在暑假期间为来自不同专业的优秀新生提供科研项目的志愿指导。</span>
 </div>
 
-<div class="project-card" markdown="1">
+<br>
+
 <h2 style="margin-top: 0; border-bottom: 2px solid #eee; padding-bottom: 10px;"><span class="lang-en">INTERNSHIP & TRAINING</span><span class="lang-zh" >实习与实训</span></h2>
 
 **<span class="lang-en">Guangdong Industry Polytechnic</span><span class="lang-zh" >广东轻工职业技术大学</span>**
@@ -440,9 +446,8 @@ My research interests and skills lie in Python Programming, C Programming, and M
 * **<span class="lang-en">Overview:</span><span class="lang-zh" >概述：</span>** <span class="lang-en">Completed comprehensive engineering training at the School of Mechanical and Electrical Technology, gaining hands-on experience in manufacturing processes and electrical technology.</span><span class="lang-zh" >在机电技术学院完成了全面的工程实训，获得了制造工艺和电气技术的实践经验。</span>
 </div>
 
-</div>
-
 <style>
+
 /* Language Toggle Logic */
 body.zh-active .lang-en {
     display: none !important;
