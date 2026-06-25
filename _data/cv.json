@@ -1,152 +1,288 @@
 {
   "basics": {
-    "name": "Your Sidebar Name",
-    "email": "none@example.org",
-    "phone": "",
-    "website": "https://academicpages.github.io",
-    "summary": "Currently employed at Red Brick University. Short biography for the left-hand sidebar",
+    "name": "Yiyang Ma",
+    "label": "B.E. Candidate in Intelligent Manufacturing",
+    "email": "mayiyang7313@gmail.com",
+    "website": "https://xunshang111.github.io",
+    "summary": "Undergraduate researcher at Guangzhou University working on efficient visual modeling, reliable 3D visual perception, metric depth estimation, low-cost and sparse sensing, and edge AI deployment.",
     "location": {
-      "address": "",
+      "address": "Guangzhou University",
       "postalCode": "",
-      "city": "Earth",
-      "countryCode": "US",
-      "region": ""
+      "city": "Guangzhou",
+      "countryCode": "China",
+      "region": "Guangdong"
     },
     "profiles": [
       {
-        "network": "Google Scholar",
-        "username": "",
-        "url": "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
-      },
-      {
-        "network": "ORCID",
-        "username": "",
-        "url": "https://orcid.org/yourorcidurl"
-      },
-      {
         "network": "GitHub",
-        "username": "academicpages",
-        "url": "https://github.com/academicpages"
+        "username": "xunshang111",
+        "url": "https://github.com/xunshang111"
       }
     ]
   },
-  "work": [],
   "education": [
     {
-      "institution": "GitHub University",
-      "area": "Ph.D in Version Control Theory",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2018",
-      "gpa": null,
-      "courses": []
-    },
-    {
-      "institution": "GitHub University",
-      "area": "M.S. in Jekyll",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2014",
-      "gpa": null,
-      "courses": []
-    },
-    {
-      "institution": "GitHub University",
-      "area": "B.S. in GitHub",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2012",
-      "gpa": null,
+      "institution": "Guangzhou University (GZHU)",
+      "area": "B.E. in Intelligent Manufacturing",
+      "studyType": "Bachelor of Engineering",
+      "startDate": "2023-09",
+      "endDate": "Expected 2027-06",
+      "gpa": "3.58/4.0; average score 89.90/100; rank 5/57; comprehensive assessment rank 1/57 in sophomore year",
       "courses": []
     }
   ],
-  "skills": [],
-  "languages": [],
-  "interests": [],
-  "references": [],
+  "work": [
+    {
+      "company": "Research Group of Prof. Xiaofei Yang, Guangzhou University",
+      "position": "Second Author; Leading Student Contributor - HALO",
+      "website": "",
+      "startDate": "2025-07",
+      "endDate": "2026-03",
+      "summary": "HALO: A Sample-Adaptive Low-Rank Modulation Framework for HSI Classification. Manuscript under review at IEEE Transactions on Geoscience and Remote Sensing.",
+      "highlights": [
+        "Identified the limitation of fixed-weight feature transformations in HSI classification, where complex intra-class spectral variability requires sample-adaptive modulation rather than uniform feature scaling.",
+        "Implemented a lightweight Transformer framework in PyTorch and contributed to Holographic Patch Embedding, Dynamic Low-Rank Adapter, and Spectral Polynomial Prior modules.",
+        "DLoRA introduces only 4.6K additional parameters per layer for sample-specific weight modulation.",
+        "Conducted ablation studies, visualization analysis, and manuscript writing.",
+        "Achieved 95.07% OA under 10% labels on Indian Pines and 86.22% OA on Houston 2013 under 1% labels, with 29.34M FLOPs."
+      ]
+    },
+    {
+      "company": "Research Group of Prof. Xiaofei Yang, Guangzhou University",
+      "position": "Second Author; Leading Student Contributor - R2Mamba",
+      "website": "",
+      "startDate": "2026-05",
+      "endDate": "2026-06",
+      "summary": "R2Mamba: Route-Reliability Mamba for Hyperspectral Image Classification. Manuscript under review at IEEE JSTARS.",
+      "highlights": [
+        "Developed an efficient Mamba-based HSI classification framework for patch-based central-pixel prediction under complex boundaries and mixed-pixel regions.",
+        "Designed the Route-Reliability Mamba Block, routing spatial token maps through row, column, main-diagonal, anti-diagonal, and center-outward Manhattan-ring scan paths.",
+        "Proposed a label-free local feature-difference cue and a Gate-Guided Aggregation head using path-gate entropy for certainty-aware pooling.",
+        "Conducted experiments on Indian Pines, Houston 2013, and WHU-Hi-HongHu with progressive ablation, boundary/interior diagnosis, local correction visualization, and route-fraction statistics."
+      ]
+    },
+    {
+      "company": "Guangzhou University",
+      "position": "Co-Author - SSGTN",
+      "website": "",
+      "startDate": "2025-05",
+      "endDate": "2026-01",
+      "summary": "SSGTN: Spectral-Spatial Graph Transformer Network for HSI Classification. Published in Remote Sensing.",
+      "highlights": [
+        "Contributed to implementation and evaluation of a dual-branch GCN-Transformer framework for label-scarce HSI classification.",
+        "Assisted with experiments involving adaptive superpixel graph construction, spectral-spatial shift modules, and complexity-accuracy comparison.",
+        "Achieved 99.62% OA on WHU-Hi-LongKou with 1% training samples while maintaining a favorable FLOPs-accuracy trade-off."
+      ]
+    },
+    {
+      "company": "Marine Pipeline Inspection ROV Project Team",
+      "position": "Lead Developer: Perception and Visualization Systems",
+      "website": "",
+      "startDate": "2024-09",
+      "endDate": "2025-11",
+      "summary": "Marine Pipeline Inspection ROV with Real-Time Edge Perception and Digital Twin Visualization.",
+      "highlights": [
+        "Built the perception and visualization software stack connecting the physical ROV, Jetson edge node, STM32 controller, and shore-side digital twin interface.",
+        "Implemented a real-time visual perception pipeline on NVIDIA Jetson Orin Nano, including stereo image processing, CLAHE-based underwater enhancement, and YOLOv11 inference, achieving 38 fps.",
+        "Integrated a Flask and Three.js/WebGL-based monitoring dashboard for synchronizing depth, attitude, UWB position, motion status, video, and detection results on the operator side.",
+        "The system won the National 2nd Prize in the China Robotics and AI Competition and the National 3rd Prize in the National University Student Contest on Energy Saving and Emission Reduction."
+      ]
+    },
+    {
+      "company": "Edge AI Smart Waste Sorting System Team",
+      "position": "AI Lead",
+      "website": "",
+      "startDate": "2025-01",
+      "endDate": "2025-04",
+      "summary": "Edge AI Smart Waste Sorting System with Three-Stage Differential Separation.",
+      "highlights": [
+        "Built a 12,000-image waste dataset across 4 classes and 11 subcategories from approximately 8,000 self-collected and annotated images.",
+        "Trained a YOLOv5s model and deployed it on a K230 RISC-V edge board using ONNX, NNCASE, INT8 quantization, and channel pruning.",
+        "Reduced model size by approximately 60% with less than 1% accuracy loss and achieved 31 fps real-time offline inference.",
+        "Supported a Chinese invention patent application under substantive examination as the 3rd inventor."
+      ]
+    },
+    {
+      "company": "Maker Association of Guangzhou University",
+      "position": "President",
+      "website": "",
+      "startDate": "2025-05",
+      "endDate": "Present",
+      "summary": "Lead one of the university's largest student innovation communities.",
+      "highlights": [
+        "Coordinate technical workshops, project teams, and peer mentoring activities.",
+        "Organized Winter Camp and Summer Camp hands-on technology workshops with 500+ participants, promoting student projects in robotics, embedded systems, and AI applications."
+      ]
+    }
+  ],
   "publications": [
     {
-      "name": "Paper Title Number 1",
-      "publisher": "Journal 1",
-      "releaseDate": "2009-10-01",
-      "website": "https://academicpages.github.io/files/paper1.pdf",
-      "summary": "This paper is about the number 1. The number 2 is left for future work."
+      "name": "HALO: A Sample-Adaptive Low-Rank Modulation Framework for HSI Classification",
+      "publisher": "IEEE Transactions on Geoscience and Remote Sensing, under review",
+      "releaseDate": "2026",
+      "website": "",
+      "summary": "Yang, X., Ma, Y., Wen, J., Xue, M., Fang, Y., Ban, Y., and Zhou, Y. Second author and leading student contributor."
     },
     {
-      "name": "Paper Title Number 2",
-      "publisher": "Journal 1",
-      "releaseDate": "2010-10-01",
-      "website": "https://academicpages.github.io/files/paper2.pdf",
-      "summary": "This paper is about the number 2. The number 3 is left for future work."
+      "name": "R2Mamba: Route-Reliability Mamba for Hyperspectral Image Classification",
+      "publisher": "IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, under review",
+      "releaseDate": "2026",
+      "website": "",
+      "summary": "Wang, W., Ma, Y., Yang, X., Su, Y., and Jiang, M. Second author and leading student contributor."
     },
     {
-      "name": "Paper Title Number 3",
-      "publisher": "Journal 1",
-      "releaseDate": "2015-10-01",
-      "website": "https://academicpages.github.io/files/paper3.pdf",
-      "summary": "This paper is about the number 3. The number 4 is left for future work."
-    },
-    {
-      "name": "Paper Title Number 4",
-      "publisher": "GitHub Journal of Bugs",
-      "releaseDate": "2024-02-17",
-      "website": "https://academicpages.github.io/files/paper3.pdf",
-      "summary": "This paper is about fixing template issue #693."
+      "name": "SSGTN: Spectral-Spatial Graph Transformer Network for HSI Classification",
+      "publisher": "Remote Sensing",
+      "releaseDate": "2026",
+      "website": "",
+      "summary": "Shi, H., Luo, Z., Ma, Y., Zhu, G., and Dai, X. Co-author."
     }
   ],
-  "presentations": [
+  "patents": [
     {
-      "name": "Talk 1 on Relevant Topic in Your Field",
-      "event": "UC San Francisco, Department of Testing",
-      "date": "2012-03-01",
-      "location": "San Francisco, CA, USA",
-      "description": ""
+      "title": "Edge AI Waste Sorting System Based on Three-Stage Differential Separation",
+      "date": "2025",
+      "status": "Chinese invention patent application, under substantive examination",
+      "role": "3rd Inventor"
     },
     {
-      "name": "Tutorial 1 on Relevant Topic in Your Field",
-      "event": "UC-Berkeley Institute for Testing Science",
-      "date": "2013-03-01",
-      "location": "Berkeley, CA, USA",
-      "description": ""
-    },
-    {
-      "name": "Talk 2 on Relevant Topic in Your Field",
-      "event": "London School of Testing",
-      "date": "2014-02-01",
-      "location": "London, UK",
-      "description": ""
-    },
-    {
-      "name": "Conference Proceeding talk 3 on Relevant Topic in Your Field",
-      "event": "Testing Institute of America 2014 Annual Conference",
-      "date": "2014-03-01",
-      "location": "Los Angeles, CA, USA",
-      "description": ""
+      "title": "Integrated Low-Carbon Seeding and Harvesting Agricultural Machine",
+      "date": "2024",
+      "status": "Chinese utility model patent, granted",
+      "role": "4th Inventor"
     }
   ],
-  "teaching": [
+  "awards": [
     {
-      "course": "Teaching experience 1",
-      "institution": "University 1, Department",
-      "date": "2014-01-01",
-      "role": "Undergraduate course",
-      "description": ""
+      "title": "Gold Medal, National Final, China International College Students' Innovation Competition",
+      "date": "2025",
+      "awarder": "National level",
+      "summary": "Representative national-level professional competition award."
     },
     {
-      "course": "Teaching experience 2",
-      "institution": "University 1, Department",
-      "date": "2015-01-01",
-      "role": "Workshop",
-      "description": ""
+      "title": "National 2nd Prize, 27th China Robotics and Artificial Intelligence Competition",
+      "date": "2025",
+      "awarder": "National level",
+      "summary": "Marine pipeline inspection ROV project."
+    },
+    {
+      "title": "National 3rd Prize, 18th National University Student Contest on Energy Saving and Emission Reduction",
+      "date": "2025",
+      "awarder": "National level",
+      "summary": "Marine pipeline inspection ROV project."
+    },
+    {
+      "title": "National 2nd Prize, 10th National Applied Talent Comprehensive Skills Competition",
+      "date": "2025",
+      "awarder": "National level",
+      "summary": ""
+    },
+    {
+      "title": "2nd Prize, 14th Asia and Pacific Mathematical Contest in Modeling",
+      "date": "2024",
+      "awarder": "APMCM",
+      "summary": "Top 800 out of 7,488 papers with 27,000+ participants."
+    },
+    {
+      "title": "First-Class Scholarship and Outstanding Student Award",
+      "date": "2025",
+      "awarder": "Guangzhou University",
+      "summary": "Top 2%."
+    },
+    {
+      "title": "Advanced Individual for Academic Enrichment",
+      "date": "2025",
+      "awarder": "Guangzhou University",
+      "summary": "Top 1%."
+    },
+    {
+      "title": "Second-Class Scholarship",
+      "date": "2024",
+      "awarder": "Guangzhou University",
+      "summary": "Top 9%."
+    }
+  ],
+  "skills": [
+    {
+      "name": "Programming and Deep Learning",
+      "level": "",
+      "keywords": ["Python", "C", "PyTorch", "OpenCV", "YOLO"]
+    },
+    {
+      "name": "Model Training and Evaluation",
+      "level": "",
+      "keywords": ["Dataset construction", "Ablation studies", "Visualization analysis", "Experimental result tracking"]
+    },
+    {
+      "name": "Edge AI Deployment",
+      "level": "",
+      "keywords": ["ONNX", "NNCASE", "INT8 quantization", "Channel pruning", "K230 RISC-V", "MaixCAM"]
+    },
+    {
+      "name": "Embedded and Tools",
+      "level": "",
+      "keywords": ["Arduino", "Git", "LaTeX", "Markdown", "SolidWorks"]
+    },
+    {
+      "name": "AI-Assisted Research Workflow",
+      "level": "",
+      "keywords": ["Literature triage", "Code debugging", "Experiment planning", "Technical writing", "Manual verification"]
     }
   ],
   "portfolio": [
     {
-      "name": "Portfolio item number 1",
-      "category": "portfolio",
-      "date": "",
-      "url": "",
-      "description": "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
+      "name": "HALO / DLoRA for Hyperspectral Image Classification",
+      "category": "Research",
+      "date": "2025-2026",
+      "url": "/#projects",
+      "description": "Lightweight Transformer framework with Holographic Patch Embedding, Dynamic Low-Rank Adapter, and Spectral Polynomial Prior."
+    },
+    {
+      "name": "R2Mamba for HSI Classification",
+      "category": "Research",
+      "date": "2026",
+      "url": "/#projects",
+      "description": "Route-reliability Mamba framework with multiple scan paths, gate-guided aggregation, and certainty-aware pooling."
+    },
+    {
+      "name": "Marine Pipeline Inspection ROV",
+      "category": "Robotics and Edge AI",
+      "date": "2024-2025",
+      "url": "/#projects",
+      "description": "Jetson-based real-time vision and Flask/Three.js digital twin dashboard for underwater inspection."
+    },
+    {
+      "name": "Edge AI Smart Waste Sorting System",
+      "category": "Edge AI",
+      "date": "2025",
+      "url": "/#projects",
+      "description": "YOLOv5s waste recognition deployed on K230 RISC-V hardware at 31 fps after INT8 quantization and pruning."
+    },
+    {
+      "name": "Integrated Low-Carbon Seeding and Harvesting Robot",
+      "category": "Robotics",
+      "date": "2024",
+      "url": "/#awards",
+      "description": "Participated in mechanical design, prototype development, system integration, and patent documentation for an electric celtuce agricultural robot."
     }
-  ]
+  ],
+  "languages": [
+    {
+      "language": "Chinese",
+      "fluency": "Native"
+    },
+    {
+      "language": "English",
+      "fluency": "Working proficiency"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Research Interests",
+      "keywords": ["Efficient visual modeling", "Reliable 3D visual perception", "Metric depth estimation", "Low-cost sparse sensing", "Edge AI deployment"]
+    }
+  ],
+  "presentations": [],
+  "teaching": [],
+  "references": []
 }

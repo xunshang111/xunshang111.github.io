@@ -1,550 +1,1003 @@
 ---
 permalink: /
-title: "Welcome to Yiyang Ma's Homepage"
-author_profile: true
-redirect_from: 
+title: "Yiyang Ma"
+author_profile: false
+redirect_from:
   - /about/
   - /about.html
 ---
 
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
 <style>
-  /* 1. SOFT AURORA BACKGROUND (PRESERVED) */
+  html { scroll-behavior: smooth; }
   body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
-    line-height: 1.6 !important;
-    color: #2c3e50;
-    background-color: #fbfbfb;
-    background-image:
-      radial-gradient(at 0% 0%, rgba(200, 220, 255, 0.3) 0px, transparent 50%),
-      radial-gradient(at 100% 0%, rgba(230, 210, 255, 0.3) 0px, transparent 50%),
-      radial-gradient(at 100% 100%, rgba(255, 230, 230, 0.2) 0px, transparent 50%);
-    background-attachment: fixed;
-    min-height: 100vh;
+    background: #fbfaf7;
+    color: #222831;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   }
-
-  /* 2. GLASSMORPHISM CARDS */
-  .sidebar, .education-card, .project-card, .paper-card, .timeline-content {
-    background: rgba(255, 255, 255, 0.6) !important;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    color: #333 !important;
-    border: 1px solid rgba(255, 255, 255, 0.8);
-    border-radius: 16px;
-    padding: 24px;
-    margin-bottom: 24px;
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
-    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease;
+  .archive, .page, .page__inner-wrap { float: none !important; max-width: none !important; padding-right: 0 !important; width: 100% !important; }
+  .page__title { display: none; }
+  .page__content { max-width: none !important; padding-top: 0; width: 100% !important; }
+  .page__content p, .page__content li { font-size: 0.98rem; line-height: 1.72; }
+  .page__content h1, .page__content h2, .page__content h3 { letter-spacing: 0; }
+  .masthead {
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    background: rgba(251, 250, 247, 0.94) !important;
+    border-bottom: 1px solid rgba(70, 63, 52, 0.12);
+  }
+  .masthead__inner-wrap { max-width: 1160px; }
+  .greedy-nav, .greedy-nav .visible-links, .greedy-nav .hidden-links { background: transparent !important; }
+  .masthead__menu-item a {
+    color: #27303d !important;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 0.88rem;
+    font-weight: 650;
+    letter-spacing: 0;
     position: relative;
-    overflow: hidden;
+    transition: color 160ms ease, background 160ms ease;
   }
-
-  /* Hover Pop Effect */
-  .education-card:hover, .project-card:hover, .paper-card:hover, .timeline-content:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1), 0 0 20px rgba(255, 255, 255, 0.4);
-    border-color: #fff;
-  }
-
-  /* GEEK TYPOGRAPHY */
-  .geek-meta, .timeline-date, .card-meta, .card-content p em, .card-content p strong {
-    /* Using system monospace or Fira Code if loaded */
-    font-family: 'Fira Code', 'SF Mono', 'Consolas', 'Courier New', monospace;
-  }
-
-  /* Reset strong/em font size/color if needed, but geek-meta usually smaller */
-  .card-content p em {
-    font-size: 0.9em;
-    color: #555;
-    font-style: normal; /* Monospace usually looks better normal */
-  }
-
-  /* Flex layout for Icon + Content */
-  .education-card, .project-card, .paper-card {
-    display: flex;
-    gap: 20px;
-    align-items: flex-start;
-  }
-
-  /* Link Colors & Icons */
-  .education-card a, .project-card a, .paper-card a { color: #0366d6 !important; text-decoration: none; }
-  .education-card a:hover, .project-card a:hover, .paper-card a:hover { text-decoration: underline; }
-  .project-card a.btn { color: #fff !important; text-decoration: none !important; }
-
-  .card-icon {
-    flex-shrink: 0;
-    width: 50px; height: 50px;
-    background: rgba(255, 255, 255, 0.5);
-    border-radius: 12px;
-    display: flex; align-items: center; justify-content: center; font-size: 24px;
-    border: 1px solid rgba(255,255,255,0.8);
-  }
-
-  /* TIMELINE LAYOUT */
-  .timeline {
-    position: relative;
-    padding-left: 30px;
-    border-left: 2px solid rgba(0,0,0,0.1);
-    margin-left: 10px;
-    margin-top: 20px;
-  }
-  .timeline-item {
-    position: relative;
-    margin-bottom: 30px;
-  }
-  .timeline-marker {
+  .masthead__menu-item a::after {
+    background: #2f6f68;
+    bottom: -0.32rem;
+    content: "";
+    height: 2px;
+    left: 50%;
     position: absolute;
-    left: -37px;
-    top: 20px;
-    width: 12px;
-    height: 12px;
-    background: #fff;
-    border: 3px solid #0366d6;
-    border-radius: 50%;
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+    transition: transform 180ms ease;
+    width: calc(100% - 0.6rem);
+  }
+  .masthead__menu-item a:hover::after,
+  .masthead__menu-item a.is-active::after,
+  .masthead__menu-item.selected a::after { transform: translateX(-50%) scaleX(1); }
+  #theme-toggle a {
+    align-items: center;
+    background: rgba(255, 253, 248, 0.78);
+    border: 1px solid rgba(124, 116, 103, 0.32);
+    border-radius: 999px;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.72);
+    display: inline-flex !important;
+    gap: 0.36rem;
+    height: 34px;
+    justify-content: center;
+    margin-left: 0.45rem;
+    min-width: 92px;
+    padding: 0 0.62rem;
+    width: auto !important;
+  }
+  #theme-toggle a::after { display: none; }
+  .masthead__inner-wrap,
+  .masthead__menu,
+  .greedy-nav,
+  .greedy-nav .visible-links,
+  .greedy-nav .visible-links li,
+  .greedy-nav .visible-links a {
+    background: transparent !important;
+  }
+  .greedy-nav > button {
+    align-items: center;
+    background: transparent !important;
+    border: 1px solid #d8d0c4;
+    border-radius: 8px;
+    box-shadow: none !important;
+    display: none;
+    height: 42px;
+    justify-content: center;
+    margin-left: 0.5rem;
+    padding: 0;
+    position: relative;
+    width: 46px;
+  }
+  .greedy-nav > button .navicon,
+  .greedy-nav > button .navicon::before,
+  .greedy-nav > button .navicon::after {
+    background: #27303d !important;
+    border-radius: 999px;
+    height: 3px;
+    width: 24px;
+  }
+  .mobile-nav-panel {
+    background: rgba(255, 253, 248, 0.98);
+    border: 1px solid #e1d9ce;
+    border-radius: 8px;
+    box-shadow: 0 18px 40px rgba(41, 33, 21, 0.13);
+    display: grid;
+    gap: 0.15rem;
+    padding: 0.55rem;
+    position: absolute;
+    right: 0.75rem;
+    top: calc(100% + 0.45rem);
+    width: min(270px, calc(100vw - 1.5rem));
+    z-index: 1000;
+  }
+  .mobile-nav-panel[hidden] { display: none; }
+  .mobile-nav-panel a {
+    border-radius: 6px;
+    color: #27303d !important;
+    font-size: 0.92rem;
+    font-weight: 650;
+    padding: 0.72rem 0.8rem;
+    text-decoration: none !important;
+  }
+  .mobile-nav-panel a:hover,
+  .mobile-nav-panel a:active { background: #f1ece4; }
+  .info-card,
+  .publication,
+  .project-card,
+  .profile-card,
+  .action-button,
+  .project-image-link,
+  .project-text-link,
+  .skill-pill,
+  .tag {
+    transition: background 180ms ease, border-color 180ms ease, box-shadow 180ms ease, color 180ms ease, transform 180ms ease, filter 180ms ease;
+  }
+  .info-card,
+  .publication,
+  .project-card,
+  .profile-card {
+    isolation: isolate;
+    position: relative;
+  }
+  .info-card::after,
+  .publication::after,
+  .project-card::after,
+  .profile-card::after {
+    background: linear-gradient(125deg, transparent 0%, rgba(255, 255, 255, 0.18) 38%, rgba(255, 255, 255, 0.46) 50%, rgba(255, 255, 255, 0.12) 62%, transparent 100%);
+    content: "";
+    inset: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    transform: translateX(-36%) skewX(-10deg);
+    transition: opacity 220ms ease, transform 620ms ease;
     z-index: 1;
-    box-shadow: 0 0 0 4px rgba(3, 102, 214, 0.1);
   }
-  .timeline-date {
-    margin-bottom: 8px;
-    display: block;
+  .info-card > *,
+  .publication > *,
+  .project-card > *,
+  .profile-card > * {
+    position: relative;
+    z-index: 2;
+  }
+  .info-card:hover,
+  .publication:hover,
+  .project-card:hover {
+    background: rgba(255, 253, 248, 0.96);
+    border-color: #b9aa99;
+    box-shadow: 0 18px 38px rgba(41, 33, 21, 0.12), 0 1px 0 rgba(255, 255, 255, 0.78) inset;
+    transform: translateY(-3px);
+  }
+  .info-card:hover::after,
+  .publication:hover::after,
+  .project-card:hover::after {
+    opacity: 1;
+    transform: translateX(36%) skewX(-10deg);
+  }
+  .project-image-link:hover img { filter: saturate(1.04) contrast(1.02); }
+  .project-text-link:hover { color: #204f49 !important; transform: translateX(2px); }
+  .action-button:active,
+  .project-card:active { transform: translateY(0); }
+  .page__footer {
+    background: #f2eee7;
+    color: #717987;
+    margin-top: 0;
+  }
+  .page__footer a { color: #344052 !important; font-weight: 650; text-decoration: none !important; }
+  .page__footer a:hover { color: #2f6f68 !important; }
+  .page__footer-follow .social-icons { align-items: center; display: flex; flex-wrap: wrap; gap: 0.5rem 0.9rem; padding-left: 0; }
+  .page__footer-follow .social-icons li { list-style: none; margin: 0; }
+  .theme-icon {
+    color: #394454;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.66rem;
     font-weight: 600;
-    color: #0366d6;
-    font-size: 0.9em;
+    line-height: 1;
+    min-width: 34px;
+    text-align: center;
+  }
+  .theme-switch__icon {
+    align-items: center;
+    border-radius: 999px;
+    color: #8b7653;
+    display: inline-flex;
+    flex: 0 0 20px;
+    height: 20px;
+    justify-content: center;
+    opacity: 0.52;
+    position: relative;
+    transition: background 160ms ease, color 160ms ease, opacity 160ms ease, transform 160ms ease;
+    width: 20px;
+  }
+  .theme-switch__icon::before,
+  .theme-switch__icon::after {
+    box-sizing: border-box;
+    content: "";
+    position: absolute;
+  }
+  .theme-switch__icon--sun { background: #f4ead8; color: #8f6220; opacity: 1; }
+  .theme-switch__icon--sun::before {
+    background: currentColor;
+    border-radius: 999px;
+    height: 6px;
+    left: 7px;
+    top: 7px;
+    width: 6px;
+    box-shadow:
+      0 -6px 0 -2px currentColor,
+      0 6px 0 -2px currentColor,
+      6px 0 0 -2px currentColor,
+      -6px 0 0 -2px currentColor,
+      4px 4px 0 -2px currentColor,
+      -4px -4px 0 -2px currentColor,
+      4px -4px 0 -2px currentColor,
+      -4px 4px 0 -2px currentColor;
+  }
+  .theme-switch__icon--moon { color: #6d7482; }
+  .theme-switch__icon--moon::before {
+    background: currentColor;
+    border-radius: 999px;
+    height: 11px;
+    left: 5px;
+    top: 4px;
+    width: 11px;
+  }
+  .theme-switch__icon--moon::after {
+    background: #fffdf8;
+    border-radius: 999px;
+    height: 10px;
+    left: 9px;
+    top: 2px;
+    width: 10px;
+  }
+  #theme-toggle a:hover .theme-switch__icon { transform: translateY(-1px); }
+  .profile-shell {
+    --ink: #1f2933;
+    --muted: #687383;
+    --line: #e1d9ce;
+    --soft: #f1ece4;
+    --panel: rgba(255, 253, 248, 0.9);
+    --teal: #2f6f68;
+    --gold: #9a6a20;
+    --rust: #9f4f2f;
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 1.35rem 4.6rem;
+  }
+  .hero {
+    display: grid;
+    grid-template-columns: minmax(0, 620px) minmax(320px, 360px);
+    gap: 3.4rem;
+    align-items: center;
+    justify-content: center;
+    padding: 5.2rem 0 4.4rem;
+  }
+  .kicker {
+    color: var(--teal);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0;
+    margin-bottom: 1.1rem;
+    text-transform: uppercase;
+  }
+  .hero-title {
+    color: var(--ink);
+    font-family: "Newsreader", Georgia, serif;
+    font-size: 5.7rem;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 0.95;
+    margin: 0 0 1.1rem;
+  }
+  .hero-subtitle {
+    color: #253041;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 1.32rem;
+    font-weight: 650;
+    line-height: 1.42;
+    max-width: 610px;
+    margin: 0 0 1rem;
+  }
+  .hero-copy { color: var(--muted); font-size: 1rem; max-width: 610px; margin: 0 0 1.25rem; }
+  .action-row { display: flex; flex-wrap: wrap; gap: 0.62rem; margin-top: 1.35rem; }
+  .action-button {
+    align-items: center;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    color: #1f2933 !important;
+    display: inline-flex;
+    font-size: 0.9rem;
+    font-weight: 700;
+    min-height: 40px;
+    padding: 0.48rem 0.9rem;
+    text-decoration: none !important;
+    transition: background 160ms ease, border-color 160ms ease, transform 160ms ease;
+  }
+  .action-button:hover { background: white; border-color: #b9ad9f; transform: translateY(-1px); }
+  .action-button.primary { background: #1f2933; border-color: #1f2933; color: #fffaf2 !important; }
+  .profile-card {
+    --glare-x: 50%;
+    --glare-y: 18%;
+    --tilt-x: 0deg;
+    --tilt-y: 0deg;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    box-shadow: 0 18px 44px rgba(41, 33, 21, 0.1), 0 1px 0 rgba(255, 255, 255, 0.82) inset;
+    overflow: hidden;
+    transform: perspective(900px) rotateX(var(--tilt-x)) rotateY(var(--tilt-y)) translateY(0);
+    transform-style: preserve-3d;
+    will-change: transform;
+  }
+  .profile-card::before {
+    background:
+      radial-gradient(circle at var(--glare-x) var(--glare-y), rgba(255, 255, 255, 0.54), rgba(255, 255, 255, 0.18) 22%, transparent 46%),
+      linear-gradient(135deg, rgba(255, 255, 255, 0.34), transparent 36%, rgba(47, 111, 104, 0.08) 100%);
+    content: "";
+    inset: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    transition: opacity 180ms ease;
+    z-index: 1;
+  }
+  .profile-card:hover,
+  .profile-card.is-card-active {
+    border-color: #b9aa99;
+    box-shadow: 0 24px 58px rgba(41, 33, 21, 0.16), 0 1px 0 rgba(255, 255, 255, 0.88) inset;
+  }
+  .profile-card:hover::before,
+  .profile-card.is-card-active::before { opacity: 1; }
+  .profile-card:hover::after,
+  .profile-card.is-card-active::after {
+    opacity: 1;
+    transform: translateX(32%) skewX(-10deg);
+  }
+  .profile-card img { aspect-ratio: 4 / 3; display: block; object-fit: cover; object-position: center 34%; transform: scale(1); transition: filter 220ms ease, transform 420ms ease; width: 100%; }
+  .profile-card:hover img,
+  .profile-card.is-card-active img { filter: saturate(1.05) contrast(1.02); transform: scale(1.025); }
+  .profile-card__body { display: grid; gap: 0.78rem; padding: 0.92rem; }
+  .profile-role {
+    color: #243041;
+    font-size: 0.92rem !important;
+    font-weight: 720;
+    line-height: 1.48 !important;
+    margin: 0 !important;
+  }
+  .profile-meta {
+    color: var(--muted);
+    font-size: 0.78rem !important;
+    line-height: 1.5 !important;
+    margin: 0 !important;
+  }
+  .profile-stats {
+    display: grid;
+    gap: 0.62rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .profile-stats div {
+    background: #f5f1ea;
+    border: 1px solid #e5dccf;
+    border-radius: 8px;
+    padding: 0.62rem 0.64rem;
+  }
+  .profile-stats strong {
+    color: var(--ink);
+    display: block;
+    font-family: "Newsreader", Georgia, serif;
+    font-size: 1.55rem;
+    font-weight: 650;
+    line-height: 1;
+    margin-bottom: 0.25rem;
+  }
+  .profile-stats span {
+    color: #6b7482;
+    display: block;
+    font-size: 0.68rem;
+    font-weight: 650;
+    line-height: 1.3;
+  }
+  .profile-focus { display: flex; flex-wrap: wrap; gap: 0.38rem; }
+  .profile-focus span {
+    border: 1px solid #d9d0c4;
+    border-radius: 999px;
+    color: #4f5b6b;
+    font-size: 0.68rem;
+    font-weight: 650;
+    line-height: 1.2;
+    padding: 0.24rem 0.5rem;
+  }
+  .profile-focus span:hover,
+  .tag:hover,
+  .project-metrics span:hover,
+  .skill-pill:hover {
+    background: #fffaf2;
+    border-color: #bda98f;
+    color: #27303d;
+    transform: translateY(-1px);
+  }
+  .profile-email {
+    border-top: 1px solid #ebe4da;
+    color: var(--teal) !important;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.72rem;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+    padding-top: 0.66rem;
+    text-decoration: none !important;
+  }
+  .profile-email:hover { color: #204f49 !important; }
+  .profile-email.is-copied::after {
+    color: #8d6330;
+    content: " copied";
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 0.68rem;
+    font-weight: 700;
+  }
+  .metric-strip {
+    border-bottom: 1px solid var(--line);
+    border-top: 1px solid var(--line);
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    margin: 0 0 3.6rem;
+  }
+  .metric { border-right: 1px solid var(--line); min-height: 130px; padding: 1.05rem 1.1rem; }
+  .metric:last-child { border-right: 0; }
+  .metric strong { color: var(--ink); display: block; font-family: "Newsreader", Georgia, serif; font-size: 2.45rem; font-weight: 650; line-height: 1; margin-bottom: 0.35rem; white-space: nowrap; }
+  .metric span { color: var(--muted); display: block; font-size: 0.88rem; line-height: 1.42; max-width: 11rem; }
+  .home-section { border-top: 1px solid var(--line); display: block; padding: 3.2rem 0; scroll-margin-top: 5rem; }
+  .section-label { align-items: baseline; border-bottom: 1px solid #ebe4da; display: flex; gap: 0.75rem; justify-content: flex-start; margin-bottom: 1.45rem; padding-bottom: 0.85rem; }
+  .section-label .num { color: var(--teal); display: inline-block; font-family: "JetBrains Mono", monospace; font-size: 0.78rem; font-weight: 600; letter-spacing: 0; }
+  .section-label h2 { color: var(--ink); font-family: "Newsreader", Georgia, serif; font-size: 1.68rem; font-weight: 650; margin: 0; }
+  .section-intro { color: #687383; font-size: 1.12rem; line-height: 1.75; margin: 0 0 1.45rem; max-width: 720px; }
+  .card-grid { display: grid; gap: 1rem; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .info-card, .publication, .project-card {
+    background: rgba(255, 253, 248, 0.82);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+  }
+  .info-card { padding: 1rem; }
+  .info-card h3, .project-body h3, .publication h3 { color: var(--ink); font-size: 1rem; font-weight: 750; line-height: 1.35; margin: 0 0 0.55rem; }
+  .info-card p, .project-body p, .publication p { color: #5f6b7a; margin: 0; }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 0.42rem; margin-top: 0.85rem; }
+  .tag { border: 1px solid #d9d0c4; border-radius: 999px; color: #5d6673; font-size: 0.72rem; font-weight: 650; padding: 0.16rem 0.5rem; }
+  .timeline { display: grid; gap: 0.95rem; }
+  .timeline-item { border-left: 2px solid #d8d0c4; padding-left: 1rem; }
+  .timeline-item .year { color: var(--teal); font-family: "JetBrains Mono", monospace; font-size: 0.88rem; font-weight: 600; margin-bottom: 0.24rem; }
+  .timeline-item p { color: #344052; font-size: 1rem; margin: 0; max-width: 780px; }
+  .publication-list { display: grid; gap: 1rem; }
+  .publication { align-items: stretch; display: grid; gap: 1.2rem; grid-template-columns: minmax(260px, 0.42fr) minmax(0, 1fr); overflow: hidden; padding: 0; }
+  .publication-figure { align-items: center; background: #fffaf2; border-right: 1px solid var(--line); display: flex; min-height: 215px; overflow: hidden; padding: 0.85rem; position: relative; text-decoration: none !important; }
+  .publication-figure img { display: block; max-height: 250px; object-fit: contain; object-position: center; transform: scale(1); transition: filter 180ms ease, transform 220ms ease; width: 100%; }
+  .publication-figure:hover img { filter: saturate(1.04) contrast(1.02); transform: scale(1.025); }
+  .publication-body { display: flex; flex-direction: column; gap: 0.72rem; padding: 1rem 1.1rem 1rem 0; }
+  .publication .status { color: var(--gold); font-family: "JetBrains Mono", monospace; font-size: 0.66rem; font-weight: 600; letter-spacing: 0; text-transform: uppercase; }
+  .publication h3 { font-size: 1.05rem; margin: 0; }
+  .publication-authors { color: #687383 !important; font-size: 0.82rem !important; line-height: 1.52 !important; }
+  .publication-summary { font-size: 0.86rem !important; line-height: 1.58 !important; }
+  .publication-actions { align-items: center; display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: auto; }
+  .publication-link { color: var(--teal) !important; display: inline-block; font-size: 0.78rem; font-weight: 750; text-decoration: none !important; width: fit-content; }
+  .publication-link:hover { color: #204f49 !important; transform: translateX(2px); }
+  .project-grid { display: grid; gap: 1rem; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .project-card { display: flex; flex-direction: column; min-height: 100%; overflow: hidden; }
+  .project-card--featured { display: flex; flex-direction: column; }
+  .project-image-link { color: inherit !important; display: block; overflow: hidden; position: relative; text-decoration: none !important; }
+  .project-image-link img { aspect-ratio: 16 / 9; box-sizing: border-box; display: block; object-fit: cover; object-position: top center; transform: scale(1); transition: filter 180ms ease, transform 220ms ease; width: 100%; }
+  .project-image-link img.project-cover--diagram { background: #fffaf2; object-fit: contain; object-position: center; padding: 0.5rem; }
+  .project-image-link img.project-cover--photo { object-fit: cover; object-position: center; }
+  .project-image-link--duo .project-cover-duo { aspect-ratio: 16 / 9; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-template-rows: minmax(0, 1fr); overflow: hidden; }
+  .project-image-link--duo img { aspect-ratio: auto; height: 100%; min-width: 0; object-fit: cover; object-position: center; width: 100%; }
+  .project-image-link--duo img + img { border-left: 1px solid rgba(255, 250, 242, 0.72); }
+  .project-image-link:hover img { filter: saturate(1.05) contrast(1.03); transform: scale(1.025); }
+  .image-open-label { background: rgba(31, 41, 51, 0.88); border-radius: 999px; bottom: 0.7rem; color: #fffaf2; font-family: "JetBrains Mono", monospace; font-size: 0.68rem; font-weight: 600; padding: 0.28rem 0.55rem; position: absolute; right: 0.7rem; }
+  .project-body { display: flex; flex-direction: column; gap: 0.78rem; padding: 1rem; }
+  .project-kicker { color: var(--teal) !important; font-family: "JetBrains Mono", monospace; font-size: 0.68rem !important; font-weight: 600; line-height: 1.35 !important; margin: 0 !important; text-transform: uppercase; }
+  .project-body h3 { margin-bottom: -0.2rem; }
+  .project-body > p { font-size: 0.9rem !important; line-height: 1.62 !important; }
+  .project-brief { display: grid; gap: 0.55rem; }
+  .project-brief div { background: #f7f3ed; border: 1px solid #ebe2d6; border-radius: 8px; padding: 0.68rem 0.72rem; }
+  .project-brief span { color: #8d6330; display: block; font-family: "JetBrains Mono", monospace; font-size: 0.64rem; font-weight: 600; margin-bottom: 0.25rem; text-transform: uppercase; }
+  .project-brief p { color: #536071; font-size: 0.78rem !important; line-height: 1.5 !important; margin: 0 !important; }
+  .project-metrics { display: flex; flex-wrap: wrap; gap: 0.38rem; margin-top: auto; }
+  .project-metrics span { background: #fffaf2; border: 1px solid #d9d0c4; border-radius: 999px; color: #364354; font-size: 0.7rem; font-weight: 700; line-height: 1.2; padding: 0.24rem 0.5rem; }
+  .project-text-link { color: var(--teal) !important; display: inline-block; font-size: 0.82rem; font-weight: 750; margin-top: 0.1rem; text-decoration: none !important; width: fit-content; }
+  .credential-ledger {
+    border-bottom: 1px solid var(--line);
+    border-top: 1px solid var(--line);
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .credential-summary {
+    border-bottom: 1px solid var(--line);
+    display: grid;
+    gap: 1.2rem;
+    grid-column: 1 / -1;
+    grid-template-columns: minmax(230px, 0.9fr) minmax(0, 1.1fr);
+    padding: 1rem 0;
+  }
+  .credential-block {
+    padding: 1rem 1rem 1rem 0;
+  }
+  .credential-block + .credential-block {
+    border-left: 1px solid var(--line);
+    padding-left: 1rem;
+    padding-right: 0;
+  }
+  .credential-kicker {
+    color: var(--teal) !important;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.68rem !important;
+    font-weight: 600;
+    line-height: 1.35 !important;
+    margin: 0 0 0.52rem !important;
+    text-transform: uppercase;
+  }
+  .credential-title {
+    color: var(--ink);
+    font-size: 1rem;
+    font-weight: 780;
+    line-height: 1.35;
+    margin: 0 0 0.28rem;
+  }
+  .credential-note {
+    color: #5f6b7a;
+    font-size: 0.9rem !important;
+    line-height: 1.52 !important;
+    margin: 0 !important;
+  }
+  .credential-metrics {
+    display: grid;
+    gap: 0;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    margin: 0;
+  }
+  .credential-metrics div {
+    border-left: 1px solid var(--line);
+    padding: 0.08rem 0.72rem;
+  }
+  .credential-metrics dt {
+    color: #7a8492;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.62rem;
+    font-weight: 600;
+    line-height: 1.3;
+    margin: 0 0 0.28rem;
+    text-transform: uppercase;
+  }
+  .credential-metrics dd {
+    color: var(--ink);
+    font-family: "Newsreader", Georgia, serif;
+    font-size: 1.28rem;
+    font-weight: 650;
+    line-height: 1;
+    margin: 0;
+  }
+  .credential-list { display: grid; gap: 0.66rem; margin: 0; padding: 0; }
+  .credential-list li {
+    display: grid;
+    gap: 0.6rem;
+    grid-template-columns: 3.4rem minmax(0, 1fr);
+    list-style: none;
+  }
+  .credential-year {
+    color: var(--teal);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.68rem;
+    font-weight: 600;
+    line-height: 1.55;
+  }
+  .credential-list p {
+    color: #4f5b6b;
+    font-size: 0.88rem !important;
+    line-height: 1.52 !important;
+    margin: 0 !important;
+  }
+  .credential-list strong { color: var(--ink); }
+  .compact-list { display: grid; gap: 0.75rem; margin: 0; padding: 0; }
+  .compact-list li { border-left: 2px solid #d8d0c4; color: #4a5667; list-style: none; padding-left: 0.9rem; }
+  .compact-list strong { color: var(--ink); }
+  .split-panel { display: grid; gap: 1rem; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .skills-cloud { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+  .skill-pill { background: #f1ece4; border: 1px solid #d8d0c4; border-radius: 999px; color: #3b4757; font-size: 0.8rem; font-weight: 650; padding: 0.28rem 0.62rem; }
+  .reveal { opacity: 0; transform: translateY(12px); transition: opacity 420ms ease, transform 420ms ease; }
+  .reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+  html[data-theme="dark"] body { background: #15171c; color: #e8dfd2; }
+  html[data-theme="dark"] .masthead__inner-wrap,
+  html[data-theme="dark"] .masthead__menu,
+  html[data-theme="dark"] .greedy-nav,
+  html[data-theme="dark"] .greedy-nav .visible-links,
+  html[data-theme="dark"] .greedy-nav .visible-links li,
+  html[data-theme="dark"] .greedy-nav .visible-links a { background: transparent !important; }
+  html[data-theme="dark"] .greedy-nav > button { border-color: #514b43; background: transparent !important; }
+  html[data-theme="dark"] #theme-toggle a {
+    background: rgba(28, 29, 33, 0.82) !important;
+    border-color: rgba(232, 223, 210, 0.25);
+    box-shadow: inset 0 1px 0 rgba(232, 223, 210, 0.08);
+  }
+  html[data-theme="dark"] .theme-icon { color: #e8dfd2; }
+  html[data-theme="dark"] .theme-switch__icon--sun { background: transparent; color: #8b8174; opacity: 0.48; }
+  html[data-theme="dark"] .theme-switch__icon--moon { background: #2b343f; color: #d6c9b7; opacity: 1; }
+  html[data-theme="dark"] .theme-switch__icon--moon::after { background: #2b343f; }
+  html[data-theme="dark"] .greedy-nav > button .navicon,
+  html[data-theme="dark"] .greedy-nav > button .navicon::before,
+  html[data-theme="dark"] .greedy-nav > button .navicon::after { background: #e8dfd2 !important; }
+  html[data-theme="dark"] .mobile-nav-panel { background: rgba(25, 26, 31, 0.98); border-color: #39352f; box-shadow: 0 18px 44px rgba(0, 0, 0, 0.42); }
+  html[data-theme="dark"] .mobile-nav-panel a { color: #e8dfd2 !important; }
+  html[data-theme="dark"] .mobile-nav-panel a:hover,
+  html[data-theme="dark"] .mobile-nav-panel a:active { background: #242321; }
+  html[data-theme="dark"] .page__footer { background: #111318; color: #9f9688; }
+  html[data-theme="dark"] .page__footer a { color: #d9cfbe !important; }
+  html[data-theme="dark"] .page__footer a:hover { color: #76b7ab !important; }
+  html[data-theme="dark"] .info-card:hover,
+  html[data-theme="dark"] .publication:hover,
+  html[data-theme="dark"] .project-card:hover { background: rgba(31, 32, 36, 0.94); border-color: #5a5147; box-shadow: 0 16px 38px rgba(0, 0, 0, 0.32), 0 1px 0 rgba(232, 223, 210, 0.06) inset; }
+  html[data-theme="dark"] .profile-card:hover,
+  html[data-theme="dark"] .profile-card.is-card-active { border-color: #5a5147; box-shadow: 0 24px 58px rgba(0, 0, 0, 0.42), 0 1px 0 rgba(232, 223, 210, 0.06) inset; }
+  html[data-theme="dark"] .masthead { background: rgba(21, 23, 28, 0.94) !important; border-bottom-color: rgba(232, 223, 210, 0.13); }
+  html[data-theme="dark"] .masthead__menu-item a { color: #e6dece !important; }
+  html[data-theme="dark"] .profile-shell { --ink: #f0e7d8; --muted: #b8ad9d; --line: #39352f; --soft: #242321; --panel: rgba(28, 29, 33, 0.9); --teal: #76b7ab; --gold: #d6a958; --rust: #d68d72; }
+  html[data-theme="dark"] .profile-card,
+  html[data-theme="dark"] .info-card,
+  html[data-theme="dark"] .publication,
+  html[data-theme="dark"] .project-card { background: rgba(28, 29, 33, 0.86); }
+  html[data-theme="dark"] .publication-figure { background: #1f2024; border-right-color: #39352f; }
+  html[data-theme="dark"] .profile-role,
+  html[data-theme="dark"] .timeline-item p { color: #ded5c7; }
+  html[data-theme="dark"] .profile-stats div,
+  html[data-theme="dark"] .project-brief div { background: #242321; border-color: #4a453d; }
+  html[data-theme="dark"] .project-image-link img.project-cover--diagram { background: #1f2024; }
+  html[data-theme="dark"] .profile-stats span,
+  html[data-theme="dark"] .profile-focus span,
+  html[data-theme="dark"] .project-brief p { color: #b8ad9d; }
+  html[data-theme="dark"] .profile-focus span,
+  html[data-theme="dark"] .project-metrics span { background: #242321; border-color: #4a453d; color: #d8cebf; }
+  html[data-theme="dark"] .profile-focus span:hover,
+  html[data-theme="dark"] .tag:hover,
+  html[data-theme="dark"] .project-metrics span:hover,
+  html[data-theme="dark"] .skill-pill:hover { background: #2d2b27; border-color: #6a5d4e; color: #f0e7d8; }
+  html[data-theme="dark"] .profile-email { border-top-color: #39352f; color: #76b7ab !important; }
+  html[data-theme="dark"] .profile-email:hover { color: #a8d5cd !important; }
+  html[data-theme="dark"] .project-brief span { color: #d6a958; }
+  html[data-theme="dark"] .project-image-link--duo img + img { border-left-color: #39352f; }
+  html[data-theme="dark"] .hero-subtitle { color: #f0e7d8; }
+  html[data-theme="dark"] .hero-copy,
+  html[data-theme="dark"] .section-intro,
+  html[data-theme="dark"] .info-card p,
+  html[data-theme="dark"] .project-body p,
+  html[data-theme="dark"] .publication-authors,
+  html[data-theme="dark"] .publication-summary,
+  html[data-theme="dark"] .publication p { color: #b8ad9d; }
+  html[data-theme="dark"] .action-button { color: #f0e7d8 !important; }
+  html[data-theme="dark"] .action-button.primary { background: #e8dfd2; border-color: #e8dfd2; color: #15171c !important; }
+  html[data-theme="dark"] .credential-note,
+  html[data-theme="dark"] .credential-list p { color: #b8ad9d; }
+  html[data-theme="dark"] .credential-metrics dt { color: #928a7d; }
+  html[data-theme="dark"] .tag,
+  html[data-theme="dark"] .skill-pill { background: #242321; border-color: #4a453d; color: #d8cebf; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .info-card,
+    .publication,
+    .project-card,
+    .profile-card,
+    .project-image-link img,
+    .reveal {
+      transition: none !important;
+      transform: none !important;
+    }
+    .info-card::after,
+    .publication::after,
+    .project-card::after,
+    .profile-card::before,
+    .profile-card::after {
+      display: none;
+    }
   }
 
-  /* Sidebar & Mobile */
-  .author__avatar img { border-radius: 12px !important; border: 4px solid rgba(255,255,255,0.8); }
-
-  @media (min-width: 769px) {
-    .sidebar {
-      position: sticky !important;
-      top: 80px;
-      z-index: 10;
-    }
+  @media (max-width: 1080px) {
+    .greedy-nav { align-items: center; display: flex !important; position: relative; width: 100%; }
+    .greedy-nav .visible-links { align-items: center; display: flex !important; flex: 1 1 auto; min-width: 0; order: 1; }
+    .greedy-nav > button { flex: 0 0 auto; order: 2; }
+    .masthead__menu-item--lg { margin-right: auto; }    .greedy-nav > button { display: inline-flex; }
+    .greedy-nav .visible-links li:not(.persist):not(#theme-toggle) { display: none !important; }
+    .masthead__inner-wrap { padding-left: 1rem; padding-right: 1rem; }
   }
-  @media (max-width: 768px) {
-    .sidebar {
-      position: relative !important;
-      top: 0 !important;
-      width: 100% !important;
-      margin-bottom: 20px;
-    }
-    .education-card, .project-card, .paper-card {
-      flex-direction: column;
-    }
-    .card-icon { margin-bottom: 10px; }
+  @media (max-width: 900px) {
+    .hero, .split-panel, .credential-ledger, .credential-summary { grid-template-columns: 1fr; }
+    .hero { gap: 1.8rem; padding: 2.6rem 0 3rem; }
+    .hero-title { font-size: 4.25rem; }
+    .hero-subtitle { font-size: 1.12rem; max-width: 100%; }
+    .hero-copy { max-width: 100%; }
+    .profile-card { max-width: 440px; width: 100%; }
+    .metric-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .metric { border-bottom: 1px solid var(--line); min-height: 108px; }
+    .card-grid, .project-grid, .credential-ledger, .credential-summary { grid-template-columns: 1fr; }
+    .publication { grid-template-columns: 1fr; }
+    .publication-figure { border-bottom: 1px solid var(--line); border-right: 0; min-height: auto; }
+    .publication-body { padding: 0.92rem; }
+    .project-card--featured { grid-column: auto; }
+    .credential-block + .credential-block { border-left: 0; border-top: 1px solid var(--line); padding-left: 0; }
+    .credential-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .home-section { padding: 2.4rem 0; }
   }
-
-  /* Sidebar & Mobile */
-  .author__avatar img { border-radius: 50% !important; border: 4px solid rgba(255,255,255,0.8); }
-
-  @media (min-width: 769px) {
-    .sidebar {
-      position: sticky !important;
-      top: 80px;
-      z-index: 10;
-    }
+  @media (max-width: 560px) {
+    body { overflow-x: hidden; }
+    .masthead__menu-item--lg a { font-size: 0.92rem !important; }
+    #theme-toggle a { height: 34px; min-width: 82px; padding: 0 0.52rem; }
+    .theme-icon { font-size: 0.62rem; min-width: 30px; }
+    .theme-switch__icon { height: 18px; width: 18px; }
+    .profile-shell { padding: 0 1rem 3.2rem; }
+    .hero { padding-top: 2rem; }
+    .hero-title { font-size: 3.25rem; line-height: 0.98; }
+    .hero-subtitle { font-size: 1.03rem; }
+    .action-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .action-button { justify-content: center; min-height: 42px; padding-left: 0.65rem; padding-right: 0.65rem; }
+    .profile-card { max-width: none; }
+    .profile-card img { aspect-ratio: 4 / 3; object-position: center 34%; }
+    .profile-card__body { padding: 0.92rem; }
+    .profile-stats strong { font-size: 1.55rem; }
+    .metric-strip { grid-template-columns: 1fr; }
+    .metric { border-right: 0; min-height: auto; padding: 0.9rem 0; }
+    .metric strong { font-size: 2.15rem; }
+    .section-intro { font-size: 1rem; line-height: 1.68; }
+    .info-card, .project-body { padding: 0.92rem; }
+    .publication-figure { padding: 0.7rem; }
+    .publication-actions { gap: 0.6rem; }
+    .project-image-link--duo .project-cover-duo { aspect-ratio: 4 / 3; grid-template-columns: 1fr; grid-template-rows: repeat(2, minmax(0, 1fr)); }
+    .project-image-link--duo img + img { border-left: 0; border-top: 1px solid rgba(255, 250, 242, 0.72); }
+    html[data-theme="dark"] .project-image-link--duo img + img { border-top-color: #39352f; }
+    .page__footer { padding-left: 1rem; padding-right: 1rem; }
   }
-  @media (max-width: 768px) {
-    .sidebar {
-      position: relative !important;
-      top: 0 !important;
-      width: 100% !important;
-      margin-bottom: 20px;
-    }
-    .education-card, .project-card, .paper-card {
-      flex-direction: column;
-    }
-    .card-icon { margin-bottom: 10px; }
-  }
-  .author__avatar img { border-radius: 50% !important; border: 4px solid rgba(255,255,255,0.8); }
 </style>
 
-<div id="home-view" markdown="1">
-<div class="lang-en" markdown="1">
-Hello! I am **Yiyang Ma**, a Bachelor of Engineering (Third-year Student) at **Guangzhou University (GZHU)**, majoring in **Intelligent Manufacturing Engineering**. I am expected to graduate in 2027.
-</div>
-<div class="lang-zh" markdown="1">
-你好！我是**马艺洋**，**广州大学 (GZHU)** **智能制造工程**专业的大三在读本科生。我预计于 2027 年毕业。
-</div>
-
-<div class="lang-en" markdown="1">
-My research interests and skills lie in Python Programming, C Programming, and Mathematics.
-</div>
-<div class="lang-zh" markdown="1">
-我的研究兴趣和技能主要集中在 Python 编程、C 语言编程和数学方面。
-</div>
-
-## 🎓 <span class="lang-en">Education</span><span class="lang-zh" >教育经历</span>
-<div id="education">
-<div class="education-card">
-  <div class="card-icon">🎓</div>
-  <div class="card-content">
-    <h3 style="margin: 0 0 5px 0;"><span class="lang-en">Guangzhou University (GZHU)</span><span class="lang-zh" >广州大学 (GZHU)</span></h3>
-    <p style="margin: 0 0 10px 0; color: #666; font-size: 0.9em;"><em>09/2023 - <span class="lang-en">Present | Intelligent Manufacturing Engineering</span><span class="lang-zh" >至今 | 智能制造工程工学学士</span></em></p>
-    <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 10px;">
-      <span style="background: rgba(255,255,255,0.6); padding: 4px 10px; border-radius: 12px; font-size: 0.8em; color: #555; border: 1px solid rgba(0,0,0,0.05);" class="geek-meta">GPA: 3.58/4.0</span>
-      <span style="background: rgba(255,255,255,0.6); padding: 4px 10px; border-radius: 12px; font-size: 0.8em; color: #555; border: 1px solid rgba(0,0,0,0.05);" class="geek-meta"><span class="lang-en">Rank</span><span class="lang-zh" >排名</span>: 8/57</span>
-      <span style="background: rgba(255,255,255,0.6); padding: 4px 10px; border-radius: 12px; font-size: 0.8em; color: #555; border: 1px solid rgba(0,0,0,0.05);" class="geek-meta"><span class="lang-en">Weighted Avg: 88.20/100</span><span class="lang-zh" >加权平均分: 88.20/100</span></span>
+<div class="profile-shell">
+  <section class="hero reveal" id="about-me">
+    <div>
+      <div class="kicker">Homepage &middot; Guangzhou &middot; 2026</div>
+      <h1 class="hero-title">Yiyang Ma</h1>
+      <p class="hero-subtitle">Undergraduate researcher building efficient visual intelligence for hyperspectral remote sensing and deployable edge perception systems.</p>
+      <p class="hero-copy">I am a B.E. candidate in Intelligent Manufacturing at Guangzhou University, expected to graduate in June 2027. My work connects sample-adaptive spectral-spatial learning, compact perception models, and real-world engineering deployment.</p>
+      <div class="action-row">
+        <a class="action-button primary" href="/cv-json/">View CV</a>
+        <a class="action-button" href="mailto:mayiyang7313@gmail.com">Email</a>
+        <a class="action-button" href="https://github.com/xunshang111">GitHub</a>
+        <a class="action-button" href="#publications">Publications</a>
+      </div>
     </div>
-    <p style="margin: 0; font-size: 0.9em;"><strong><span class="lang-en">Relevant Courses:</span><span class="lang-zh" >相关课程:</span></strong> <span class="lang-en">Linear Algebra (94), Python Programming (93), University Physics (90), C Programming Design (89).</span><span class="lang-zh" >线性代数 (94), Python 编程 (93), 大学物理 (90), C 语言程序设计 (89).</span></p>
-    <p style="margin: 5px 0 0 0; font-size: 0.9em;"><strong><span class="lang-en">Core Honors:</span><span class="lang-zh" >核心荣誉:</span></strong> <span class="lang-en">University First-Class Scholarship (Top 2%), Ranked 1st in Major in Comprehensive Evaluation (Sophomore), University Second-Class Scholarship (Top 9%), CET-4.</span><span class="lang-zh" >校一等奖学金 (前 2%)，大二综测专业第一，校二等奖学金 (前 9%)，大学英语四级 (CET-4)。</span></p>
+    <aside class="profile-card" aria-label="Profile summary">
+      <img src="/images/avatar.jpg" alt="Yiyang Ma">
+      <div class="profile-card__body">
+        <p class="profile-role">B.E. Candidate &middot; Guangzhou University</p>
+        <p class="profile-meta">Intelligent Manufacturing &middot; expected June 2027</p>
+
+        <div class="profile-focus" aria-label="Research focus">
+          <span>Efficient Visual Modeling</span>
+          <span>HSI Classification</span>
+          <span>Edge AI Deployment</span>
+        </div>
+        <a class="profile-email" href="mailto:mayiyang7313@gmail.com">mayiyang7313@gmail.com</a>
+      </div>
+    </aside>
+  </section>
+
+  <div class="metric-strip reveal" aria-label="Selected metrics">
+    <div class="metric"><strong>3</strong><span>research papers on hyperspectral visual modeling</span></div>
+    <div class="metric"><strong>2</strong><span>Chinese patent outputs from deployed engineering systems</span></div>
+    <div class="metric"><strong>6+</strong><span>national-level competition and innovation awards</span></div>
+    <div class="metric"><strong>38 / 31</strong><span>fps edge inference on Jetson ROV vision and K230 waste sorting</span></div>
   </div>
-</div>
-</div>
-
-## 📜 <span class="lang-en">Publication</span><span class="lang-zh" >发表论文</span>
-
-<div id="publications">
-<div class="paper-card">
-  <div class="card-icon">📜</div>
-  <div class="card-content">
-    <strong class="geek-meta">2026</strong><br>
-    Haotian Shi, Zihang Luo, <strong>Yiyang Ma</strong>, Guanquan Zhu, Xin Dai. <strong>SSGTN: Spectral-Spatial Graph Transformer Network for Hyperspectral Image Classification</strong>. <em>(Remote Sensing)</em>, <a href="https://doi.org/10.3390/rs18020199">[Paper]</a>.
-  </div>
-</div>
-
-<div class="paper-card">
-  <div class="card-icon">📜</div>
-  <div class="card-content">
-    <strong class="geek-meta">2025</strong><br>
-    Guiyun Liu, Haozhe Xu, Yu Zhu, <strong>Yiyang Ma</strong>, Zhipeng Chen. <strong>Optimal Media Control Strategy for Rumor Propagation in a Multilingual Dual Layer Reaction Diffusion Network Model</strong>. <em>(Mathematics)</em>, <a href="https://doi.org/10.3390/math13142253">[Paper]</a>.
-  </div>
-</div>
-</div>
-
-## 💼 <span class="lang-en">Project Experience</span><span class="lang-zh" >项目经历</span>
-
-<div id="projects">
-
-<div class="project-card" markdown="1">
-  <div class="card-icon">🛰️</div>
-  <div class="card-content">
-    <h3><span class="lang-en">HoLoRA: Hyperspectral Image Classification via Holographic Low-Rank Adapter</span><span class="lang-zh" >HoLoRA: 基于全息低秩适配器的高光谱图像分类</span></h3>
-    <p><em><span class="lang-en">Project Leader (Supervisor: Xiaofei Yang) | 06/2025-Present</span><span class="lang-zh" >项目负责人 (指导老师: 杨小飞) | 06/2025-至今</span></em><br>
-    <strong><span class="lang-en">What I Built:</span><span class="lang-zh" >研究内容:</span></strong> <span class="lang-en">Developed a lightweight deep learning framework for hyperspectral image (HSI) classification that dynamically adapts its weights to each input sample, addressing the challenges of high spectral dimensionality and limited labeled data.</span><span class="lang-zh" >开发了一个轻量级高光谱图像 (HSI) 分类深度学习框架，其能够为每个输入样本动态适应权重，解决了高光谱维度和有限标记数据的挑战。</span><br>
-    <strong><span class="lang-en">Key Innovations:</span><span class="lang-zh" >核心创新:</span></strong><br>
-    <span class="lang-en">1. <strong>Holographic Patch Embedding (HPE):</strong> Encodes each spatial patch into multiple tokens instead of one, preserving complete spatial context that standard Vision Transformers lose.</span><span class="lang-zh" >1. <strong>全息补丁嵌入 (HPE):</strong> 将每个空间补丁编码为多个标记，保留了标准视觉 Transformer 容易丢失的完整空间上下文。</span><br>
-    <span class="lang-en">2. <strong>Dynamic Low-Rank Adapter:</strong> Generates sample-specific weight adjustments via input-driven functions, enabling "one-sample-one-adaptation" without increasing inference cost.</span><span class="lang-zh" >2. <strong>动态低秩适配器:</strong> 通过输入驱动函数生成特定样本的权重调整，实现了"单样本单自适应"，而不增加推理成本。</span><br>
-    <span class="lang-en">3. <strong>Spectral Polynomial Prior (SPP):</strong> A physics-guided loss that models spectral distortions, improving robustness to illumination variations.</span><span class="lang-zh" >3. <strong>光谱多项式先验 (SPP):</strong> 物理引导的损失函数以模拟光谱失真，提高了对光照变化的鲁棒性。</span><br>
-    <strong><span class="lang-en">Key Finding:</span><span class="lang-zh" >关键发现:</span></strong> <span class="lang-en">Through controlled experiments with identical parameter counts, I demonstrated that dynamic weight modulation—not model size—is the key driver of performance in complex scenes (+1.2% OA gain).</span><span class="lang-zh" >通过相同参数量的对照实验证明，在复杂场景中推动性能提升的关键是动态权重调制，而非模型规模 (OA 提升 1.2%)。</span><br>
-    <strong><span class="lang-en">Results:</span><span class="lang-zh" >实验结果:</span></strong> <span class="lang-en">95.07% OA on Indian Pines (+0.94% vs. SSFTT), 85% FLOPs of comparable methods. (Target: IEEE TIP)</span><span class="lang-zh" >在 Indian Pines 达到 95.07% OA (较 SSFTT 提升 0.94%)，且计算量仅为同类方法的 85%。(目标期刊: IEEE TIP)</span></p>
-    <a href="#" class="btn btn--primary">📄 <span class="lang-en">Project Page</span><span class="lang-zh" >项目主页</span></a>
-  </div>
-</div>
-
-<div class="project-card" markdown="1">
-  <div class="card-icon">🌍</div>
-  <div class="card-content">
-    <h3><span class="lang-en">SSGTN: Spectral-Spatial Graph Transformer Network for HSI Classification</span><span class="lang-zh" >SSGTN: 基于空谱图变换网络的高光谱图像分类</span></h3>
-    <p><em><span class="lang-en">Published in Remote Sensing (JCR Q1) | 05/2025 – 01/2026</span><span class="lang-zh" >发表于 Remote Sensing (JCR一区) | 05/2025 – 01/2026</span></em><br>
-    <span class="lang-en">Haotian Shi, Zihang Luo, <strong>Yiyang Ma</strong>, Guanquan Zhu, and Xin Dai *(Supervisor: Xin Dai & Haotian Shi)</span><span class="lang-zh" >Haotian Shi, Zihang Luo, <strong>Yiyang Ma</strong>, Guanquan Zhu, and Xin Dai *(指导老师: 戴欣 & 史皓天)</span><br>
-    <strong><span class="lang-en">What I Built:</span><span class="lang-zh" >研究内容:</span></strong> <span class="lang-en">Developed a hybrid GCN-Transformer framework that synergizes local topology with global dependencies, resolving the trade-off between structural preservation and long-range context under scarce supervision (1% labels).</span><span class="lang-zh" >开发了混合 GCN-Transformer 框架，将局部拓扑与全局依赖相结合，解决了在极少量监督(1%标签)下结构保留与长程上下文之间的权衡问题。</span><br>
-    <strong><span class="lang-en">Key Innovations:</span><span class="lang-zh" >核心创新:</span></strong><br>
-    <span class="lang-en">1. <strong>LDA-SLIC Superpixel Graph:</strong> Projects high-dimensional inputs into compact nodes via spectral reduction, preserving discriminative boundaries while drastically lowering computational cost.</span><span class="lang-zh" >1. <strong>LDA-SLIC 超像素图:</strong> 通过光谱降维将高维输入投影为紧凑节点，在极大降低计算成本的同时保留了判别性边界。</span><br>
-    <span class="lang-en">2. <strong>Spectral-Spatial Shift Module (SSSM):</strong> A parameter-free mechanism performing cyclic shifts to enable multi-scale feature interaction without adding learnable weights.</span><span class="lang-zh" >2. <strong>空谱移位模块 (SSSM):</strong> 无参数循环移位机制，无需增加可学习权重即可实现多尺度特征交互。</span><br>
-    <span class="lang-en">3. <strong>Dual-Branch GCN-Transformer:</strong> Parallelly extracts local geometric and global semantic features, dynamically fused for comprehensive representation.</span><span class="lang-zh" >3. <strong>双分支 GCN-Transformer:</strong> 并行提取局部几何和全局语义特征并进行动态融合以实现全面表征。</span><br>
-    <strong><span class="lang-en">Key Finding:</span><span class="lang-zh" >关键发现:</span></strong> <span class="lang-en">Component-wise ablation proved that explicit structural priors outweigh model depth in low-data regimes—the parameter-free SSSM alone boosted urban scene accuracy by ~4%, validating that geometric constraints mitigate overfitting.</span><span class="lang-zh" >消融实验证明在低数据状态下显式结构先验比模型深度更重要——仅无参数的 SSSM 就能将城市场景准确率提升约 4%，验证了几何约束能缓解过拟合。</span><br>
-    <strong><span class="lang-en">Results:</span><span class="lang-zh" >实验结果:</span></strong> <span class="lang-en">93.97% OA on Houston2018 (+2.95% vs. Graph-Mamba), utilizing only 3.8% FLOPs of standard Transformers (60G vs. 1578G).</span><span class="lang-zh" >在 Houston2018 达到 93.97% OA (较 Graph-Mamba 提升 2.95%)，计算量仅为标准 Transformer 的 3.8% (60G vs. 1578G)。</span></p>
-    <a href="#" class="btn btn--primary">📄 <span class="lang-en">Project Page</span><span class="lang-zh" >项目主页</span></a>
-  </div>
-</div>
-
-<div class="project-card" markdown="1">
-  <div class="card-icon">🤖</div>
-  <div class="card-content">
-    <h3><span class="lang-en">A Robot for Underwater Energy Pipeline Crack Detection</span><span class="lang-zh" >水下能源管道裂缝检测机器人</span></h3>
-    <p><em><span class="lang-en">Core Member (Supervisor: Zhifu Li & Daqi Chen) | 09/2024 - Present</span><span class="lang-zh" >核心成员 (指导老师: 李志付 & 陈大奇) | 09/2024 - 至今</span></em><br>
-    <span class="lang-en">Developed a high-performance underwater robot for pipeline inspection, focusing on stability and precision. The system features a Neural Network-enhanced Fuzzy PID controller that reduces navigation offset by 34% in complex currents, and an Actor-Critic Reinforcement Learning module for thruster fault tolerance with a 0.7s response time. Additionally, an improved YOLOv11-based visual detection system was implemented, boosting crack detection accuracy by 14%, effectively solving traditional inspection difficulties.</span><span class="lang-zh" >开发了一款高性能水下机器人用于管道检测，专注于稳定性和精度。系统采用神经网络增强的模糊 PID 控制器，将复杂水流中的导航偏差减少了 34%，并采用 Actor-Critic 强化学习模块实现推进器容错 (0.7秒响应时间)。此外，实施了改进的基于 YOLOv11 的视觉检测系统，将裂缝检测准确率提高了 14%，有效解决了传统检测难题。</span><br>
-    <strong><span class="lang-en">Achievements</span><span class="lang-zh" >成就</span>:</strong> <span class="lang-en">National 2nd Prize (China Robotics & AI Competition), National 3rd Prize (Energy Saving Competition).</span><span class="lang-zh" >国家二等奖 (中国机器人及人工智能大赛)，国家三等奖 (节能减排大赛)。</span></p>
-    <a href="#" class="btn btn--primary">📄 <span class="lang-en">Project Page</span><span class="lang-zh" >项目主页</span></a>
-  </div>
-</div>
-
-<div class="project-card" markdown="1">
-  <div class="card-icon">🛠️</div>
-  <div class="card-content">
-    <h3><span class="lang-en">Intelligent Trash Can System Based on Three-stage Differential Separation Device</span><span class="lang-zh" >基于三级差分分离装置的智能垃圾桶系统</span></h3>
-    <p><em><span class="lang-en">Core Member (Supervisor: Wenting Deng) | 01/2025-04/2025</span><span class="lang-zh" >核心成员 (指导老师: 邓文婷) | 01/2025-04/2025</span></em><br>
-    <span class="lang-en">Built an automated waste sorting system utilizing a three-stage differential separation mechanism and dual-servo precision control. The system employs an Arduino Mega 2560 for motion control and a CanMV K230 module for edge AI computing. Specifically, I was responsible for deploying the YOLOv5 model and optimizing the recognition algorithm, achieving a high classification accuracy of 99.74% across four waste categories. Additionally, I coordinated the mechanical-electrical integration and successfully filed an invention patent as the second student inventor.</span><span class="lang-zh" >构建了一个利用三级差分分离机制和双伺服精密控制的自动化垃圾分类系统。使用 Arduino Mega 2560 进行运动控制，CanMV K230 模块进行边缘 AI 计算。我主要负责部署 YOLOv5 模型并优化识别算法，在四类垃圾中实现了 99.74% 的高分类准确率。协调机电一体化并作为第二学生发明人成功申请了发明专利。</span><br>
-    <strong><span class="lang-en">Outcome:</span><span class="lang-zh" >成果:</span></strong> <span class="lang-en">Filed an invention patent (2nd Student Inventor).</span><span class="lang-zh" >申请发明专利 (第二学生发明人)。</span></p>
-    <a href="#" class="btn btn--primary">📄 <span class="lang-en">Project Page</span><span class="lang-zh" >项目主页</span></a>
-  </div>
-</div>
-</div>
-
-## 🥇 <span class="lang-en">Scholarship & Awards</span><span class="lang-zh" >奖学金与奖项</span>
-<div id="awards" class="project-card" style="display: block;">
-  <div style="margin-bottom: 30px;">
-    <h3 style="margin-top: 0; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 15px;"><span class="lang-en">National Competitions</span><span class="lang-zh" >国家级竞赛</span></h3>
-    <ul style="margin-bottom: 0; padding-left: 20px; line-height: 1.8;">
-      <li style="margin-bottom: 10px;">🥇 <span class="lang-en"><strong>Gold Medal</strong>, China International College Students' Innovation Competition 2025 (National Level).</span><span class="lang-zh" ><strong>金奖</strong>, 2025年中国国际大学生创新大赛 (国家级)。</span></li>
-      <li style="margin-bottom: 10px;">🥈 <span class="lang-en"><strong>National 2nd Prize</strong>, The 27th China Robotics & Artificial Intelligence Competition, 2025.</span><span class="lang-zh" ><strong>国家二等奖</strong>, 第二十七届中国机器人及人工智能大赛, 2025。</span></li>
-      <li style="margin-bottom: 10px;">🥈 <span class="lang-en"><strong>National 2nd Prize</strong>, The 10th National Applied Talent Comprehensive Skills Competition, 2024. (Project Leader)</span><span class="lang-zh" ><strong>国家二等奖</strong>, 第十届全国应用型人才综合技能大赛, 2024 (项目负责人)。</span></li>
-      <li style="margin-bottom: 10px;">🥉 <span class="lang-en"><strong>National 3rd Prize</strong>, The 18th National University Student Social Practice and Science Contest on Energy Saving & Emission Reduction, 2025. (Project Leader)</span><span class="lang-zh" ><strong>国家三等奖</strong>, 第十八届全国大学生节能减排社会实践与科技竞赛, 2025 (项目负责人)。</span></li>
-      <li style="margin-bottom: 10px;">🥈 <span class="lang-en"><strong>2nd Prize</strong>, The 14th Asia and Pacific Mathematical Contest in Modeling (APMCM), 2024.</span><span class="lang-zh" ><strong>二等奖</strong>, 第十四届亚太地区大学生数学建模竞赛 (APMCM), 2024。</span></li>
-    </ul>
-  </div>
-
-  <div>
-    <h3 style="margin-top: 0; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 15px;"><span class="lang-en">Scholarships & Academics</span><span class="lang-zh" >奖学金与学业</span></h3>
-    <ul style="margin-bottom: 0; padding-left: 20px; line-height: 1.8;">
-      <li style="margin-bottom: 10px;">🎓 <span class="lang-en"><strong>University First-Class Scholarship</strong> (Top 2%), Academic Year 2025.</span><span class="lang-zh" ><strong>校一等奖学金</strong> (前 2%), 2025学年。</span></li>
-      <li style="margin-bottom: 10px;">🎓 <span class="lang-en"><strong>University Second-Class Scholarship</strong> (Top 9%), Academic Year 2024.</span><span class="lang-zh" ><strong>校二等奖学金</strong> (前 9%), 2024学年。</span></li>
-    </ul>
-  </div>
-</div>
-
-## 🧙‍♂️ <span class="lang-en">Extracurricular Activities</span><span class="lang-zh" >课外活动</span>
-<div id="extracurricular-activities">
-<div class="timeline">
-
-  <div class="timeline-item">
-    <div class="timeline-marker"></div>
-    <div class="timeline-date">05/2025 - <span class="lang-en">Present</span><span class="lang-zh" >至今</span></div>
-    <div class="timeline-content">
-      <h3 style="margin-top:0;"><span class="lang-en">Maker Association of Guangzhou University</span><span class="lang-zh" >广州大学创客协会</span></h3>
-      <p><em><span class="lang-en">President</span><span class="lang-zh" >会长</span></em></p>
-      <ul>
-        <li><strong><span class="lang-en">Leadership:</span><span class="lang-zh" >领导力:</span></strong> <span class="lang-en">Led the university's largest student innovation community. Organized the 12th "Winter Camp" and "Summer Camp" academic technology activities, attracting over 500 participants.</span><span class="lang-zh" >领导全校最大的学生创新社团。组织第十二届“冬令营”和“夏令营”学术科技活动，吸引了超过 500 名参与者。</span></li>
-        <li><strong><span class="lang-en">Event Organization:</span><span class="lang-zh" >活动组织:</span></strong> <span class="lang-en">Successfully organized and executed the university-level selection for the 18th National University Student Social Practice and Science Contest on Energy Saving & Emission Reduction.</span><span class="lang-zh" >成功组织并执行了第十八届全国大学生节能减排社会实践与科技竞赛的校级选拔赛。</span></li>
-      </ul>
+  <section class="home-section reveal" id="research-interests">
+    <div class="section-label"><span class="num">01</span><h2>Research</h2></div>
+    <div>
+      <p class="section-intro">My current direction is efficient and reliable visual intelligence: models that learn from limited supervision, sensors that stay low-cost and sparse, and systems that can run in real engineering environments.</p>
+      <div class="card-grid">
+        <article class="info-card"><h3>Efficient Visual Modeling</h3><p>Parameter-efficient learning for high-dimensional visual data, with dynamic low-rank adaptation and compact Transformer/Mamba-style modules.</p><div class="tag-row"><span class="tag">DLoRA</span><span class="tag">Transformer</span><span class="tag">Mamba</span></div></article>
+        <article class="info-card"><h3>Hyperspectral Image Classification</h3><p>Spectral-spatial representation learning under label scarcity, mixed pixels, boundary regions, and cross-scene spectral variability.</p><div class="tag-row"><span class="tag">HSI</span><span class="tag">Remote Sensing</span><span class="tag">Graph</span></div></article>
+        <article class="info-card"><h3>Deployable Perception Systems</h3><p>Edge AI pipelines for underwater inspection, waste sorting, and robot-side perception where latency, model size, and reliability matter.</p><div class="tag-row"><span class="tag">Jetson</span><span class="tag">K230</span><span class="tag">YOLO</span></div></article>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <div class="timeline-item">
-    <div class="timeline-marker"></div>
-    <div class="timeline-date">07/2024 - <span class="lang-en">Present</span><span class="lang-zh" >至今</span></div>
-    <div class="timeline-content">
-      <h3 style="margin-top:0;"><span class="lang-en">Guangzhou-Hong Kong Science and Innovation Talent Class</span><span class="lang-zh" >穗港科技创新人才班</span></h3>
-      <p><em><span class="lang-en">Teaching Assistant</span><span class="lang-zh" >助教</span></em></p>
-      <ul>
-        <li><strong><span class="lang-en">Mentorship:</span><span class="lang-zh" >指导:</span></strong> <span class="lang-en">Served as a Teaching Assistant for the elite talent class. Provided voluntary guidance to outstanding freshmen from various majors on scientific research projects during summer breaks.</span><span class="lang-zh" >担任精英人才班的助教。在暑假期间为来自不同专业的优秀新生提供科研项目的志愿指导。</span></li>
-      </ul>
+  <section class="home-section reveal" id="publications">
+    <div class="section-label"><span class="num">02</span><h2>Publications</h2></div>
+    <div class="publication-list">
+      <article class="publication">
+        <a class="publication-figure" href="/images/portfolio/halo.jpg" target="_blank" rel="noopener" aria-label="Open HALO detailed poster"><img src="/images/portfolio/HALOframework.png" alt="HALO framework architecture"></a>
+        <div class="publication-body">
+          <span class="status">Manuscript under review &middot; TGRS</span>
+          <h3>HALO: A Sample-Adaptive Low-Rank Modulation Framework for HSI Classification</h3>
+          <p class="publication-authors">Yang, X., <strong>Ma, Y.</strong>, Wen, J., Xue, M., Fang, Y., Ban, Y., &amp; Zhou, Y.</p>
+          <p class="publication-summary">A lightweight Transformer framework for heterogeneous and label-scarce hyperspectral scenes. I implemented the main pipeline and contributed to HPE, DLoRA, SPP, ablations, visualization, and manuscript writing.</p>
+          <div class="tag-row"><span class="tag">DLoRA</span><span class="tag">HPE</span><span class="tag">SPP</span><span class="tag">95.07% OA</span></div>
+          <div class="publication-actions"><a class="publication-link" href="/images/portfolio/halo.jpg" target="_blank" rel="noopener">Detail poster &rarr;</a><a class="publication-link" href="/images/portfolio/HALOframework.png" target="_blank" rel="noopener">Architecture &rarr;</a></div>
+        </div>
+      </article>
+
+      <article class="publication">
+        <a class="publication-figure" href="/images/portfolio/R2Mambaframework.png" target="_blank" rel="noopener" aria-label="Open R2Mamba architecture"><img src="/images/portfolio/R2Mambaframework.png" alt="R2Mamba framework architecture"></a>
+        <div class="publication-body">
+          <span class="status">Manuscript under review &middot; JSTARS</span>
+          <h3>R2Mamba: Route-Reliability Mamba for Hyperspectral Image Classification</h3>
+          <p class="publication-authors">Wang, W., <strong>Ma, Y.</strong>, Yang, X., Su, Y., &amp; Jiang, M.</p>
+          <p class="publication-summary">A Mamba-based HSI classifier using route-reliability scan paths and gate-guided aggregation for boundary and mixed-pixel regions. I designed reliability diagnostics, local correction visualization, and unified experiments.</p>
+          <div class="tag-row"><span class="tag">Mamba</span><span class="tag">Route Reliability</span><span class="tag">Boundary Cues</span><span class="tag">HSI</span></div>
+          <div class="publication-actions"><a class="publication-link" href="/images/portfolio/R2Mambaframework.png" target="_blank" rel="noopener">Architecture &rarr;</a></div>
+        </div>
+      </article>
+
+      <article class="publication">
+        <a class="publication-figure" href="/images/portfolio/ssgtn.jpg" target="_blank" rel="noopener" aria-label="Open SSGTN detailed poster"><img src="/images/portfolio/SSGTNframework.png" alt="SSGTN framework architecture"></a>
+        <div class="publication-body">
+          <span class="status">Published &middot; Remote Sensing</span>
+          <h3>SSGTN: Spectral-Spatial Graph Transformer Network for HSI Classification</h3>
+          <p class="publication-authors">Shi, H., Luo, Z., <strong>Ma, Y.</strong>, Zhu, G., &amp; Dai, X. Remote Sensing, 2026.</p>
+          <p class="publication-summary">A dual-branch graph and Transformer framework for label-efficient hyperspectral image classification. I contributed to implementation, evaluation, and complexity-accuracy comparison.</p>
+          <div class="tag-row"><span class="tag">GCN</span><span class="tag">Transformer</span><span class="tag">Superpixel Graph</span><span class="tag">99.62% OA</span></div>
+          <div class="publication-actions"><a class="publication-link" href="/images/portfolio/ssgtn.jpg" target="_blank" rel="noopener">Detail poster &rarr;</a><a class="publication-link" href="/images/portfolio/SSGTNframework.png" target="_blank" rel="noopener">Architecture &rarr;</a></div>
+        </div>
+      </article>
     </div>
-  </div>
+  </section>
 
-</div>
-</div>
+  <section class="home-section reveal" id="projects">
+    <div class="section-label"><span class="num">03</span><h2>Projects</h2></div>
+    <div class="project-grid">
+      <article class="project-card">
+        <a class="project-image-link" href="/images/portfolio/rov.jpg" target="_blank" rel="noopener" aria-label="Open ROV detailed poster"><img class="project-cover--photo" src="/images/portfolio/UAV.png" alt="Marine inspection ROV cover render"><span class="image-open-label">View detail</span></a>
+        <div class="project-body">
+          <p class="project-kicker">System &middot; Marine Robotics</p>
+          <h3>Marine Pipeline Inspection ROV</h3>
+          <p>Perception and digital-twin software stack for underwater inspection.</p>
+          <div class="project-brief">
+            <div><span>System</span><p>Jetson Orin Nano, STM32, UWB, depth, attitude sensors, live video, and Flask services.</p></div>
+            <div><span>Interface</span><p>Three.js/WebGL dashboard for synchronized pose, sensor state, and visual detection.</p></div>
+          </div>
+          <div class="project-metrics"><span>38 fps</span><span>YOLOv11</span><span>Three.js</span></div>
+          <a class="project-text-link" href="/images/portfolio/rov.jpg" target="_blank" rel="noopener">View detail poster &rarr;</a>
+        </div>
+      </article>
 
-## 🛠️ <span class="lang-en">Internship</span><span class="lang-zh" >实习与实训</span>
-<div id="internship">
-<div class="timeline">
-  <div class="timeline-item">
-    <div class="timeline-marker"></div>
-    <div class="timeline-date">04/2025</div>
-    <div class="timeline-content">
-      <h3 style="margin-top:0;"><span class="lang-en">Guangdong Industry Polytechnic</span><span class="lang-zh" >广东轻工职业技术大学</span></h3>
-      <p><em><span class="lang-en">Engineering Training Trainee</span><span class="lang-zh" >工程实训学员</span></em></p>
-      <ul>
-        <li><span class="lang-en">Completed comprehensive engineering training in manufacturing processes and electrical technology.</span><span class="lang-zh" >在机电技术学院完成了全面的工程实训，获得了制造工艺和电气技术的实践经验。</span></li>
-      </ul>
+      <article class="project-card">
+        <a class="project-image-link project-image-link--duo" href="/images/portfolio/systems.jpg" target="_blank" rel="noopener" aria-label="Open shared systems detailed poster"><span class="project-cover-duo"><img src="/images/portfolio/AI%20sorting.jpg" alt="Edge AI waste sorting system cover photo"><img src="/images/portfolio/harvest%20machine.jpg" alt="Low-carbon agricultural robot cover render"></span><span class="image-open-label">Shared detail</span></a>
+        <div class="project-body">
+          <p class="project-kicker">Deployment &middot; Edge AI + Robotics</p>
+          <h3>Waste Sorting System &amp; Agricultural Robot</h3>
+          <p>Two deployable engineering systems sharing one detailed portfolio poster: a K230 waste-sorting pipeline and an integrated low-carbon seeding-harvesting robot.</p>
+          <div class="project-brief">
+            <div><span>Waste Sorting</span><p>Built a 12,000-image dataset, pruned and INT8-quantized YOLOv5s through NNCASE for K230 hardware.</p></div>
+            <div><span>Agricultural Robot</span><p>Participated in modular mechanical design, prototype testing, system integration, and patent documentation.</p></div>
+          </div>
+          <div class="project-metrics"><span>12,000 images</span><span>31 fps</span><span>2 patent outputs</span></div>
+          <a class="project-text-link" href="/images/portfolio/systems.jpg" target="_blank" rel="noopener">View shared detail poster &rarr;</a>
+        </div>
+      </article>
     </div>
-  </div>
-</div>
-</div>
+  </section>
+
+  <section class="home-section reveal" id="credentials">
+    <div class="section-label"><span class="num">04</span><h2>Credentials</h2></div>
+    <div>
+      <p class="section-intro">Academic standing, selected awards, and patent outputs, kept compact here and fully detailed in the CV.</p>
+      <div class="credential-ledger">
+        <article class="credential-summary">
+          <div>
+            <p class="credential-kicker">Education</p>
+            <h3 class="credential-title">Guangzhou University</h3>
+            <p class="credential-note"><strong>B.E. in Intelligent Manufacturing</strong><br>Sep 2023 - Present; expected Jun 2027.</p>
+          </div>
+          <dl class="credential-metrics" aria-label="Academic standing">
+            <div><dt>GPA</dt><dd>3.58/4.0</dd></div>
+            <div><dt>Average</dt><dd>89.90</dd></div>
+            <div><dt>Rank</dt><dd>5/57</dd></div>
+            <div><dt>Assessment</dt><dd>1/57</dd></div>
+          </dl>
+        </article>
+        <article class="credential-block">
+          <p class="credential-kicker">Selected Awards</p>
+          <ul class="credential-list">
+            <li><span class="credential-year">2025</span><p><strong>Gold Medal</strong>, National Final, China International College Students' Innovation Competition.</p></li>
+            <li><span class="credential-year">2025</span><p><strong>National 2nd Prize</strong>, China Robotics and Artificial Intelligence Competition.</p></li>
+            <li><span class="credential-year">2025</span><p><strong>National 3rd Prize</strong>, National University Student Contest on Energy Saving and Emission Reduction.</p></li>
+            <li><span class="credential-year">2024</span><p><strong>2nd Prize</strong>, Asia and Pacific Mathematical Contest in Modeling.</p></li>
+          </ul>
+        </article>
+        <article class="credential-block">
+          <p class="credential-kicker">Patents and Leadership</p>
+          <ul class="credential-list">
+            <li><span class="credential-year">2025</span><p><strong>Chinese invention patent application</strong>, Edge AI Waste Sorting System, 3rd inventor.</p></li>
+            <li><span class="credential-year">2024</span><p><strong>Chinese utility model patent</strong>, Integrated Low-Carbon Seeding and Harvesting Agricultural Machine, 4th inventor.</p></li>
+            <li><span class="credential-year">2025</span><p><strong>President</strong>, Maker Association of Guangzhou University.</p></li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
 
 </div>
-
-
-<div id="cv-view" style="display: none;" markdown="1">
-<br>
-
-## 📄 <span class="lang-en">Curriculum Vitae</span><span class="lang-zh" >个人简历</span>
-
-<h2 style="margin-top: 0; border-bottom: 2px solid #eee; padding-bottom: 10px;"><span class="lang-en">EDUCATION</span><span class="lang-zh" >教育背景</span></h2>
-
-**<span class="lang-en">Guangzhou University (GZHU)</span><span class="lang-zh" >广州大学 (GZHU)</span>**
-*<span class="lang-en">Bachelor of Engineering (Third-year Student)</span><span class="lang-zh" >工学学士 (大三在读)</span>*
-*09/2023 - <span class="lang-en">Present</span><span class="lang-zh" >至今</span>*
-* **<span class="lang-en">Major:</span><span class="lang-zh" >专业：</span>** <span class="lang-en">Intelligent Manufacturing Engineering</span><span class="lang-zh" >智能制造工程</span> | **GPA:** 3.58/4.0 (<span class="lang-en">Rank: 8/57</span><span class="lang-zh" >排名: 8/57</span>) | **<span class="lang-en">Weighted Avg:</span><span class="lang-zh" >加权平均分：</span>** 88.20/100
-* **<span class="lang-en">Relevant Courses:</span><span class="lang-zh" >相关课程：</span>** <span class="lang-en">Linear Algebra (94), Python Programming (93), University Physics (90), C Programming Design (89).</span><span class="lang-zh" >线性代数 (94), Python 编程 (93), 大学物理 (90), C 语言程序设计 (89)。</span>
-* **<span class="lang-en">Core Honors:</span><span class="lang-zh" >核心荣誉：</span>** <span class="lang-en">University First-Class Scholarship (Top 2%), Ranked 1st in Major in Comprehensive Evaluation (Sophomore), University Second-Class Scholarship (Top 9%), CET-4.</span><span class="lang-zh" >校一等奖学金 (前 2%)，大二综测专业第一，校二等奖学金 (前 9%)，大学英语四级 (CET-4)。</span>
-</div>
-
-<br>
-
-<h2 style="margin-top: 0; border-bottom: 2px solid #eee; padding-bottom: 10px;"><span class="lang-en">PROJECT EXPERIENCE</span><span class="lang-zh" >项目经历</span></h2>
-
-**<span class="lang-en">HoLoRA: Hyperspectral Image Classification via Holographic Low-Rank Adapter</span><span class="lang-zh" >HoLoRA: 基于全息低秩适配器的高光谱图像分类</span>**
-*<span class="lang-en">Project Leader (Supervisor: Xiaofei Yang)</span><span class="lang-zh" >项目负责人 (指导老师: 杨小飞)</span> | 06/2025-<span class="lang-en">Present</span><span class="lang-zh" >至今</span>*
-* **<span class="lang-en">What I Built:</span><span class="lang-zh" >研究内容:</span>** <span class="lang-en">Developed a lightweight deep learning framework for hyperspectral image (HSI) classification that dynamically adapts its weights to each input sample, addressing the challenges of high spectral dimensionality and limited labeled data.</span><span class="lang-zh" >开发了一个轻量级高光谱图像 (HSI) 分类深度学习框架，其能够为每个输入样本动态适应权重，解决了高光谱维度和有限标记数据的挑战。</span>
-* **<span class="lang-en">Key Innovations:</span><span class="lang-zh" >核心创新:</span>**
-  * **<span class="lang-en">Holographic Patch Embedding (HPE):</span><span class="lang-zh" >全息补丁嵌入 (HPE):</span>** <span class="lang-en">Encodes each spatial patch into multiple tokens instead of one, preserving complete spatial context that standard Vision Transformers lose.</span><span class="lang-zh" >将每个空间补丁编码为多个标记，保留了标准视觉 Transformer 容易丢失的完整空间上下文。</span>
-  * **<span class="lang-en">Dynamic Low-Rank Adapter:</span><span class="lang-zh" >动态低秩适配器:</span>** <span class="lang-en">Generates sample-specific weight adjustments via input-driven functions, enabling "one-sample-one-adaptation" without increasing inference cost.</span><span class="lang-zh" >通过输入驱动函数生成特定样本的权重调整，实现了"单样本单自适应"，而不增加推理成本。</span>
-  * **<span class="lang-en">Spectral Polynomial Prior (SPP):</span><span class="lang-zh" >光谱多项式先验 (SPP):</span>** <span class="lang-en">A physics-guided loss that models spectral distortions, improving robustness to illumination variations.</span><span class="lang-zh" >物理引导的损失函数以模拟光谱失真，提高了对光照变化的鲁棒性。</span>
-* **<span class="lang-en">Key Finding:</span><span class="lang-zh" >关键发现:</span>** <span class="lang-en">Through controlled experiments with identical parameter counts, I demonstrated that dynamic weight modulation—not model size—is the key driver of performance in complex scenes (+1.2% OA gain).</span><span class="lang-zh" >通过相同参数量的对照实验证明，在复杂场景中推动性能提升的关键是动态权重调制，而非模型规模 (OA 提升 1.2%)。</span>
-* **<span class="lang-en">Results:</span><span class="lang-zh" >实验结果:</span>** <span class="lang-en">95.07% OA on Indian Pines (+0.94% vs. SSFTT), 85% FLOPs of comparable methods. (Target: IEEE TIP)</span><span class="lang-zh" >在 Indian Pines 达到 95.07% OA (较 SSFTT 提升 0.94%)，且计算量仅为同类方法的 85%。(目标期刊: IEEE TIP)</span>
-
-<br>
-
-**<span class="lang-en">SSGTN: Spectral-Spatial Graph Transformer Network for HSI Classification</span><span class="lang-zh" >SSGTN: 基于空谱图变换网络的高光谱图像分类</span>**
-*<span class="lang-en">Haotian Shi, Zihang Luo, **Yiyang Ma**, Guanquan Zhu and Xin Dai (Supervisor: Xin Dai & Haotian Shi)</span><span class="lang-zh" >Haotian Shi, Zihang Luo, **Yiyang Ma**, Guanquan Zhu and Xin Dai (指导老师: 戴欣 & 史皓天)</span> | 05/2025 – 01/2026*
-*<span class="lang-en">Published in Remote Sensing (JCR Q1).</span><span class="lang-zh" >发表于 Remote Sensing (JCR一区)。</span>*
-* **<span class="lang-en">What I Built:</span><span class="lang-zh" >研究内容:</span>** <span class="lang-en">Developed a hybrid GCN-Transformer framework that synergizes local topology with global dependencies, resolving the trade-off between structural preservation and long-range context under scarce supervision (1% labels).</span><span class="lang-zh" >开发了混合 GCN-Transformer 框架，将局部拓扑与全局依赖相结合，解决了在极少量监督(1%标签)下结构保留与长程上下文之间的权衡问题。</span>
-* **<span class="lang-en">Key Innovations:</span><span class="lang-zh" >核心创新:</span>**
-  * **<span class="lang-en">LDA-SLIC Superpixel Graph:</span><span class="lang-zh" >LDA-SLIC 超像素图:</span>** <span class="lang-en">Projects high-dimensional inputs into compact nodes via spectral reduction, preserving discriminative boundaries while drastically lowering computational cost.</span><span class="lang-zh" >通过光谱降维将高维输入投影为紧凑节点，在极大降低计算成本的同时保留了判别性边界。</span>
-  * **<span class="lang-en">Spectral-Spatial Shift Module (SSSM):</span><span class="lang-zh" >空谱移位模块 (SSSM):</span>** <span class="lang-en">A parameter-free mechanism performing cyclic shifts to enable multi-scale feature interaction without adding learnable weights.</span><span class="lang-zh" >无参数循环移位机制，无需增加可学习权重即可实现多尺度特征交互。</span>
-  * **<span class="lang-en">Dual-Branch GCN-Transformer:</span><span class="lang-zh" >双分支 GCN-Transformer:</span>** <span class="lang-en">Parallelly extracts local geometric and global semantic features, dynamically fused for comprehensive representation.</span><span class="lang-zh" >并行提取局部几何和全局语义特征并进行动态融合以实现全面表征。</span>
-* **<span class="lang-en">Key Finding:</span><span class="lang-zh" >关键发现:</span>** <span class="lang-en">Component-wise ablation proved that explicit structural priors outweigh model depth in low-data regimes—the parameter-free SSSM alone boosted urban scene accuracy by ~4%, validating that geometric constraints mitigate overfitting.</span><span class="lang-zh" >消融实验证明在低数据状态下显式结构先验比模型深度更重要——仅无参数的 SSSM 就能将城市场景准确率提升约 4%，验证了几何约束能缓解过拟合。</span>
-* **<span class="lang-en">Results:</span><span class="lang-zh" >实验结果:</span>** <span class="lang-en">93.97% OA on Houston2018 (+2.95% vs. Graph-Mamba), utilizing only 3.8% FLOPs of standard Transformers (60G vs. 1578G).</span><span class="lang-zh" >在 Houston2018 达到 93.97% OA (较 Graph-Mamba 提升 2.95%)，计算量仅为标准 Transformer 的 3.8% (60G vs. 1578G)。</span>
-
-<br>
-
-**<span class="lang-en">A Robot for Underwater Energy Pipeline Crack Detection</span><span class="lang-zh" >水下能源管道裂缝检测机器人</span>**
-*<span class="lang-en">Core Member (Supervisor: Zhifu Li & Daqi Chen)</span><span class="lang-zh" >核心成员 (指导老师: 李志付 & 陈大奇)</span> | 09/2024 - <span class="lang-en">Present</span><span class="lang-zh" >至今</span>*
-* <span class="lang-en">Developed a high-performance underwater robot for pipeline inspection, focusing on stability and precision. The system features a Neural Network-enhanced Fuzzy PID controller that reduces navigation offset by 34% in complex currents, and an Actor-Critic Reinforcement Learning module for thruster fault tolerance with a 0.7s response time. Additionally, an improved YOLOv11-based visual detection system was implemented, boosting crack detection accuracy by 14%, effectively solving traditional inspection difficulties.</span><span class="lang-zh" >开发了一款高性能水下机器人用于管道检测，专注于稳定性和精度。系统采用神经网络增强的模糊 PID 控制器，将复杂水流中的导航偏差减少了 34%，并采用 Actor-Critic 强化学习模块实现推进器容错 (0.7秒响应时间)。此外，实施了改进的基于 YOLOv11 的视觉检测系统，将裂缝检测准确率提高了 14%，有效解决了传统检测难题。</span>
-* **<span class="lang-en">Achievements:</span><span class="lang-zh" >成就：</span>** <span class="lang-en">National 2nd Prize (China Robotics & AI Competition), National 3rd Prize (Energy Saving Competition).</span><span class="lang-zh" >国家二等奖 (中国机器人及人工智能大赛)，国家三等奖 (节能减排大赛)。</span>
-
-<br>
-
-**<span class="lang-en">Intelligent Trash Can System Based on Three-stage Differential Separation Device</span><span class="lang-zh" >基于三级差分分离装置的智能垃圾桶系统</span>**
-*<span class="lang-en">Core Member (Supervisor: Wenting Deng)</span><span class="lang-zh" >核心成员 (指导老师: 邓文婷)</span> | 01/2025-04/2025*
-* <span class="lang-en">Built an automated waste sorting system utilizing a three-stage differential separation mechanism and dual-servo precision control. The system employs an Arduino Mega 2560 for motion control and a CanMV K230 module for edge AI computing. Specifically, I was responsible for deploying the YOLOv5 model and optimizing the recognition algorithm, achieving a high classification accuracy of 99.74% across four waste categories. Additionally, I coordinated the mechanical-electrical integration and successfully filed an invention patent as the second student inventor.</span><span class="lang-zh" >构建了一个利用三级差分分离机制和双伺服精密控制的自动化垃圾分类系统。使用 Arduino Mega 2560 进行运动控制，CanMV K230 模块进行边缘 AI 计算。我具体负责部署 YOLOv5 模型并优化识别算法，在四类垃圾中实现了 99.74% 的高分类准确率。此外，我协调机电一体化并作为第二学生发明人成功申请了发明专利。</span>
-* **<span class="lang-en">Outcome:</span><span class="lang-zh" >成果：</span>** <span class="lang-en">Filed an invention patent (2nd Student Inventor).</span><span class="lang-zh" >申请发明专利 (第二学生发明人)。</span>
-</div>
-
-<br>
-
-<h2 style="margin-top: 0; border-bottom: 2px solid #eee; padding-bottom: 10px;"><span class="lang-en">SCHOLARSHIP & AWARDS</span><span class="lang-zh" >奖学金与奖项</span></h2>
-
-**<span class="lang-en">Scholarships & Academics:</span><span class="lang-zh" >奖学金与学业：</span>**
-* <span class="lang-en">University First-Class Scholarship (Top 2%), Academic Year 2025</span><span class="lang-zh" >校一等奖学金 (前 2%), 2025学年</span>
-* <span class="lang-en">University Second-Class Scholarship (Top 9%), Academic Year 2024</span><span class="lang-zh" >校二等奖学金 (前 9%), 2024学年</span>
-
-**<span class="lang-en">National Competitions:</span><span class="lang-zh" >国家级竞赛：</span>**
-* <span class="lang-en">**Gold Medal**, China International College Students' Innovation Competition 2025 (National Level).</span><span class="lang-zh" >**金奖**, 2025年中国国际大学生创新大赛 (国家级)。</span>
-* <span class="lang-en">**National 2nd Prize**, The 27th China Robotics & Artificial Intelligence Competition, 2025.</span><span class="lang-zh" >**国家二等奖**, 第二十七届中国机器人及人工智能大赛, 2025。</span>
-* <span class="lang-en">**National 2nd Prize**, The 10th National Applied Talent Comprehensive Skills Competition, 2024. (Project Leader)</span><span class="lang-zh" >**国家二等奖**, 第十届全国应用型人才综合技能大赛, 2024 (项目负责人)。</span>
-* <span class="lang-en">**National 3rd Prize**, The 18th National University Student Social Practice and Science Contest on Energy Saving & Emission Reduction, 2025. (Project Leader)</span><span class="lang-zh" >**国家三等奖**, 第十八届全国大学生节能减排社会实践与科技竞赛, 2025 (项目负责人)。</span>
-* <span class="lang-en">**2nd Prize**, The 14th Asia and Pacific Mathematical Contest in Modeling (APMCM), 2024.</span><span class="lang-zh" >**二等奖**, 第十四届亚太地区大学生数学建模竞赛 (APMCM), 2024。</span>
-
-<br>
-
-<h2 style="margin-top: 0; border-bottom: 2px solid #eee; padding-bottom: 10px;"><span class="lang-en">EXTRACURRICULAR ACTIVITIES</span><span class="lang-zh" >课外活动</span></h2>
-
-**<span class="lang-en">Maker Association of Guangzhou University</span><span class="lang-zh" >广州大学创客协会</span>**
-*<span class="lang-en">President</span><span class="lang-zh" >会长</span> | 05/2025 – <span class="lang-en">Present</span><span class="lang-zh" >至今</span>*
-* **<span class="lang-en">Leadership:</span><span class="lang-zh" >领导力：</span>** <span class="lang-en">Led the university's largest student innovation community. Organized the 12th "Winter Camp" and "Summer Camp" academic technology activities, attracting over 500 participants.</span><span class="lang-zh" >领导全校最大的学生创新社团。组织第十二届“冬令营”和“夏令营”学术科技活动，吸引了超过 500 名参与者。</span>
-* **<span class="lang-en">Event Organization:</span><span class="lang-zh" >活动组织：</span>** <span class="lang-en">Successfully organized and executed the university-level selection for the 18th National University Student Social Practice and Science Contest on Energy Saving & Emission Reduction.</span><span class="lang-zh" >成功组织并执行了第十八届全国大学生节能减排社会实践与科技竞赛的校级选拔赛。</span>
-
-<br>
-
-**<span class="lang-en">Guangzhou-Hong Kong Science and Innovation Talent Class</span><span class="lang-zh" >穗港科技创新人才班</span>**
-*<span class="lang-en">Teaching Assistant</span><span class="lang-zh" >助教</span> | <span class="lang-en">[Start Date]</span><span class="lang-zh" >[开始时间]</span> – <span class="lang-en">Present</span><span class="lang-zh" >至今</span>*
-* **<span class="lang-en">Mentorship:</span><span class="lang-zh" >指导：</span>** <span class="lang-en">Served as a Teaching Assistant for the elite talent class. Provided voluntary guidance to outstanding freshmen from various majors on scientific research projects during summer breaks.</span><span class="lang-zh" >担任精英人才班的助教。在暑假期间为来自不同专业的优秀新生提供科研项目的志愿指导。</span>
-</div>
-
-<br>
-
-<h2 style="margin-top: 0; border-bottom: 2px solid #eee; padding-bottom: 10px;"><span class="lang-en">INTERNSHIP & TRAINING</span><span class="lang-zh" >实习与实训</span></h2>
-
-**<span class="lang-en">Guangdong Industry Polytechnic</span><span class="lang-zh" >广东轻工职业技术大学</span>**
-*<span class="lang-en">Engineering Training Trainee</span><span class="lang-zh" >工程实训学员</span> | 04/2025*
-* **<span class="lang-en">Overview:</span><span class="lang-zh" >概述：</span>** <span class="lang-en">Completed comprehensive engineering training at the School of Mechanical and Electrical Technology, gaining hands-on experience in manufacturing processes and electrical technology.</span><span class="lang-zh" >在机电技术学院完成了全面的工程实训，获得了制造工艺和电气技术的实践经验。</span>
-</div>
-
-<style>
-
-/* Language Toggle Logic */
-body.zh-active .lang-en {
-    display: none !important;
-}
-body.zh-active .lang-zh {
-    display: inline-block !important;
-}
-body.zh-active div.lang-zh {
-    display: block !important;
-}
-/* By default, lang-zh is hidden by inline styles or basic css, but let's ensure it here just in case */
-body:not(.zh-active) .lang-zh {
-    display: none !important;
-}
-body:not(.zh-active) .lang-en {
-    display: inline-block !important;
-}
-body:not(.zh-active) div.lang-en {
-    display: block !important;
-}
-</style>
 
 <script>
-/* SPA Navigation and Language Toggle Logic */
+  (function () {
+    var links = Array.prototype.slice.call(document.querySelectorAll('.masthead a[href^="/#"], .action-row a[href^="#"]'));
+    links.forEach(function (link) {
+      link.addEventListener('click', function (event) {
+        var href = link.getAttribute('href');
+        var hash = href.charAt(0) === '#' ? href : href.replace(/^\//, '');
+        var target = document.querySelector(hash);
+        if (!target) return;
+        event.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        history.replaceState(null, '', hash);
+      });
+    });
 
-function toggleLanguage() {
-    document.body.classList.toggle('zh-active');
-}
+    var sections = Array.prototype.slice.call(document.querySelectorAll('.home-section[id]'));
+    if ('IntersectionObserver' in window) {
+      var navObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          document.querySelectorAll('.masthead a.is-active').forEach(function (active) { active.classList.remove('is-active'); });
+          var active = document.querySelector('.masthead a[href="/#' + entry.target.id + '"]');
+          if (active) active.classList.add('is-active');
+        });
+      }, { rootMargin: '-35% 0px -55% 0px', threshold: 0.01 });
+      sections.forEach(function (section) { navObserver.observe(section); });
 
-document.addEventListener('DOMContentLoaded', function() {
-    var homeView = document.getElementById('home-view');
-    var cvView = document.getElementById('cv-view');
-
-    /* Function to handle hash changes */
-    function handleHashChange() {
-        var hash = window.location.hash;
-
-        if (hash === '#cv-view') {
-            homeView.style.display = 'none';
-            cvView.style.display = 'block';
-            window.scrollTo(0, 0);
-        } else {
-            homeView.style.display = 'block';
-            cvView.style.display = 'none';
-            /* Allow default scrolling for other anchors like #education */
-        }
+      var revealObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08 });
+      document.querySelectorAll('.reveal').forEach(function (element) { revealObserver.observe(element); });
+    } else {
+      document.querySelectorAll('.reveal').forEach(function (element) { element.classList.add('is-visible'); });
     }
 
-    /* Use event delegation on the document body, BUT use capturing phase (true). */
-    /* The theme's greedy-nav or other scripts might call e.stopPropagation() on their listeners, */
-    /* which prevents the event from bubbling up to the body. Capturing catches it on the way down. */
-    document.body.addEventListener('click', function(e) {
-        var target = e.target.closest('a');
-        if (!target) return;
+    var finePointer = window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+    var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var profileCard = document.querySelector('.profile-card');
+    if (profileCard && finePointer && !reduceMotion) {
+      profileCard.addEventListener('pointermove', function (event) {
+        var rect = profileCard.getBoundingClientRect();
+        var x = (event.clientX - rect.left) / rect.width;
+        var y = (event.clientY - rect.top) / rect.height;
+        var rotateY = (x - 0.5) * 7;
+        var rotateX = (0.5 - y) * 6;
+        profileCard.style.setProperty('--tilt-x', rotateX.toFixed(2) + 'deg');
+        profileCard.style.setProperty('--tilt-y', rotateY.toFixed(2) + 'deg');
+        profileCard.style.setProperty('--glare-x', Math.round(x * 100) + '%');
+        profileCard.style.setProperty('--glare-y', Math.round(y * 100) + '%');
+        profileCard.classList.add('is-card-active');
+      });
+      profileCard.addEventListener('pointerleave', function () {
+        profileCard.style.setProperty('--tilt-x', '0deg');
+        profileCard.style.setProperty('--tilt-y', '0deg');
+        profileCard.style.setProperty('--glare-x', '50%');
+        profileCard.style.setProperty('--glare-y', '18%');
+        profileCard.classList.remove('is-card-active');
+      });
+    }
 
-        var href = target.getAttribute('href') || '';
-        var text = target.innerText || '';
-
-        /* 1. Check for Language Toggle */
-        /* The theme might strip the 'lang-toggle' class when it moves items into the dropdown. */
-        /* We reliably check by class OR by the text content "中文/English". */
-        if (target.classList.contains('lang-toggle') || text.includes('中文/English')) {
-            e.preventDefault();
-            /* Stop other click listeners (like the theme's default link handler) from interfering */
-            e.stopPropagation();
-            toggleLanguage();
-            return;
-        }
-
-        /* 2. Handle SPA Navigation inside the site */
-        if (href.indexOf('#') !== -1) {
-            var targetHash = href.substring(href.indexOf('#'));
-
-            if (targetHash === '#cv-view') {
-                homeView.style.display = 'none';
-                cvView.style.display = 'block';
-                /* Force hash update so the back button works and 'hashchange' triggers */
-                if (window.location.hash !== '#cv-view') {
-                    window.history.pushState(null, null, '#cv-view');
-                }
-            } else if (targetHash !== '#' && targetHash !== '') {
-                /* Clicking an anchor like #projects or #education */
-                homeView.style.display = 'block';
-                cvView.style.display = 'none';
-            }
-        } else if (href === '/' || (href.startsWith(window.location.origin) && href.endsWith('/'))) {
-            /* Clicking "About Me" or Site Title */
-            homeView.style.display = 'block';
-            cvView.style.display = 'none';
-            window.scrollTo(0, 0);
-        }
-    }, true); /* <--- Capture phase is extremely important here */
-
-    /* Listen for browser back/forward buttons (hashchange event) */
-    window.addEventListener('hashchange', handleHashChange);
-
-    /* Check initial hash on load */
-    handleHashChange();
-});
+    var emailLink = document.querySelector('.profile-email');
+    if (emailLink && navigator.clipboard && window.isSecureContext) {
+      emailLink.addEventListener('click', function (event) {
+        event.preventDefault();
+        var email = emailLink.textContent.trim().replace(/\s+copied$/i, '');
+        navigator.clipboard.writeText(email).then(function () {
+          emailLink.classList.add('is-copied');
+          window.setTimeout(function () { emailLink.classList.remove('is-copied'); }, 1400);
+        }, function () {
+          window.location.href = emailLink.href;
+        });
+      });
+    }
+  })();
 </script>

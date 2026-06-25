@@ -12,7 +12,7 @@ site_theme               : "default" # The available themes options are "default
 title                    : "Yiyang Ma"
 title_separator          : "-"
 name                     : &name "Yiyang Ma"
-description              : &description "Yiyang Ma's Personal Website"   # Update this with a general description of your site, this is the default if not overridden by a page
+description              : &description "Yiyang Ma's academic website: efficient visual modeling, hyperspectral image classification, reliable 3D perception, and edge AI systems."
 url                      : https://xunshang111.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -26,12 +26,12 @@ author:
   avatar           : "avatar.jpg"
   name             : "Yiyang Ma"
   pronouns         : # example: "she/her"  
-  bio              : "Bachelor of Engineering (candidate) at Guangzhou University. Major: Intelligent Manufacturing Engineering."
+  bio              : "B.E. candidate at Guangzhou University working on efficient visual modeling, hyperspectral image classification, reliable 3D perception, and edge AI deployment."
   location         : "Guangzhou, China"
   employer         : # "Red Brick University"
   uri              : # URL
-  email            : "1733665145@qq.com"
-  phone            : "+86 17875817548" # Added phone number
+  email            : "mayiyang7313@gmail.com"
+  phone            :
 
   # Academic websites
   academia         : # URL
@@ -52,7 +52,7 @@ author:
   bitbucket        : # Username - Update with your username on the site
   codepen          : # Username
   dribbble         : # Username
-  github           : # "academicpages"
+  github           : "xunshang111"
   kaggle           : # Username  
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
@@ -119,7 +119,7 @@ staticman:
   path                   : "_data/comments/{options.slug}"
   requiredFields         : ['name', 'email', 'message']
   transforms:
-    email                : "md5"
+  email            : "mayiyang7313@gmail.com"
   generatedFields:
     date:
       type               : "date"
@@ -145,7 +145,7 @@ facebook:
   app_id                 :
   publisher              :
 og_image                 :  # Social media default site image
-og_description           :  # Social media default site image description
+og_description              : &description "Yiyang Ma's academic website: efficient visual modeling, hyperspectral image classification, reliable 3D perception, and edge AI systems."
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
@@ -296,6 +296,8 @@ defaults:
 # Sass/SCSS
 sass:
   sass_dir: _sass
+  load_paths:
+    - "./_sass"
   style: compressed # https://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
 
 
