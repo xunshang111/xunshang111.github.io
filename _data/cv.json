@@ -27,18 +27,18 @@
       "studyType": "Bachelor of Engineering",
       "startDate": "2023-09",
       "endDate": "Expected 2027-06",
-      "gpa": "3.58/4.0; average score 89.90/100; rank 5/57; comprehensive assessment rank 1/57 in sophomore year",
+      "gpa": "3.60/4.0; average score 90.32/100; rank 4/57; comprehensive assessment rank 1/57 in sophomore year",
       "courses": []
     }
   ],
   "work": [
     {
       "company": "Research Group of Prof. Xiaofei Yang, Guangzhou University",
-      "position": "Second Author; Leading Student Contributor - HALO",
+      "position": "First Author; Leading Student Contributor - HALO",
       "website": "",
       "startDate": "2025-07",
       "endDate": "2026-03",
-      "summary": "HALO: A Sample-Adaptive Low-Rank Modulation Framework for HSI Classification. Manuscript under review at IEEE Transactions on Geoscience and Remote Sensing.",
+      "summary": "HALO: A Sample-Adaptive Low-Rank Modulation Framework for HSI Classification. Manuscript in preparation for submission to Expert Systems with Applications (ESWA).",
       "highlights": [
         "Identified the limitation of fixed-weight feature transformations in HSI classification, where complex intra-class spectral variability requires sample-adaptive modulation rather than uniform feature scaling.",
         "Implemented a lightweight Transformer framework in PyTorch and contributed to Holographic Patch Embedding, Dynamic Low-Rank Adapter, and Spectral Polynomial Prior modules.",
@@ -118,10 +118,10 @@
   "publications": [
     {
       "name": "HALO: A Sample-Adaptive Low-Rank Modulation Framework for HSI Classification",
-      "publisher": "IEEE Transactions on Geoscience and Remote Sensing, under review",
+      "publisher": "Expert Systems with Applications (ESWA), preparing for submission",
       "releaseDate": "2026",
       "website": "",
-      "summary": "Yang, X., Ma, Y., Wen, J., Xue, M., Fang, Y., Ban, Y., and Zhou, Y. Second author and leading student contributor."
+      "summary": "Ma, Y., Wen, J., and Yang, X. (corresponding author). First author and leading student contributor."
     },
     {
       "name": "R2Mamba: Route-Reliability Mamba for Hyperspectral Image Classification",

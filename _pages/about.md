@@ -810,9 +810,9 @@ redirect_from:
       <article class="publication">
         <a class="publication-figure" href="/images/portfolio/halo.jpg" target="_blank" rel="noopener" aria-label="Open HALO detailed poster"><img src="/images/portfolio/HALOframework.png" alt="HALO framework architecture"></a>
         <div class="publication-body">
-          <span class="status">Manuscript under review &middot; TGRS</span>
+          <span class="status">Preparing for submission &middot; Expert Systems with Applications (ESWA)</span>
           <h3>HALO: A Sample-Adaptive Low-Rank Modulation Framework for HSI Classification</h3>
-          <p class="publication-authors">Yang, X., <strong>Ma, Y.</strong>, Wen, J., Xue, M., Fang, Y., Ban, Y., &amp; Zhou, Y.</p>
+          <p class="publication-authors"><strong>Ma, Y.</strong>, Wen, J., &amp; Yang, X. (corresponding author).</p>
           <p class="publication-summary">A lightweight Transformer framework for heterogeneous and label-scarce hyperspectral scenes. I implemented the main pipeline and contributed to HPE, DLoRA, SPP, ablations, visualization, and manuscript writing.</p>
           <div class="tag-row"><span class="tag">DLoRA</span><span class="tag">HPE</span><span class="tag">SPP</span><span class="tag">95.07% OA</span></div>
           <div class="publication-actions"><a class="publication-link" href="/images/portfolio/halo.jpg" target="_blank" rel="noopener">Detail poster &rarr;</a><a class="publication-link" href="/images/portfolio/HALOframework.png" target="_blank" rel="noopener">Architecture &rarr;</a></div>
@@ -892,9 +892,9 @@ redirect_from:
             <p class="credential-note"><strong>B.E. in Intelligent Manufacturing</strong><br>Sep 2023 - Present; expected Jun 2027.</p>
           </div>
           <dl class="credential-metrics" aria-label="Academic standing">
-            <div><dt>GPA</dt><dd>3.58/4.0</dd></div>
-            <div><dt>Average</dt><dd>89.90</dd></div>
-            <div><dt>Rank</dt><dd>5/57</dd></div>
+            <div><dt>GPA</dt><dd>3.60/4.0</dd></div>
+            <div><dt>Average</dt><dd>90.32</dd></div>
+            <div><dt>Rank</dt><dd>4/57</dd></div>
             <div><dt>Assessment</dt><dd>1/57</dd></div>
           </dl>
         </article>
