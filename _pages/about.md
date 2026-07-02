@@ -636,9 +636,20 @@ redirect_from:
   html[data-theme="dark"] .page__footer a:hover { color: #76b7ab !important; }
   html[data-theme="dark"] .info-card:hover,
   html[data-theme="dark"] .publication:hover,
-  html[data-theme="dark"] .project-card:hover { background: rgba(31, 32, 36, 0.94); border-color: #5a5147; box-shadow: 0 16px 38px rgba(0, 0, 0, 0.32), 0 1px 0 rgba(232, 223, 210, 0.06) inset; }
+  html[data-theme="dark"] .project-card:hover { background: rgba(31, 32, 36, 0.94); border-color: #63594c; box-shadow: 0 16px 38px rgba(0, 0, 0, 0.32), 0 0 0 1px rgba(118, 183, 171, 0.08) inset; }
   html[data-theme="dark"] .profile-card:hover,
-  html[data-theme="dark"] .profile-card.is-card-active { border-color: #5a5147; box-shadow: 0 24px 58px rgba(0, 0, 0, 0.42), 0 1px 0 rgba(232, 223, 210, 0.06) inset; }
+  html[data-theme="dark"] .profile-card.is-card-active { border-color: #63594c; box-shadow: 0 24px 58px rgba(0, 0, 0, 0.42), 0 0 0 1px rgba(118, 183, 171, 0.08) inset; }
+  html[data-theme="dark"] .info-card::after,
+  html[data-theme="dark"] .publication::after,
+  html[data-theme="dark"] .project-card::after,
+  html[data-theme="dark"] .profile-card::after {
+    display: none;
+  }
+  html[data-theme="dark"] .profile-card::before {
+    background:
+      radial-gradient(circle at var(--glare-x) var(--glare-y), rgba(118, 183, 171, 0.12), rgba(118, 183, 171, 0.04) 24%, transparent 52%),
+      linear-gradient(135deg, rgba(214, 169, 88, 0.04), transparent 42%, rgba(118, 183, 171, 0.05) 100%);
+  }
   html[data-theme="dark"] .masthead { background: rgba(21, 23, 28, 0.94) !important; border-bottom-color: rgba(232, 223, 210, 0.13); }
   html[data-theme="dark"] .masthead__menu-item a { color: #e6dece !important; }
   html[data-theme="dark"] .profile-shell { --ink: #f0e7d8; --muted: #b8ad9d; --line: #39352f; --soft: #242321; --panel: rgba(28, 29, 33, 0.9); --teal: #76b7ab; --gold: #d6a958; --rust: #d68d72; }
@@ -674,7 +685,14 @@ redirect_from:
   html[data-theme="dark"] .publication-summary,
   html[data-theme="dark"] .publication p { color: #b8ad9d; }
   html[data-theme="dark"] .action-button { color: #f0e7d8 !important; }
+  html[data-theme="dark"] .action-button:hover {
+    background: #242321;
+    border-color: #6a5d4e;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.24);
+    color: #f0e7d8 !important;
+  }
   html[data-theme="dark"] .action-button.primary { background: #e8dfd2; border-color: #e8dfd2; color: #15171c !important; }
+  html[data-theme="dark"] .action-button.primary:hover { background: #f0e7d8; border-color: #f0e7d8; color: #15171c !important; }
   html[data-theme="dark"] .credential-note,
   html[data-theme="dark"] .credential-list p { color: #b8ad9d; }
   html[data-theme="dark"] .credential-metrics dt { color: #928a7d; }
@@ -765,7 +783,7 @@ redirect_from:
       <p class="hero-copy">I am a B.E. candidate in Intelligent Manufacturing at Guangzhou University, expected to graduate in June 2027. My work connects sample-adaptive spectral-spatial learning, compact perception models, and real-world engineering deployment.</p>
       <div class="action-row">
         <a class="action-button primary" href="/cv-json/">View CV</a>
-        <a class="action-button" href="mailto:mayiyang7313@gmail.com">Email</a>
+        <a class="action-button" href="/images/portfolio/shouye.jpg" target="_blank" rel="noopener">Profile</a>
         <a class="action-button" href="https://github.com/xunshang111">GitHub</a>
         <a class="action-button" href="#publications">Publications</a>
       </div>
@@ -778,7 +796,7 @@ redirect_from:
 
         <div class="profile-focus" aria-label="Research focus">
           <span>Efficient Visual Modeling</span>
-          <span>HSI Classification</span>
+          <span>Dynamic Representation Learning</span>
           <span>Edge AI Deployment</span>
         </div>
         <a class="profile-email" href="mailto:mayiyang7313@gmail.com">mayiyang7313@gmail.com</a>
@@ -790,16 +808,16 @@ redirect_from:
     <div class="metric"><strong>3</strong><span>research papers on hyperspectral visual modeling</span></div>
     <div class="metric"><strong>2</strong><span>Chinese patent outputs from deployed engineering systems</span></div>
     <div class="metric"><strong>6+</strong><span>national-level competition and innovation awards</span></div>
-    <div class="metric"><strong>38 / 31</strong><span>fps edge inference on Jetson ROV vision and K230 waste sorting</span></div>
+    <div class="metric"><strong>4/57</strong><span>academic rank in the Intelligent Manufacturing cohort</span></div>
   </div>
   <section class="home-section reveal" id="research-interests">
     <div class="section-label"><span class="num">01</span><h2>Research</h2></div>
     <div>
-      <p class="section-intro">My current direction is efficient and reliable visual intelligence: models that learn from limited supervision, sensors that stay low-cost and sparse, and systems that can run in real engineering environments.</p>
+      <p class="section-intro">My current research interests are efficient visual modeling, dynamic representation learning, and edge AI deployment.</p>
       <div class="card-grid">
         <article class="info-card"><h3>Efficient Visual Modeling</h3><p>Parameter-efficient learning for high-dimensional visual data, with dynamic low-rank adaptation and compact Transformer/Mamba-style modules.</p><div class="tag-row"><span class="tag">DLoRA</span><span class="tag">Transformer</span><span class="tag">Mamba</span></div></article>
-        <article class="info-card"><h3>Hyperspectral Image Classification</h3><p>Spectral-spatial representation learning under label scarcity, mixed pixels, boundary regions, and cross-scene spectral variability.</p><div class="tag-row"><span class="tag">HSI</span><span class="tag">Remote Sensing</span><span class="tag">Graph</span></div></article>
-        <article class="info-card"><h3>Deployable Perception Systems</h3><p>Edge AI pipelines for underwater inspection, waste sorting, and robot-side perception where latency, model size, and reliability matter.</p><div class="tag-row"><span class="tag">Jetson</span><span class="tag">K230</span><span class="tag">YOLO</span></div></article>
+        <article class="info-card"><h3>Dynamic Representation Learning</h3><p>Sample-adaptive spectral-spatial learning for complex visual scenes, including dynamic modulation and reliability-aware sequence modeling.</p><div class="tag-row"><span class="tag">DLoRA</span><span class="tag">Mamba</span><span class="tag">HSI</span></div></article>
+        <article class="info-card"><h3>Edge AI Deployment</h3><p>Compact perception pipelines for underwater inspection, waste sorting, and robot-side inference where latency, model size, and reliability matter.</p><div class="tag-row"><span class="tag">Jetson</span><span class="tag">K230</span><span class="tag">YOLO</span></div></article>
       </div>
     </div>
   </section>
@@ -810,9 +828,9 @@ redirect_from:
       <article class="publication">
         <a class="publication-figure" href="/images/portfolio/halo.jpg" target="_blank" rel="noopener" aria-label="Open HALO detailed poster"><img src="/images/portfolio/HALOframework.png" alt="HALO framework architecture"></a>
         <div class="publication-body">
-          <span class="status">Preparing for submission &middot; Expert Systems with Applications (ESWA)</span>
+          <span class="status">Preparing for submission &middot; Expert Systems with Applications</span>
           <h3>HALO: A Sample-Adaptive Low-Rank Modulation Framework for HSI Classification</h3>
-          <p class="publication-authors"><strong>Ma, Y.</strong>, Wen, J., &amp; Yang, X. (corresponding author).</p>
+          <p class="publication-authors"><strong>Ma, Y.</strong>, Wen, J., Yang, X., et al.</p>
           <p class="publication-summary">A lightweight Transformer framework for heterogeneous and label-scarce hyperspectral scenes. I implemented the main pipeline and contributed to HPE, DLoRA, SPP, ablations, visualization, and manuscript writing.</p>
           <div class="tag-row"><span class="tag">DLoRA</span><span class="tag">HPE</span><span class="tag">SPP</span><span class="tag">95.07% OA</span></div>
           <div class="publication-actions"><a class="publication-link" href="/images/portfolio/halo.jpg" target="_blank" rel="noopener">Detail poster &rarr;</a><a class="publication-link" href="/images/portfolio/HALOframework.png" target="_blank" rel="noopener">Architecture &rarr;</a></div>
@@ -822,7 +840,7 @@ redirect_from:
       <article class="publication">
         <a class="publication-figure" href="/images/portfolio/R2Mambaframework.png" target="_blank" rel="noopener" aria-label="Open R2Mamba architecture"><img src="/images/portfolio/R2Mambaframework.png" alt="R2Mamba framework architecture"></a>
         <div class="publication-body">
-          <span class="status">Manuscript under review &middot; JSTARS</span>
+          <span class="status">Manuscript under review &middot; IEEE JSTARS</span>
           <h3>R2Mamba: Route-Reliability Mamba for Hyperspectral Image Classification</h3>
           <p class="publication-authors">Wang, W., <strong>Ma, Y.</strong>, Yang, X., Su, Y., &amp; Jiang, M.</p>
           <p class="publication-summary">A Mamba-based HSI classifier using route-reliability scan paths and gate-guided aggregation for boundary and mixed-pixel regions. I designed reliability diagnostics, local correction visualization, and unified experiments.</p>
@@ -893,7 +911,7 @@ redirect_from:
           </div>
           <dl class="credential-metrics" aria-label="Academic standing">
             <div><dt>GPA</dt><dd>3.60/4.0</dd></div>
-            <div><dt>Average</dt><dd>90.32</dd></div>
+            <div><dt>Average</dt><dd>90.47</dd></div>
             <div><dt>Rank</dt><dd>4/57</dd></div>
             <div><dt>Assessment</dt><dd>1/57</dd></div>
           </dl>
@@ -904,6 +922,7 @@ redirect_from:
             <li><span class="credential-year">2025</span><p><strong>Gold Medal</strong>, National Final, China International College Students' Innovation Competition.</p></li>
             <li><span class="credential-year">2025</span><p><strong>National 2nd Prize</strong>, China Robotics and Artificial Intelligence Competition.</p></li>
             <li><span class="credential-year">2025</span><p><strong>National 3rd Prize</strong>, National University Student Contest on Energy Saving and Emission Reduction.</p></li>
+            <li><span class="credential-year">2026</span><p><strong>College Top Ten Student</strong>, Guangzhou University.</p></li>
             <li><span class="credential-year">2024</span><p><strong>2nd Prize</strong>, Asia and Pacific Mathematical Contest in Modeling.</p></li>
           </ul>
         </article>

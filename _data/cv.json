@@ -4,7 +4,7 @@
     "label": "B.E. Candidate in Intelligent Manufacturing",
     "email": "mayiyang7313@gmail.com",
     "website": "https://xunshang111.github.io",
-    "summary": "Undergraduate researcher at Guangzhou University working on efficient visual modeling, reliable 3D visual perception, metric depth estimation, low-cost and sparse sensing, and edge AI deployment.",
+    "summary": "Undergraduate researcher at Guangzhou University working on efficient visual modeling, dynamic representation learning, and edge AI deployment.",
     "location": {
       "address": "Guangzhou University",
       "postalCode": "",
@@ -27,33 +27,35 @@
       "studyType": "Bachelor of Engineering",
       "startDate": "2023-09",
       "endDate": "Expected 2027-06",
-      "gpa": "3.60/4.0; average score 90.32/100; rank 4/57; comprehensive assessment rank 1/57 in sophomore year",
+      "gpa": "3.60/4.0 | average score 90.47/100 | rank 4/57 | comprehensive assessment rank 1/57 in sophomore year",
       "courses": []
     }
   ],
   "work": [
     {
       "company": "Research Group of Prof. Xiaofei Yang, Guangzhou University",
-      "position": "First Author; Leading Student Contributor - HALO",
+      "position": "First Author",
       "website": "",
-      "startDate": "2025-07",
-      "endDate": "2026-03",
-      "summary": "HALO: A Sample-Adaptive Low-Rank Modulation Framework for HSI Classification. Manuscript in preparation for submission to Expert Systems with Applications (ESWA).",
+      "startDate": "2025-09",
+      "endDate": "Present",
+      "status": "Preparing for submission to Expert Systems with Applications",
+      "summary": "HALO: A Sample-Adaptive Low-Rank Modulation Framework for HSI Classification. Manuscript in preparation for submission to Expert Systems with Applications.",
       "highlights": [
         "Identified the limitation of fixed-weight feature transformations in HSI classification, where complex intra-class spectral variability requires sample-adaptive modulation rather than uniform feature scaling.",
         "Implemented a lightweight Transformer framework in PyTorch and contributed to Holographic Patch Embedding, Dynamic Low-Rank Adapter, and Spectral Polynomial Prior modules.",
-        "DLoRA introduces only 4.6K additional parameters per layer for sample-specific weight modulation.",
+        "DLoRA introduces only <strong>4.6K</strong> additional parameters per layer for sample-specific weight modulation.",
         "Conducted ablation studies, visualization analysis, and manuscript writing.",
-        "Achieved 95.07% OA under 10% labels on Indian Pines and 86.22% OA on Houston 2013 under 1% labels, with 29.34M FLOPs."
+        "Achieved <strong>95.07% OA</strong> under 10% labels on Indian Pines and <strong>86.22% OA</strong> on Houston 2013 under 1% labels, with <strong>29.34M FLOPs</strong>."
       ]
     },
     {
       "company": "Research Group of Prof. Xiaofei Yang, Guangzhou University",
-      "position": "Second Author; Leading Student Contributor - R2Mamba",
+      "position": "Second Author",
       "website": "",
       "startDate": "2026-05",
-      "endDate": "2026-06",
-      "summary": "R2Mamba: Route-Reliability Mamba for Hyperspectral Image Classification. Manuscript under review at IEEE JSTARS.",
+      "endDate": "Present",
+      "status": "Under review at IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing",
+      "summary": "R2Mamba: Route-Reliability Mamba for Hyperspectral Image Classification. Manuscript under review at IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing.",
       "highlights": [
         "Developed an efficient Mamba-based HSI classification framework for patch-based central-pixel prediction under complex boundaries and mixed-pixel regions.",
         "Designed the Route-Reliability Mamba Block, routing spatial token maps through row, column, main-diagonal, anti-diagonal, and center-outward Manhattan-ring scan paths.",
@@ -63,10 +65,11 @@
     },
     {
       "company": "Guangzhou University",
-      "position": "Co-Author - SSGTN",
+      "position": "Co-Author",
       "website": "",
       "startDate": "2025-05",
       "endDate": "2026-01",
+      "status": "Published in Remote Sensing",
       "summary": "SSGTN: Spectral-Spatial Graph Transformer Network for HSI Classification. Published in Remote Sensing.",
       "highlights": [
         "Contributed to implementation and evaluation of a dual-branch GCN-Transformer framework for label-scarce HSI classification.",
@@ -83,7 +86,7 @@
       "summary": "Marine Pipeline Inspection ROV with Real-Time Edge Perception and Digital Twin Visualization.",
       "highlights": [
         "Built the perception and visualization software stack connecting the physical ROV, Jetson edge node, STM32 controller, and shore-side digital twin interface.",
-        "Implemented a real-time visual perception pipeline on NVIDIA Jetson Orin Nano, including stereo image processing, CLAHE-based underwater enhancement, and YOLOv11 inference, achieving 38 fps.",
+        "Implemented a real-time visual perception pipeline on NVIDIA Jetson Orin Nano, including stereo image processing, CLAHE-based underwater enhancement, and YOLOv11 inference, achieving <strong>38 fps</strong>.",
         "Integrated a Flask and Three.js/WebGL-based monitoring dashboard for synchronizing depth, attitude, UWB position, motion status, video, and detection results on the operator side.",
         "The system won the National 2nd Prize in the China Robotics and AI Competition and the National 3rd Prize in the National University Student Contest on Energy Saving and Emission Reduction."
       ]
@@ -96,9 +99,9 @@
       "endDate": "2025-04",
       "summary": "Edge AI Smart Waste Sorting System with Three-Stage Differential Separation.",
       "highlights": [
-        "Built a 12,000-image waste dataset across 4 classes and 11 subcategories from approximately 8,000 self-collected and annotated images.",
+        "Built a <strong>12,000-image</strong> waste dataset across 4 classes and 11 subcategories from approximately 8,000 self-collected and annotated images.",
         "Trained a YOLOv5s model and deployed it on a K230 RISC-V edge board using ONNX, NNCASE, INT8 quantization, and channel pruning.",
-        "Reduced model size by approximately 60% with less than 1% accuracy loss and achieved 31 fps real-time offline inference.",
+        "Reduced model size by approximately 60% with less than 1% accuracy loss and achieved <strong>31 fps</strong> real-time offline inference.",
         "Supported a Chinese invention patent application under substantive examination as the 3rd inventor."
       ]
     },
@@ -118,24 +121,30 @@
   "publications": [
     {
       "name": "HALO: A Sample-Adaptive Low-Rank Modulation Framework for HSI Classification",
-      "publisher": "Expert Systems with Applications (ESWA), preparing for submission",
+      "category": "Manuscripts",
+      "publisher": "Expert Systems with Applications, preparing for submission",
       "releaseDate": "2026",
       "website": "",
-      "summary": "Ma, Y., Wen, J., and Yang, X. (corresponding author). First author and leading student contributor."
+      "citation": "<strong>Ma, Y.</strong>, Wen, J., Yang, X., et al. (2026). HALO: A Sample-Adaptive Low-Rank Modulation Framework for HSI Classification. Manuscript in preparation for submission to <em>Expert Systems with Applications</em>.",
+      "summary": ""
     },
     {
       "name": "R2Mamba: Route-Reliability Mamba for Hyperspectral Image Classification",
+      "category": "Manuscripts",
       "publisher": "IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, under review",
       "releaseDate": "2026",
       "website": "",
-      "summary": "Wang, W., Ma, Y., Yang, X., Su, Y., and Jiang, M. Second author and leading student contributor."
+      "citation": "Wang, W., <strong>Ma, Y.</strong>, Yang, X., Su, Y., and Jiang, M. (2026). R2Mamba: Route-Reliability Mamba for Hyperspectral Image Classification. Manuscript under review at <em>IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing</em>.",
+      "summary": ""
     },
     {
       "name": "SSGTN: Spectral-Spatial Graph Transformer Network for HSI Classification",
+      "category": "Journal Papers",
       "publisher": "Remote Sensing",
       "releaseDate": "2026",
       "website": "",
-      "summary": "Shi, H., Luo, Z., Ma, Y., Zhu, G., and Dai, X. Co-author."
+      "citation": "Shi, H., Luo, Z., <strong>Ma, Y.</strong>, Zhu, G., and Dai, X. (2026). SSGTN: Spectral-Spatial Graph Transformer Network for HSI Classification. <em>Remote Sensing</em>.",
+      "summary": ""
     }
   ],
   "patents": [
@@ -176,6 +185,12 @@
       "date": "2025",
       "awarder": "National level",
       "summary": ""
+    },
+    {
+      "title": "College Top Ten Student",
+      "date": "2026",
+      "awarder": "Guangzhou University",
+      "summary": "College-level student honor."
     },
     {
       "title": "2nd Prize, 14th Asia and Pacific Mathematical Contest in Modeling",
@@ -224,23 +239,23 @@
       "keywords": ["Arduino", "Git", "LaTeX", "Markdown", "SolidWorks"]
     },
     {
-      "name": "AI-Assisted Research Workflow",
+      "name": "Research Workflow",
       "level": "",
-      "keywords": ["Literature triage", "Code debugging", "Experiment planning", "Technical writing", "Manual verification"]
+      "keywords": ["Literature triage", "Code debugging", "Experiment planning", "Technical writing"]
     }
   ],
   "portfolio": [
     {
       "name": "HALO / DLoRA for Hyperspectral Image Classification",
       "category": "Research",
-      "date": "2025-2026",
+      "date": "2025-Present",
       "url": "/#projects",
       "description": "Lightweight Transformer framework with Holographic Patch Embedding, Dynamic Low-Rank Adapter, and Spectral Polynomial Prior."
     },
     {
       "name": "R2Mamba for HSI Classification",
       "category": "Research",
-      "date": "2026",
+      "date": "2026-Present",
       "url": "/#projects",
       "description": "Route-reliability Mamba framework with multiple scan paths, gate-guided aggregation, and certainty-aware pooling."
     },
@@ -279,7 +294,7 @@
   "interests": [
     {
       "name": "Research Interests",
-      "keywords": ["Efficient visual modeling", "Reliable 3D visual perception", "Metric depth estimation", "Low-cost sparse sensing", "Edge AI deployment"]
+      "keywords": ["Efficient Visual Modeling", "Dynamic Representation Learning", "Edge AI Deployment"]
     }
   ],
   "presentations": [],

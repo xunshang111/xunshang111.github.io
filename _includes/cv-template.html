@@ -25,12 +25,13 @@
   }
   .cv-shell {
     --cv-ink: #20242b;
-    --cv-muted: #5b6471;
-    --cv-soft: #7e8793;
+    --cv-muted: #56606b;
+    --cv-soft: #7a8390;
     --cv-line: #d8d7d1;
     --cv-paper: #fffefa;
+    --cv-rule: rgba(32, 36, 43, 0.12);
     margin: 0 auto;
-    max-width: 980px;
+    max-width: 960px;
     padding: 2.6rem 1.1rem 4rem;
   }
   .cv-paper {
@@ -41,7 +42,6 @@
     padding: 2rem 2.35rem 2.2rem;
   }
   .cv-header {
-    border-bottom: 1px solid var(--cv-line);
     padding-bottom: 1rem;
     text-align: center;
   }
@@ -95,12 +95,12 @@
     align-items: center;
     color: var(--cv-ink);
     display: flex;
-    font-size: 0.92rem;
+    font-size: 1rem;
     font-weight: 850;
     gap: 0.7rem;
     letter-spacing: 0;
     line-height: 1.2;
-    margin: 0 0 0.58rem;
+    margin: 0 0 0.72rem;
     text-transform: uppercase;
   }
   .cv-section-title::after {
@@ -115,7 +115,13 @@
     margin: 0;
     padding: 0;
   }
+  .cv-project-list { gap: 0.95rem; }
   .cv-entry { list-style: none; margin: 0; padding: 0; }
+  .cv-entry--project {
+    border-bottom: 1px solid var(--cv-rule);
+    padding-bottom: 0.9rem;
+  }
+  .cv-entry--project:last-child { border-bottom: 0; padding-bottom: 0; }
   .cv-entry-head {
     align-items: baseline;
     display: grid;
@@ -125,7 +131,7 @@
   .cv-entry-title {
     color: var(--cv-ink);
     font-size: 0.95rem;
-    font-weight: 850;
+    font-weight: 780;
     line-height: 1.28;
   }
   .cv-entry-date {
@@ -137,12 +143,12 @@
     white-space: nowrap;
   }
   .cv-entry-subtitle {
-    color: #3c424b;
-    font-size: 0.86rem;
+    color: #5d6670;
+    font-size: 0.8rem;
     font-style: italic;
-    font-weight: 650;
+    font-weight: 500;
     line-height: 1.38;
-    margin-top: 0.12rem;
+    margin-top: 0.14rem;
   }
   .cv-entry-detail {
     color: var(--cv-muted);
@@ -150,22 +156,67 @@
     line-height: 1.45 !important;
     margin: 0.2rem 0 0 !important;
   }
-  .cv-points {
-    display: grid;
-    gap: 0.14rem;
-    margin: 0.28rem 0 0;
-    padding-left: 1.05rem;
-  }
-  .cv-points li { color: #4d5662; font-size: 0.84rem !important; line-height: 1.43 !important; padding-left: 0.05rem; }
-  .cv-inline-list {
-    color: var(--cv-muted);
+  .cv-publication-citation {
+    color: #4d5662;
     font-size: 0.86rem !important;
     line-height: 1.48 !important;
     margin: 0 !important;
   }
+  .cv-publication-citation strong {
+    color: var(--cv-ink);
+    font-weight: 760;
+  }
+  .cv-publication-citation em {
+    color: #303842;
+    font-style: italic;
+    font-weight: 600;
+  }
+  .cv-publication-group + .cv-publication-group { margin-top: 0.82rem; }
+  .cv-subsection-title {
+    color: #3a424c;
+    font-size: 0.8rem;
+    font-weight: 750;
+    line-height: 1.25;
+    margin: 0 0 0.34rem;
+  }
+  .cv-publication-list {
+    display: grid;
+    gap: 0.42rem;
+    margin: 0;
+    padding-left: 1.15rem;
+  }
+  .cv-publication-list li {
+    color: #4d5662;
+    padding-left: 0.08rem;
+  }
+  .cv-points {
+    display: grid;
+    gap: 0.18rem;
+    margin: 0.34rem 0 0;
+    padding-left: 1.05rem;
+  }
+  .cv-points li { color: #59626d; font-size: 0.83rem !important; line-height: 1.43 !important; padding-left: 0.05rem; }
+  .cv-points strong {
+    color: #252b33;
+    font-weight: 760;
+  }
+  .cv-interest-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.36rem;
+    margin: 0;
+  }
+  .cv-tag {
+    border: 1px solid var(--cv-line);
+    border-radius: 999px;
+    color: #3f4853;
+    font-size: 0.78rem;
+    font-weight: 650;
+    line-height: 1;
+    padding: 0.34rem 0.55rem;
+  }
   .cv-awards { gap: 0.34rem; }
-  .cv-awards li,
-  .cv-skills li {
+  .cv-awards li {
     color: #4d5662;
     font-size: 0.84rem !important;
     line-height: 1.42 !important;
@@ -173,8 +224,30 @@
     margin-left: 1.05rem;
     padding-left: 0.08rem;
   }
+  .cv-skills {
+    display: grid;
+    gap: 0.28rem 1.05rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin: 0;
+    padding: 0;
+  }
+  .cv-skills li {
+    color: #4d5662;
+    border-top: 1px solid var(--cv-rule);
+    font-size: 0.82rem !important;
+    line-height: 1.42 !important;
+    list-style: none;
+    margin: 0;
+    padding: 0.34rem 0 0;
+  }
   .cv-awards strong,
-  .cv-skills strong { color: var(--cv-ink); font-weight: 850; }
+  .cv-skills strong { color: var(--cv-ink); font-weight: 760; }
+  .cv-skills strong {
+    display: block;
+    font-size: 0.8rem;
+    line-height: 1.25;
+    margin-bottom: 0.04rem;
+  }
   .cv-note {
     color: var(--cv-soft);
     font-size: 0.78rem !important;
@@ -197,12 +270,23 @@
     --cv-soft: #928a7d;
     --cv-line: #3b3934;
     --cv-paper: #181a1f;
+    --cv-rule: rgba(232, 223, 210, 0.14);
   }
   html[data-theme="dark"] .cv-label,
-  html[data-theme="dark"] .cv-entry-subtitle { color: #e0d8ca; }
+  html[data-theme="dark"] .cv-entry-subtitle,
+  html[data-theme="dark"] .cv-publication-citation em,
+  html[data-theme="dark"] .cv-subsection-title { color: #e0d8ca; }
   html[data-theme="dark"] .cv-points li,
+  html[data-theme="dark"] .cv-publication-citation,
+  html[data-theme="dark"] .cv-publication-list li,
   html[data-theme="dark"] .cv-awards li,
   html[data-theme="dark"] .cv-skills li { color: #c9c0b3; }
+  html[data-theme="dark"] .cv-points strong,
+  html[data-theme="dark"] .cv-publication-citation strong { color: #f0e8dc; }
+  html[data-theme="dark"] .cv-tag {
+    border-color: #4a453d;
+    color: #d8d0c4;
+  }
 
   @media print {
     body { background: white; }
@@ -216,6 +300,7 @@
     .cv-name { font-size: 2.45rem; }
     .cv-entry-head { grid-template-columns: 1fr; gap: 0.12rem; }
     .cv-entry-date { text-align: left; white-space: normal; }
+    .cv-skills { grid-template-columns: 1fr; }
     .cv-contact-line { display: grid; gap: 0.16rem; }
     .cv-contact-line span::after,
     .cv-contact-line a::after { display: none; }
@@ -261,7 +346,11 @@
     <section class="cv-section">
       <h2 class="cv-section-title">Research Interests</h2>
       {% for interest in cv.interests %}
-      {% if interest.keywords.size > 0 %}<p class="cv-inline-list">{{ interest.keywords | join: "; " }}</p>{% endif %}
+      {% if interest.keywords.size > 0 %}
+      <div class="cv-interest-tags" aria-label="Research interest tags">
+        {% for keyword in interest.keywords %}<span class="cv-tag">{{ keyword }}</span>{% endfor %}
+      </div>
+      {% endif %}
       {% endfor %}
     </section>
     {% endif %}
@@ -269,19 +358,36 @@
     {% if cv.publications.size > 0 %}
     <section class="cv-section">
       <h2 class="cv-section-title">Selected Publications and Manuscripts</h2>
-      <ul class="cv-list">
+      {% assign manuscripts = cv.publications | where: "category", "Manuscripts" %}
+      {% assign journal_papers = cv.publications | where: "category", "Journal Papers" %}
+      {% assign grouped_publications = manuscripts.size | plus: journal_papers.size %}
+      {% if manuscripts.size > 0 %}
+      <div class="cv-publication-group">
+        <h3 class="cv-subsection-title">Manuscripts</h3>
+        <ol class="cv-publication-list">
+          {% for publication in manuscripts %}
+          <li>{% if publication.citation %}<p class="cv-publication-citation">{{ publication.citation }}</p>{% else %}<p class="cv-publication-citation">{{ publication.name }}. {{ publication.publisher }}, {{ publication.releaseDate }}.</p>{% endif %}</li>
+          {% endfor %}
+        </ol>
+      </div>
+      {% endif %}
+      {% if journal_papers.size > 0 %}
+      <div class="cv-publication-group">
+        <h3 class="cv-subsection-title">Journal Papers</h3>
+        <ol class="cv-publication-list">
+          {% for publication in journal_papers %}
+          <li>{% if publication.citation %}<p class="cv-publication-citation">{{ publication.citation }}</p>{% else %}<p class="cv-publication-citation">{{ publication.name }}. {{ publication.publisher }}, {{ publication.releaseDate }}.</p>{% endif %}</li>
+          {% endfor %}
+        </ol>
+      </div>
+      {% endif %}
+      {% if grouped_publications == 0 %}
+      <ol class="cv-publication-list">
         {% for publication in cv.publications %}
-        <li class="cv-entry">
-          <div class="cv-entry-head">
-            <div class="cv-entry-title">{{ publication.name }}</div>
-            <div class="cv-entry-date">{{ publication.releaseDate }}</div>
-          </div>
-          <div class="cv-entry-subtitle">{{ publication.publisher }}</div>
-          {% if publication.summary %}<p class="cv-entry-detail">{{ publication.summary }}</p>{% endif %}
-        </li>
+        <li>{% if publication.citation %}<p class="cv-publication-citation">{{ publication.citation }}</p>{% else %}<p class="cv-publication-citation">{{ publication.name }}. {{ publication.publisher }}, {{ publication.releaseDate }}.</p>{% endif %}</li>
         {% endfor %}
-      </ul>
-      <p class="cv-note">Draft manuscripts are available upon request.</p>
+      </ol>
+      {% endif %}
     </section>
     {% endif %}
 
@@ -299,16 +405,16 @@
     {% if cv.work.size > 0 %}
     <section class="cv-section">
       <h2 class="cv-section-title">Selected Research and Project Experience</h2>
-      <ul class="cv-list">
+      <ul class="cv-list cv-project-list">
         {% for work in cv.work %}
         {% unless work.company contains "Maker Association" %}
-        <li class="cv-entry">
+        <li class="cv-entry cv-entry--project">
           <div class="cv-entry-head">
             {% assign work_title = work.summary | split: "." | first %}
             <div class="cv-entry-title">{{ work_title }}</div>
             <div class="cv-entry-date">{{ work.startDate }} - {{ work.endDate }}</div>
           </div>
-          <div class="cv-entry-subtitle">{{ work.position }}{% if work.company %} | {{ work.company }}{% endif %}</div>
+          <div class="cv-entry-subtitle">{{ work.position }}{% if work.company %} | {{ work.company }}{% endif %}{% if work.status %} | {{ work.status }}{% endif %}</div>
           {% if work.highlights.size > 0 %}
           <ul class="cv-points">
             {% for highlight in work.highlights %}<li>{{ highlight }}</li>{% endfor %}
@@ -326,7 +432,7 @@
       <h2 class="cv-section-title">Selected Awards</h2>
       <ul class="cv-awards">
         {% for award in cv.awards %}
-        <li><strong>{{ award.title }}</strong>, {{ award.date }}{% if award.summary %} | <em>{{ award.summary }}</em>{% endif %}</li>
+        <li><strong>{{ award.title }}</strong>, {{ award.date }}{% if award.summary and award.summary != "" %} | <em>{{ award.summary }}</em>{% endif %}</li>
         {% endfor %}
       </ul>
     </section>
@@ -335,10 +441,10 @@
     {% if cv.work.size > 0 %}
     <section class="cv-section">
       <h2 class="cv-section-title">Leadership and Technical Activities</h2>
-      <ul class="cv-list">
+      <ul class="cv-list cv-project-list">
         {% for work in cv.work %}
         {% if work.company contains "Maker Association" %}
-        <li class="cv-entry">
+        <li class="cv-entry cv-entry--project">
           <div class="cv-entry-head">
             <div class="cv-entry-title">{{ work.company }} - {{ work.position }}</div>
             <div class="cv-entry-date">{{ work.startDate }} - {{ work.endDate }}</div>
