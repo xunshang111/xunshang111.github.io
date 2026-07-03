@@ -12,6 +12,9 @@ Gemfile.lock
 node_modules
 package-lock.json
 
+# Ignore local Jekyll server logs
+jekyll-server.*.log
+
 # Ignore the vendor file at root level and bundle for alternative installation
 /vendor/
 .bundle/

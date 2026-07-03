@@ -838,14 +838,14 @@ redirect_from:
       </article>
 
       <article class="publication">
-        <a class="publication-figure" href="/images/portfolio/R2Mambaframework.png" target="_blank" rel="noopener" aria-label="Open R2Mamba architecture"><img src="/images/portfolio/R2Mambaframework.png" alt="R2Mamba framework architecture"></a>
+        <a class="publication-figure" href="/images/portfolio/R2Mamba.jpg" target="_blank" rel="noopener" aria-label="Open R2Mamba detailed poster"><img src="/images/portfolio/R2Mambaframework.png" alt="R2Mamba framework architecture"></a>
         <div class="publication-body">
           <span class="status">Manuscript under review &middot; IEEE JSTARS</span>
           <h3>R2Mamba: Route-Reliability Mamba for Hyperspectral Image Classification</h3>
           <p class="publication-authors">Wang, W., <strong>Ma, Y.</strong>, Yang, X., Su, Y., &amp; Jiang, M.</p>
           <p class="publication-summary">A Mamba-based HSI classifier using route-reliability scan paths and gate-guided aggregation for boundary and mixed-pixel regions. I designed reliability diagnostics, local correction visualization, and unified experiments.</p>
           <div class="tag-row"><span class="tag">Mamba</span><span class="tag">Route Reliability</span><span class="tag">Boundary Cues</span><span class="tag">HSI</span></div>
-          <div class="publication-actions"><a class="publication-link" href="/images/portfolio/R2Mambaframework.png" target="_blank" rel="noopener">Architecture &rarr;</a></div>
+          <div class="publication-actions"><a class="publication-link" href="/images/portfolio/R2Mamba.jpg" target="_blank" rel="noopener">Detail poster &rarr;</a><a class="publication-link" href="/images/portfolio/R2Mambaframework.png" target="_blank" rel="noopener">Architecture &rarr;</a></div>
         </div>
       </article>
 
