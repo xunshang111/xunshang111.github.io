@@ -184,6 +184,7 @@ exclude:
   - Gemfile
   - Gruntfile.js
   - gulpfile.js
+  - jekyll-server.*.log
   - LICENSE
   - local
   - log
